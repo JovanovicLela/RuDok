@@ -26,3 +26,5 @@ Poslovni sistemi svakodnevno generišu enormnu količinu dokumenata koje je potr
 - racionalizacija troškova i vremena
 - bolje planiranje i usavršavanje        
 
+Uz određena prilagođavanja RuDok može naći primenu u : računovodstvu, pravnim službama, obrazovanju i edukaciji, štamparskoj i izdavackoj delatnosti, u bankarstvu, kao i srodnim granama.
+Funkcionalan i fleksibilan, Rukovalac dokumentima, pruža kvalitetno poslovanje i podlogu za ostvarenje najvišeg poslovnog cilja - poslovne efikasnosti i efektivnosti.

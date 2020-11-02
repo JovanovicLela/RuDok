@@ -1,4 +1,10 @@
 package dsw.rudok.app.repository;
 
-public class Project {
+import dsw.rudok.app.repository.node.RuNode;
+
+public class Project extends RuNode {
+
+    public Project(String name, RuNode parent) {
+        super(name, parent);
+    }
 }

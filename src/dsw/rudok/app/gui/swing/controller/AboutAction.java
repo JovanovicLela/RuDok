@@ -1,6 +1,6 @@
 package dsw.rudok.app.gui.swing.controller;
 
-import dsw.rudok.app.gui.swing.tree.view.images.AboutDialog;
+import dsw.rudok.app.gui.swing.view.AboutDialog;
 import dsw.rudok.app.gui.swing.view.MainFrame;
 
 import javax.swing.*;

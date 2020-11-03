@@ -4,7 +4,9 @@
 
 ## Formalizacija vizije projekta - Rukovalac dokumentima 
 ### 1. Sažetak
-Svakodnevno se generiše enormna količina informacija koje je potrebno usmeriti i sistematizovati. Dokumenti sadrže informacije. 
+Svakodnevno se generiše enormna količina informacija koje je potrebno usmeriti i sistematizovati.   
+
+Dokumenti sadrže informacije. 
 Posledično, upravljanje dokumentima, znanjem i pronalaženje informacija predstavlja ključnu odrednicu organizacije.
 Kao odgovor promenama u savremenom poslovnom okruženju i neophodnosti prilagođavanja istim, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
 > Svrha rada jeste da objedini i definiše karakteristike Rukovaoca dokumentima.

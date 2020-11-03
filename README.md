@@ -2,19 +2,54 @@
 
 # **Rukovalac dokumentima (RuDok)**
 
-## Formalizacija vizije projekta - Rukovalac dokumentima - RuDok
+## Formalizacija vizije projekta - Rukovalac dokumentima 
+### 1. Sažetak
+Svakodnevno se generiše enormna količina informacija koje je potrebno usmeriti i sistematizovati.   
+Dokumenti sadrže informacije. 
+Posledično, upravljanje dokumentima, znanjem i pronalaženje informacija predstavlja ključnu odrednicu organizacije.
+Kao odgovor promenama u savremenom poslovnom okruženju i neophodnosti prilagođavanja istim, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
+> Svrha rada jeste da objedini i definiše karakteristike Rukovaoca dokumentima.
 
-Kao odgovor promenama u IT industriji vezano za elektronsko poslovanje i neophodnosti prilagođavanja istim, razvija se ideja o softverskom  proizvodu - **Rukovalac dokumentima (RuDok)**. 
+### 2. Uvod
+Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, **događajima upravljan**, **programski alat**.   
+Osnovna namena je da služi pojedincima i poslovnim sistemima koji u osnovi svoje delatnosti imaju rad sa dokumentima.     
+**Osnovne karakteristike RuDok-a bi bile kreiranje, upravljanje, dizajn, skladištenje i deljenje dokumenata.**
 
-#### **Rukovalac dokumentima** bi bio interaktivan, poslovni alat, čija je namena da pomogne organizacionim sistemima i pojedincima koji u osnovi svoje delatnosti imaju rad sa dokumentima.
+***Ključni pojmovi:***  _dokument_, _alat_, _interaktivan_, _softverski proizvod_, _korisnik_
 
-![](https://www.cosmos.esa.int/documents/10180/35131/doclifecycle.jpg/75c19c68-41eb-4b7b-b949-01bb8bd199e1?t=1430204176989)
+### 3. Rečnik pojmova
 
-Poslovni sistemi svakodnevno generišu enormnu količinu dokumenata koje je potrebno usmeriti. Uvođenje informacionog sistema koji omogućava čuvanje i praćenje dokumenata pojedinca ili u okviru sistema, predstavlja ključnu odrednicu organizacijske efikasnosti u savremenom poslovnom okruženju.
+dokument - pisani ili snimani proizvod, namenjen komunikaciji ili čuvanju kolekcije podataka
 
-**Osnovne uloge RuDoka bi bile administracija, kreiranje, skladištenje i deljenje dokumenata.**
-Pored ovih suštinskih elemenata uključujemo i opciju "help", čiji ce zadatak biti da objasni funkcionalnosti komponenata i pojedinih opcija u radu sa programom.
-Korisnik će biti u mogućnosti da napravi projekat sa vise dokumenata. Konkretan dokument imace proizvoljan broj stranica, vidljivih na radnoj povrsini, u  kojima se pored uredjivanje teksta i  ubacivanje grafickih elemenata , postojati i dodatna opcija dodavanja multimedijalnog sadrzaja.
+alat - softver koji služi kao ispomoć za navedenu funkcionalnost
 
+interaktivan 
+
+softverski proizvod 
+
+korisnik 
+
+### 4. Osnovne funkcionalnosti
+
+Funkcionalnosti koje RuDok nudi:
+* upravljanje dokumentima
+* upravljanje kolekcijama dokumenata
+* rukovanje radnim prostorima alata
+* deljenje dokumenata
+
+Proizvod može omogućiti korisnicima slobodno formiranje radnih prostora koji sadrže kolekcije dokumenata. Konkretan dokument može imati proizvoljan broj stranica vidljivih na radnoj površini.  
+
+Kao GUI orijentisan alat, svojim grafičkim elementima omogućava korisnicima upotrebu pojedinosti softvera, poput uređivanja dokumenata i stranica, dodavanja multimedijalnog sadržaja i dr.
+
+#### 4.1 Šta je to novo i karakteristično samo za Rukovalac dokumentima ?
+> Prepoznatljiva osobina RuDok-a je višeslojnost.
+
+Deljenje dokumenata možemo vršiti na nekoliko načina:
+* deljenje celih dokumenata - između kolekcija dokumenata
+* deljenje delova dokumenata(stranica) - između kolekcija dokumenata
+* deljenja delova stranice - izmedju razlicitih stranica ili dokumenata
+
+### 5. Pregled korisnika
+
+### 6. Primena
 Uz određena prilagođavanja RuDok može naći primenu u : računovodstvu, pravnim službama, obrazovanju i edukaciji, štamparskoj i izdavackoj delatnosti, u bankarstvu, kao i srodnim granama.
-Funkcionalan i fleksibilan, Rukovalac dokumentima, pruža kvalitetno poslovanje i podlogu za ostvarenje najvišeg poslovnog cilja - poslovne efikasnosti i efektivnosti.

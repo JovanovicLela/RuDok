@@ -12,6 +12,7 @@ Kao odgovor promenama u savremenom poslovnom okruženju i neophodnosti prilagođ
 ### Uvod
 Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, **događajima upravljan**, **programski alat**.   
 Osnovna namena je da služi pojedincima i poslovnim sistemima koji u osnovi svoje delatnosti imaju rad sa dokumentima.     
+**Osnovne karakteristike RuDoka bi bile kreiranje, upravljanje, dizajniranje, skladištenje i deljenje dokumenata.**
 
 ***Ključni pojmovi:***  _dokument_, _alat_, _interaktivan_, _softverski proizvod_, _korisnik_
 
@@ -29,10 +30,21 @@ Korisnik
 
 ### Osnovne funkcionalnosti
 
+Funkcionalnosti koje RuDok nudi:
+* upravljanje dokumentima
+* upravljanje kolekcijama dokumenata
+* rukovanje radnim prostorima alata
+* deljenje dokumenata
 
+Proizvod može omogućiti korisnicima slobodno formiranje radnih prostora koji sadrže kolekcije dokumenata. Konkretan dokument može imati proizvoljan broj stranica vidljivih na radnoj povrsini.
 
-**Osnovne uloge RuDoka bi bile administracija, kreiranje, skladištenje i deljenje dokumenata.**
-Pored ovih suštinskih elemenata uključujemo i opciju "help", čiji ce zadatak biti da objasni funkcionalnosti komponenata i pojedinih opcija u radu sa programom.
-Korisnik će biti u mogućnosti da napravi projekat sa vise dokumenata. Konkretan dokument imace proizvoljan broj stranica, vidljivih na radnoj povrsini, u  kojima se pored uredjivanje teksta i  ubacivanje grafickih elemenata , postojati i dodatna opcija dodavanja multimedijalnog sadrzaja.
+Kao GUI orijentisan alat svojim grafičkim elementima omogućava korisnicima upotrebu pojedinosti softvera, poput uredjivanja teksta, dodavanja slotova i multimedijalnog sadržaja.
+
+> Jedinstvena osobina RuDok-a je višeslojnost.
+
+Deljenje dokumenata možemo vršiti na nekoliko načina :
+* deljenje celih dokumenata - između kolekcija dokumenata
+* deljenje delova dokumenata(stranica) - između kolekcija dokumenata
+* deljenja delova stranice - izmedju razlicitih stranica ili dokumenata
 
 Uz određena prilagođavanja RuDok može naći primenu u : računovodstvu, pravnim službama, obrazovanju i edukaciji, štamparskoj i izdavackoj delatnosti, u bankarstvu, kao i srodnim granama.

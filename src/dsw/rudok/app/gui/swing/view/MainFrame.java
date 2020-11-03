@@ -14,6 +14,7 @@ public class MainFrame {
     private Repository documentRepository;
     private RuTree tree;
     private JTree workspaceTree;
+    private ProjectPanel desktop;
 
     private MainFrame(){
 

@@ -26,14 +26,40 @@ public class RuTreeItem extends DefaultMutableTreeNode{
         this.nodeModel = nodeModel;
     }
 
-    @Override
-    public boolean isLeaf() {
-        return super.isLeaf();
-    }
 
+    @Override
+    public TreeNode getChildAt(int childIndex) {
+        return findChildByIndex(childIndex);
+    }
     @Override
     public int getIndex(TreeNode node) {
         return findIndexByChild((RuTreeItem) node);
+    }
+
+    @Override
+    public int getChildCount() {
+        if(nodeModel instanceof  RuNodeComposite)
+            return  ((RuNodeComposite) nodeModel).getChildren().size();
+        return  0;
+    }
+    @Override
+    public boolean getAllowsChildren() {
+        if(nodeModel instanceof  RuNodeComposite)
+            return true;
+        return  false;
+    }
+
+    @Override
+    public Enumeration children() {
+        if(nodeModel instanceof  RuNodeComposite)
+            return  (Enumeration) ((RuNodeComposite) nodeModel).getChildren();
+        return  null;
+    }
+    @Override
+    public boolean isLeaf() {
+        if(nodeModel instanceof  RuNodeComposite)
+            return false;
+        return  true;
     }
 
     private int findIndexByChild(RuTreeItem node) {
@@ -44,7 +70,7 @@ public class RuTreeItem extends DefaultMutableTreeNode{
     }
 
 
-    private TreeNode findIndexByChild(int childIndex) {
+    private TreeNode findChildByIndex(int childIndex) {
 
         if(nodeModel instanceof RuNodeComposite){
             RuTreeItem toLookFor = new RuTreeItem(((RuNodeComposite) nodeModel).getChildren().get(childIndex));
@@ -61,35 +87,14 @@ public class RuTreeItem extends DefaultMutableTreeNode{
         return null;
     }
 
-    @Override
-    public TreeNode getChildAt(int index) {
-        return super.getChildAt(index);
-    }
 
     @Override
-    public int getChildCount() {
-        return super.getChildCount();
-    }
-
-    @Override
-    public boolean getAllowsChildren() {
-        return super.getAllowsChildren();
-    }
-
-    @Override
-    public Enumeration<TreeNode> children() {
-        return super.children();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        RuTreeItem that = (RuTreeItem) o;
-
-        if (name != null ? !name.equals(that.name) : that.name != null) return false;
-        return nodeModel != null ? nodeModel.equals(that.nodeModel) : that.nodeModel == null;
+    public boolean equals(Object obj) {
+        if(obj != null && obj instanceof  RuTreeItem){
+            RuTreeItem otherObj = (RuTreeItem) obj;
+            return  this.nodeModel.equals(otherObj.nodeModel);
+        }
+        return false;
     }
 
     @Override

@@ -8,7 +8,7 @@ Svakodnevno se generiše enormna količina informacija koje je potrebno usmeriti
 Dokumenti sadrže informacije. 
 Posledično, upravljanje dokumentima, znanjem i pronalaženje informacija predstavlja ključnu odrednicu organizacije.   
 
-U nastojanju da se omogući dizajniranje i operativna upotreba dokumentima, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
+U nastojanju da se omogući dizajniranje i operativna upotreba dokumenata, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
 > Svrha rada jeste da objedini i definiše karakteristike Rukovaoca dokumentima.
 
 ### 2. Uvod

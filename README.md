@@ -6,28 +6,29 @@
 ### 1. Sažetak
 Svakodnevno se generiše enormna količina informacija koje je potrebno usmeriti i sistematizovati.   
 Dokumenti sadrže informacije. 
-Posledično, upravljanje dokumentima, znanjem i pronalaženje informacija predstavlja ključnu odrednicu organizacije.
-Kao odgovor promenama u savremenom poslovnom okruženju i neophodnosti prilagođavanja istim, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
+Posledično, upravljanje dokumentima, znanjem i pronalaženje informacija predstavlja ključnu odrednicu organizacije.   
+
+U nastojanju da se omogući dizajniranje i operativna upotreba dokumentima, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
 > Svrha rada jeste da objedini i definiše karakteristike Rukovaoca dokumentima.
 
 ### 2. Uvod
 Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, **događajima upravljan**, **programski alat**.   
-Osnovna namena je da služi pojedincima i poslovnim sistemima koji u osnovi svoje delatnosti imaju rad sa dokumentima.     
-**Osnovne karakteristike RuDok-a bi bile kreiranje, upravljanje, dizajn, skladištenje i deljenje dokumenata.**
+**Osnovna namena** je da služi pojedincima i poslovnim sistemima koji u osnovi svoje delatnosti imaju rad sa dokumentima.     
+**Osnovne karakteristike** RuDok-a bi bile: kreiranje, upravljanje, dizajn, skladištenje i deljenje dokumenata.
 
 ***Ključni pojmovi:***  _dokument_, _alat_, _interaktivan_, _softverski proizvod_, _korisnik_
 
 ### 3. Rečnik pojmova
 
-dokument - pisani ili snimani proizvod, namenjen komunikaciji ili čuvanju kolekcije podataka
+Dokument - Složen proizvod, namenjen komunikaciji ili čuvanju kolekcije podataka.
 
-alat - softver koji služi kao ispomoć za navedenu funkcionalnost
+Alat - računarski program koji služi programerima ili korisnicima za razvoj, kreiranje, održavanje ili podržavanje drugog softvera za određenu funkcionalnost.
 
-interaktivan 
+Interaktivan - Program koji trenutno reaguje i odgovara čim korisnik deluje. Korišćenje interaktivnog softvera podseća na održavanje konverzacije, gde odgovori korisnika menjaju način na koji sistem funcioniše.
 
-softverski proizvod 
+Softverski proizvod - Konačan rezultat razvojnog ciklusa. Podrazumeva softver koji je licenciran ili na drugi način ponuđen, obezbeđen ili dostupan.
 
-korisnik 
+Korisnik - Pojedinac ili organizacioni sistem koji stupa u interakciju sa softverom i koristi ga kao alat.
 
 ### 4. Osnovne funkcionalnosti
 
@@ -44,7 +45,7 @@ Kao GUI orijentisan alat, svojim grafičkim elementima omogućava korisnicima up
 #### 4.1 Šta je to novo i karakteristično samo za Rukovalac dokumentima ?
 > Prepoznatljiva osobina RuDok-a je višeslojnost.
 
-Deljenje dokumenata možemo vršiti na nekoliko načina:
+Deljenje dokumenata može se vršiti na nekoliko načina:
 * deljenje celih dokumenata - između kolekcija dokumenata
 * deljenje delova dokumenata(stranica) - između kolekcija dokumenata
 * deljenja delova stranice - izmedju razlicitih stranica ili dokumenata

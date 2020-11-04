@@ -13,7 +13,7 @@ U nastojanju da se omogući dizajniranje i operativna upotreba dokumenata, razvi
 ### 2. Uvod
 Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, **događajima upravljan**, **programski alat**.   
 **Osnovna namena** je da služi pojedincima i poslovnim sistemima koji u osnovi svoje delatnosti imaju rad sa dokumentima.     
-**Osnovne karakteristike** bi bile: kreiranje, upravljanje, dizajn, skladištenje i deljenje dokumenata.
+**Osnovne mogućnosti** bi bile: kreiranje, upravljanje, dizajn, skladištenje i deljenje dokumenata.
 
 ***Ključni pojmovi:***  _dokument_, _alat_, _interaktivan_, _softverski proizvod_, _korisnik_
 

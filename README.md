@@ -55,7 +55,6 @@ Korisnici će moći da slobodno formiraju radne prostore koji sadrže kolekcije 
 ### 5. Pregled korisnika i primena
 
 Osnovna zamisao RuDok-a je da služi korisnicima pri rešavanju problema.  
-
 Stoga, RuDok neće biti namenjen ni za jednog specifičnog pojedinca ili sistem, već za slobodno tržište.
 Potencijalni korisnici mogu biti: eksperti koji vladaju domenom problema, organizacioni sistemi, ali i pojedinci koji ne rade svakodnevno sa dokumentima.
 

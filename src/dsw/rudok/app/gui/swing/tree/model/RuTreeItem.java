@@ -1,4 +1,4 @@
-package dsw.rudok.app.gui.swing.tree.model;
+package dsw.rudok.app.gui.swing.view;
 
 import dsw.rudok.app.repository.node.RuNode;
 import dsw.rudok.app.repository.node.RuNodeComposite;
@@ -10,7 +10,6 @@ import java.util.Enumeration;
 import java.util.Iterator;
 
 @Data
-
 public class RuTreeItem extends DefaultMutableTreeNode{
 
     private  String name;

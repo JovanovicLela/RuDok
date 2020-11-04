@@ -11,6 +11,7 @@ public class ProjectPanel extends JPanel {
     }
 
     public void setProjectName(String projectName) {
+
         projectNameLabel.setText(projectName);
     }
 }

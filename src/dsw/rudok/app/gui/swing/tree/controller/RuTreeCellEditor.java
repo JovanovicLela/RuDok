@@ -1,6 +1,5 @@
 package dsw.rudok.app.gui.swing.tree.controller;
 
-import dsw.rudok.app.gui.swing.tree.model.RuTreeItem;
 import dsw.rudok.app.repository.Workspace;
 
 import javax.swing.*;
@@ -31,7 +30,7 @@ public class RuTreeCellEditor extends DefaultTreeCellEditor implements ActionLis
     @Override
     public boolean isCellEditable(EventObject event) {
         if(event instanceof MouseEvent)
-            if(((MouseEvent)event).getClickCount()==3){
+            if(((MouseEvent)event).getClickCount() == 3){
                 return  true;
             }
         return  false;

@@ -12,13 +12,16 @@ public class SwingGui implements Gui {
     private Repository documentRepository;
 
     public SwingGui(Repository documentRepository) {
+
         this.documentRepository = documentRepository;
     }
 
     @Override
     public void start() {
         instance = MainFrame.getInstance();
-       instance.setDocumentRepository(documentRepository);
+        instance.setDocumentRepository(documentRepository);
+        instance.initialiseWorkspaceTree();
+        instance.setVisible(true);
 
     }
 }

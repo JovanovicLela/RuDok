@@ -19,11 +19,11 @@ Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, 
 
 ### 3. Rečnik pojmova
 
-Dokument - Složen proizvod, namenjen komunikaciji ili čuvanju kolekcije podataka.
+Dokument - Složen proizvod namenjen komunikaciji ili čuvanju kolekcije podataka.
 
 Alat - računarski program koji služi programerima ili korisnicima za razvoj, kreiranje, održavanje ili podržavanje drugog softvera za određenu funkcionalnost.
 
-Interaktivan - Program koji trenutno reaguje i odgovara čim korisnik deluje. Korišćenje interaktivnog softvera podseća na održavanje konverzacije, gde odgovori korisnika menjaju način na koji sistem funcioniše.
+Interaktivan - Program koji trenutno reaguje i odgovara čim korisnik deluje. Korišćenje interaktivnog softvera podseća na održavanje konverzacije, gde odgovori korisnika menjaju način na koji sistem funkcioniše.
 
 Softverski proizvod - Konačan rezultat razvojnog ciklusa. Podrazumeva softver koji je licenciran ili na drugi način ponuđen, obezbeđen ili dostupan.
 

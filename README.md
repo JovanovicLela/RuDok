@@ -39,7 +39,7 @@ Funkcionalnosti koje RuDok nudi:
 
 Proizvod može omogućiti korisnicima slobodno formiranje radnih prostora koji sadrže kolekcije dokumenata. Konkretan dokument može imati proizvoljan broj stranica vidljivih na radnoj površini.  
 
-Kao GUI orijentisan alat, svojim grafičkim elementima omogućava korisnicima upotrebu pojedinosti softvera, poput uređivanja dokumenata i stranica, dodavanja multimedijalnog sadržaja i dr.
+Kao GUI orijentisan alat, svojim grafičkim elementima omogući će korisnicima upotrebu pojedinosti softvera, poput uređivanja dokumenata i stranica, dodavanja multimedijalnog sadržaja i dr.
 
 #### 4.1 Šta je to novo i karakteristično samo za Rukovalac dokumentima ?
 > Prepoznatljiva osobina RuDok-a je višeslojnost.

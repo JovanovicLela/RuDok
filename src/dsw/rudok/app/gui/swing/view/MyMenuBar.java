@@ -1,6 +1,7 @@
 package dsw.rudok.app.gui.swing.view;
 
 import javax.swing.*;
+import java.awt.event.KeyEvent;
 
 public class MyMenuBar extends JMenuBar {
 

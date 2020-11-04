@@ -4,12 +4,14 @@ import dsw.rudok.app.core.Repository;
 import dsw.rudok.app.gui.swing.controller.ActionManager;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.swing.*;
 import java.awt.*;
 
-@Data
+@Getter
+@Setter
 public class MainFrame extends JFrame{
 
     private static  MainFrame instance = null;
@@ -33,7 +35,7 @@ public class MainFrame extends JFrame{
 
     public void initialiseWorkspaceTree(){
         tree = new RuTreeImplementation();
-        workspaceTree = tree.generateTree(documentRepository,getWorkspace());
+        workspaceTree = tree.generateTree(documentRepository.getWorkspace());
         initialiseGUI();
     }
     private void initialiseGUI(){
@@ -50,8 +52,8 @@ public class MainFrame extends JFrame{
         menu = new MyMenuBar();
         setJMenuBar(menu);
 
-        toolBar = new Toolbar();
-        add(toolBar,BorderLayout.NORTH);
+        toolBar = new ToolBar();
+        add(toolBar, BorderLayout.NORTH);
 
         desktop = new ProjectPanel();
 
@@ -62,15 +64,21 @@ public class MainFrame extends JFrame{
         split.setDividerLocation(250);
         split.setOneTouchExpandable(true);
 
-    }
+        aboutDialog = new AboutDialog();
 
-    public void setDocumentRepository(Repository documentRepository) {
     }
-
     public static MainFrame getInstance(){
         if(instance == null){
             instance = new MainFrame();
         }
         return  instance;
+    }
+
+    public void setDocumentRepository(Repository documentRepository) {
+        this.documentRepository = documentRepository;
+    }
+
+    public void setWorkspaceTree(JTree workspaceTree) {
+        this.workspaceTree = workspaceTree;
     }
 }

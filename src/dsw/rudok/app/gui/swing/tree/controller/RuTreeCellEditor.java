@@ -1,5 +1,6 @@
 package dsw.rudok.app.gui.swing.tree.controller;
 
+import dsw.rudok.app.gui.swing.tree.model.RuTreeItem;
 import dsw.rudok.app.repository.Workspace;
 
 import javax.swing.*;

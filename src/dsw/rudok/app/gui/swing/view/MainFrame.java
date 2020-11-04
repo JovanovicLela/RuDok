@@ -28,9 +28,7 @@ public class MainFrame extends JFrame{
 
     }
     private void initialise(){
-
         actionManager = new ActionManager();
-
     }
 
     public void initialiseWorkspaceTree(){
@@ -44,7 +42,7 @@ public class MainFrame extends JFrame{
         Dimension screenSize = kit.getScreenSize();
         int screenHeight =  screenSize.height;
         int screenWidth = screenSize.width;
-        setSize(screenWidth/2,screenHeight/2);
+        setSize(screenWidth / 2,screenHeight / 2);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("RuDok app");
@@ -70,15 +68,24 @@ public class MainFrame extends JFrame{
     public static MainFrame getInstance(){
         if(instance == null){
             instance = new MainFrame();
+            instance.initialise();
         }
         return  instance;
     }
 
+    public ActionManager getActionManager(){
+        return actionManager;
+    }
     public void setDocumentRepository(Repository documentRepository) {
         this.documentRepository = documentRepository;
     }
-
+    public JTree getWorkspaceTree(){
+        return workspaceTree;
+    }
     public void setWorkspaceTree(JTree workspaceTree) {
         this.workspaceTree = workspaceTree;
+    }
+    public RuTree getTree(){
+        return tree;
     }
 }

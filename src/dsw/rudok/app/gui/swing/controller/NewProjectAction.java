@@ -1,5 +1,6 @@
 package dsw.rudok.app.gui.swing.controller;
 
+import dsw.rudok.app.gui.swing.tree.model.RuTreeItem;
 import dsw.rudok.app.gui.swing.view.MainFrame;
 import dsw.rudok.app.repository.Project;
 import dsw.rudok.app.repository.node.RuNode;
@@ -18,11 +19,10 @@ public class NewProjectAction extends  AbstractRudokAction{
         putValue(SHORT_DESCRIPTION, "New Project");
 
     }
-
-    @Override
+    //override
     public void actionPerformed(ActionEvent e) {
         int label = new Random().nextInt(100);
-        Project p = new Project("Project "+ label, (RuNode) MainFrame.getInstance().getWorkspaceTree().getModel().getRoot());
+        Project p = new Project("Project "+ label, (RuNode) ((RuTreeItem) MainFrame.getInstance().getWorkspaceTree().getModel().getRoot()).getNodeModel());
         MainFrame.getInstance().getTree().addProject(p);
 
     }

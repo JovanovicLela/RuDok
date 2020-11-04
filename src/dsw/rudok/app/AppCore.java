@@ -20,7 +20,6 @@ public class AppCore extends ApplicationFramework {
         return  instance;
     }
 
-    @Override
     public void run() {
         this.gui.start();
     }

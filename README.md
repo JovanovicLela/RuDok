@@ -13,7 +13,7 @@ U nastojanju da se omogući dizajniranje i operativna upotreba dokumenata, razvi
 ### 2. Uvod
 Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, **događajima upravljan**, **programski alat**.   
 **Osnovna namena** je da služi pojedincima i poslovnim sistemima koji u osnovi svoje delatnosti imaju rad sa dokumentima.     
-**Osnovne mogućnosti** bi bile: kreiranje, upravljanje, dizajn, skladištenje i deljenje dokumenata.
+**Osnovne mogućnosti:** kreiranje, upravljanje, dizajn, skladištenje i deljenje dokumenata.
 
 ***Ključni pojmovi:***  _dokument_, _alat_, _interaktivan_, _softverski proizvod_, _korisnik_
 
@@ -21,7 +21,7 @@ Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, 
 
 Dokument - Složen proizvod namenjen komunikaciji ili čuvanju kolekcije podataka.
 
-Alat - računarski program koji služi programerima ili korisnicima za razvoj, kreiranje, održavanje ili podržavanje drugog softvera za određenu funkcionalnost.
+Alat - Računarski program koji služi programerima ili korisnicima za razvoj, kreiranje, održavanje ili podržavanje drugog softvera za određenu funkcionalnost.
 
 Interaktivan - Program koji trenutno reaguje i odgovara čim korisnik deluje. Korišćenje interaktivnog softvera podseća na održavanje konverzacije, gde odgovori korisnika menjaju način na koji sistem funkcioniše.
 
@@ -31,25 +31,32 @@ Korisnik - Pojedinac ili organizacioni sistem koji stupa u interakciju sa softve
 
 ### 4. Osnovne funkcionalnosti
 
-Funkcionalnosti koje RuDok nudi:
+Funkcionalnosti Rukovaoca dokumentima:
 * upravljanje dokumentima
 * upravljanje kolekcijama dokumenata
 * rukovanje radnim prostorima alata
 * deljenje dokumenata
+   * deljenje celih dokumenata - između kolekcija dokumenata
+   * deljenje delova dokumenata(stranica) - između kolekcija dokumenata
+   * deljenja delova stranice - izmedju razlicitih stranica ili dokumenata
 
-Proizvod može omogućiti korisnicima slobodno formiranje radnih prostora koji sadrže kolekcije dokumenata. Konkretan dokument može imati proizvoljan broj stranica vidljivih na radnoj površini.  
+Deljenje dokumenata može se vršiti na nekoliko načina:
+1. deljenje celih dokumenata - između kolekcija dokumenata
+2.  deljenje delova dokumenata(stranica) - između kolekcija dokumenata
+3.  deljenja delova stranice - izmedju razlicitih stranica ili dokumenata
 
 Kao GUI orijentisan alat, svojim grafičkim elementima omogućiće korisnicima upotrebu pojedinosti softvera, poput uređivanja dokumenata i stranica, dodavanja multimedijalnog sadržaja i dr.
 
-#### 4.1 Šta je to novo i karakteristično samo za Rukovalac dokumentima ?
-> Prepoznatljiva osobina RuDok-a je višeslojnost.
+#### 4.1 Šta izdvaja Rukovalac dokumentima od drugih?
 
-Deljenje dokumenata može se vršiti na nekoliko načina:
-* deljenje celih dokumenata - između kolekcija dokumenata
-* deljenje delova dokumenata(stranica) - između kolekcija dokumenata
-* deljenja delova stranice - izmedju razlicitih stranica ili dokumenata
+Na tržištu postoje slični proizvodi. Office paket, integrisana razvojna okruženja Eclipse i Intellij su neki od primera. Za razliku od njih, Rukovalac dokumentima imaće mogućnost klasifikacije i struktuiranog prikaza dokumenata.
+> Prepoznatljiva karakteristika: hijerarhijska struktura
 
-### 5. Pregled korisnika
+Korisnici će moći da slobodno formiraju radne prostore koji sadrže kolekcije dokumenata. Konkretan dokument može imati proizvoljan broj stranica, a svaka stranica proizvoljan broj slotova, vidljivih na radnoj površini. 
 
-### 6. Primena
+
+### 5. Pregled korisnika i primena
+
+Osnovna zamisao RuDok-a je da služi korisnicima pri rešavanju problema. Stoga, RuDok neće biti namenjen ni za jednog specifičnog pojedinca ili sistem, već za slobodno tržište. Potencijalni korisnici mogu biti: eksperti koji vladaju domenom problema, organizacioni sistemi, ali i pojedinci koji ne rade svakodnevno sa dokumentima.
+
 Uz određena prilagođavanja RuDok može naći primenu u : računovodstvu, pravnim službama, obrazovanju i edukaciji, štamparskoj i izdavačkoj delatnosti, u bankarstvu, kao i srodnim granama.

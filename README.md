@@ -7,14 +7,13 @@
 Svakodnevno se generiše enormna količina informacija koje je potrebno usmeriti i sistematizovati.   
 Dokumenti sadrže informacije. 
 Posledično, upravljanje dokumentima, znanjem i pronalaženje informacija predstavlja ključnu odrednicu organizacije.   
-
 U nastojanju da se omogući dizajniranje i operativna upotreba dokumenata, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
 > Svrha rada jeste da objedini i definiše karakteristike Rukovaoca dokumentima.
 
 ### 2. Uvod
 Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, **događajima upravljan**, **programski alat**.   
 **Osnovna namena** je da služi pojedincima i poslovnim sistemima koji u osnovi svoje delatnosti imaju rad sa dokumentima.     
-**Osnovne karakteristike** RuDok-a bi bile: kreiranje, upravljanje, dizajn, skladištenje i deljenje dokumenata.
+**Osnovne karakteristike** bi bile: kreiranje, upravljanje, dizajn, skladištenje i deljenje dokumenata.
 
 ***Ključni pojmovi:***  _dokument_, _alat_, _interaktivan_, _softverski proizvod_, _korisnik_
 

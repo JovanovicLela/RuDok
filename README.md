@@ -52,4 +52,4 @@ Deljenje dokumenata može se vršiti na nekoliko načina:
 ### 5. Pregled korisnika
 
 ### 6. Primena
-Uz određena prilagođavanja RuDok može naći primenu u : računovodstvu, pravnim službama, obrazovanju i edukaciji, štamparskoj i izdavackoj delatnosti, u bankarstvu, kao i srodnim granama.
+Uz određena prilagođavanja RuDok može naći primenu u : računovodstvu, pravnim službama, obrazovanju i edukaciji, štamparskoj i izdavačkoj delatnosti, u bankarstvu, kao i srodnim granama.

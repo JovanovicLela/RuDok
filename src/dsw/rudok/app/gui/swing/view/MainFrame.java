@@ -55,6 +55,9 @@ public class MainFrame extends JFrame{
 
         desktop = new ProjectPanel();
 
+        aboutDialog = new AboutDialog();
+        setAboutDialog(aboutDialog);
+
         JScrollPane scroll = new JScrollPane(workspaceTree);
         scroll.setMinimumSize(new Dimension(200,150));
         JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,scroll,desktop);
@@ -62,7 +65,7 @@ public class MainFrame extends JFrame{
         split.setDividerLocation(250);
         split.setOneTouchExpandable(true);
 
-        aboutDialog = new AboutDialog();
+
 
     }
     public static MainFrame getInstance(){

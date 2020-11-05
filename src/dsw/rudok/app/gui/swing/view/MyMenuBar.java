@@ -11,6 +11,11 @@ public class MyMenuBar extends JMenuBar {
         fileMenu.add(MainFrame.getInstance().getActionManager().getExitAction());
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewProjectAction());
 
+        JMenu aboutMenu = new JMenu("About");
+        aboutMenu.setMnemonic(KeyEvent.VK_A);
+        aboutMenu.add(MainFrame.getInstance().getActionManager().getAboutAction());
+
         this.add(fileMenu);
+        this.add(aboutMenu);
     }
 }

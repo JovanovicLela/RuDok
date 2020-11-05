@@ -31,22 +31,24 @@ Korisnik - Pojedinac ili organizacioni sistem koji stupa u interakciju sa softve
 
 ### 4. Osnovne funkcionalnosti
 
-Funkcionalnosti Rukovaoca dokumentima:
-* upravljanje dokumentima
-* upravljanje kolekcijama dokumenata
-* rukovanje radnim prostorima alata
-* deljenje dokumenata
-   
-Deljenje dokumenata može se vršiti na nekoliko načina:
-1. deljenje celih dokumenata - između kolekcija dokumenata
+Ideja je da razvijemo alat koji će korisnicima omogućiti opis, definisanje, operativnu upotrebu, trajno čuvanje dokumenata proizvoljne strukture, kao i slobodno formiranje kolekcija dokumenata i radnih prostora koji sadrže te kolekcije.
+
+Funkcionalnosti koje Rukovalac dokumentima nudi:
+* **upravljanje dokumentima**  
+* **upravljanje kolekcijama dokumenata**
+* **rukovanje radnim prostorima alata**
+* **deljenje dokumenata**
+
+Deljenje dokumenata se može vršiti na nekoliko načina:
+1.  deljenje celih dokumenata - između kolekcija dokumenata
 2.  deljenje delova dokumenata(stranica) - između kolekcija dokumenata
 3.  deljenja delova stranice - izmedju razlicitih stranica ili dokumenata
 
-Kao GUI orijentisan alat, svojim grafičkim elementima omogućiće korisnicima upotrebu pojedinosti softvera, poput uređivanja stranica, dodavanja multimedijalnog sadržaja i dr.
+Kao GUI orijentisan alat, svojim grafičkim elementima će omogućiti korisnicima upotrebu svih pojedinosti softvera.
 
 #### 4.1 Šta izdvaja Rukovalac dokumentima od drugih?
 
-Na tržištu postoje slični proizvodi. Office paket, integrisana razvojna okruženja Eclipse i Intellij su neki od primera. Za razliku od njih, Rukovalac dokumentima će imati mogućnost klasifikacije i struktuiranog prikaza dokumenata.
+Na tržištu postoje slični proizvodi. Office paket, integrisana razvojna okruženja Eclipse i Intellij su neki od primera. Za razliku od njih, Rukovalac dokumentima će imati mogućnost struktuiranog prikaza dokumenata.
 > Prepoznatljiva karakteristika: hijerarhijska struktura
 
 Korisnici će moći da slobodno formiraju radne prostore koji sadrže kolekcije dokumenata. Konkretan dokument može imati proizvoljan broj stranica, a svaka stranica proizvoljan broj slotova, vidljivih na radnoj površini. 
@@ -54,9 +56,9 @@ Korisnici će moći da slobodno formiraju radne prostore koji sadrže kolekcije 
 
 ### 5. Pregled korisnika i primena
 
-Osnovna zamisao RuDok-a je da služi korisnicima pri rešavanju problema.  
+Osnovna zamisao RuDok-a je da služi svim korisnicima pri rešavanju problema.  
 Stoga, RuDok neće biti namenjen ni za jednog specifičnog pojedinca ili sistem, već za slobodno tržište.
-Potencijalni korisnici mogu biti: eksperti koji vladaju domenom problema, veliki poslovni sistemi, ali i pojedinci koji ne rukuju dokumentima svakodnevno.
+Potencijalni korisnici mogu biti: eksperti koji vladaju domenom problema, veliki poslovni sistemi, ali i pojedinci koji ne rukuju često dokumentima.
 
 Uz određena prilagođavanja Rukovalac dokumentima može naći primenu u: **računovodstvu**,  **pravnim službama**, **obrazovanju i edukaciji**, **štamparskoj i izdavačkoj delatnosti**, **bankarstvu**, kao i u srodnim granama.
 

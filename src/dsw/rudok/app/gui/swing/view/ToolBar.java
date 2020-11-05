@@ -17,5 +17,6 @@ public class ToolBar extends JToolBar {
         addSeparator();
         add (MainFrame.getInstance().getActionManager().getAboutAction()) ;
 
+
     }
 }

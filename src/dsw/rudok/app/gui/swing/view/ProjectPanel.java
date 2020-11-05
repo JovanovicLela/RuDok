@@ -1,10 +1,14 @@
 package dsw.rudok.app.gui.swing.view;
 
 import dsw.rudok.app.gui.swing.observer.Observer;
+import dsw.rudok.app.repository.Document;
 import dsw.rudok.app.repository.Project;
+import dsw.rudok.app.repository.node.RuNode;
+import lombok.Setter;
 
 import javax.swing.*;
 import java.awt.*;
+@Setter
 
 public class ProjectPanel extends JPanel implements Observer {
 
@@ -20,13 +24,28 @@ public class ProjectPanel extends JPanel implements Observer {
         MainFrame.getInstance().getSubject().attach(this);
     }
 
+    public  void preview(){
+        if(openedProject == null)
+            return;
+        setProjectName(openedProject.getName());
+        setTabbedPane(openedProject);
+
+    }
+    private  void setTabbedPane(Project project){
+        tabbedPane.removeAll();
+        for(RuNode ruNodeDocument: project.getChildren()){
+            Document document = (Document) ruNodeDocument;
+            tabbedPane.add(project.getName() + " - " + document.getName()); // dodati i docPanel
+        }
+    }
     public void setProjectName(String projectName) {
         projectNameLabel.setText(projectName);
     }
 
 
+
     @Override
     public void update() {
-
+        preview();
     }
 }

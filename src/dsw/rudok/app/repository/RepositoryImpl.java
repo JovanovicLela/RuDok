@@ -2,7 +2,7 @@ package dsw.rudok.app.repository;
 
 import dsw.rudok.app.core.Repository;
 
-public class RepositoryImpl implements Repository {
+public class RepositoryImpl implements Repository{
 
     private Workspace root;
 
@@ -22,4 +22,6 @@ public class RepositoryImpl implements Repository {
     public void setRoot(Workspace root) {
         this.root = root;
     }
+
+
 }

@@ -6,7 +6,7 @@
 ### 1. Sažetak
 Svakodnevno se generiše enormna količina informacija koje je potrebno usmeriti i sistematizovati.   
 Dokumenti sadrže informacije. 
-Posledično, upravljanje dokumentima, znanjem i pronalaženje informacija predstavlja ključnu odrednicu organizacije.   
+Posledično, upravljanje dokumentima i pronalaženje informacija predstavlja ključnu odrednicu organizacije.   
 U nastojanju da se omogući dizajniranje i operativna upotreba dokumenata, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
 > Svrha rada jeste da objedini i definiše karakteristike Rukovaoca dokumentima.
 

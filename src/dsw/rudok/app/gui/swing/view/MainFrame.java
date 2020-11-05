@@ -24,7 +24,8 @@ public class MainFrame extends JFrame{
     private JTree workspaceTree;
     private ProjectPanel desktop;
     private JMenuBar menu;
-    private Subject subject = new Subject();
+    private Subject subject = new Subject(); //observer pattern
+
     private MainFrame(){
 
     }

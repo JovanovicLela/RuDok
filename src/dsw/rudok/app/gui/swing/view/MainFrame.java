@@ -55,7 +55,7 @@ public class MainFrame extends JFrame{
         toolBar = new ToolBar();
         add(toolBar, BorderLayout.NORTH);
 
-        desktop = new ProjectPanel();
+        desktop = new ProjectPanel(); // vec dodato
 
         aboutDialog = new AboutDialog();
         setAboutDialog(aboutDialog);
@@ -64,6 +64,7 @@ public class MainFrame extends JFrame{
         scroll.setMinimumSize(new Dimension(200,150));
         JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,scroll,desktop);
         getContentPane().add(split,BorderLayout.CENTER);
+
         split.setDividerLocation(250);
         split.setOneTouchExpandable(true);
 

@@ -33,9 +33,9 @@ public class ProjectPanel extends JPanel implements Observer {
     }
     private  void setTabbedPane(Project project){
         tabbedPane.removeAll();
-        for(RuNode ruNodeDocument: project.getChildren()){
+        for(RuNode ruNodeDocument: project.getChildren()) {
             Document document = (Document) ruNodeDocument;
-            tabbedPane.add(project.getName() + " - " + document.getName()); // dodati i docPanel
+            tabbedPane.add(project.getName() + " - " + document.getName(), new DocumentPanel(project.getName(),document));// dodati i docPanel
         }
     }
     public void setProjectName(String projectName) {

@@ -23,22 +23,23 @@ public class NewDocumentAction extends  AbstractRudokAction implements Observer 
     }
     @Override
     public void update() {
-        if(MainFrame.getInstance().getTree().getSelectedRuNode() instanceof Project){
+        if (MainFrame.getInstance().getTree().getSelectedRuNode() instanceof Project) {
             setEnabled(true);
+        } else {
             setEnabled(false);
         }
     }
-
     @Override
     public void actionPerformed(ActionEvent e) {
 
         RuNode selectedRuNode = MainFrame.getInstance().getTree().getSelectedRuNode();
 
-        if((selectedRuNode == null) || !(selectedRuNode instanceof Project)) // ako nije selektovan projekat, nema dodavanja novog Doc
+        if((selectedRuNode == null) || !(selectedRuNode instanceof Project)) {// ako nije selektovan projekat, nema dodavanja novog Doc
             return;
+        }
 
         Project selectedProject = (Project) selectedRuNode;
-        Document document = new Document("Document " + (selectedProject.getChildren().size() +1),selectedProject);
+        Document document = new Document("Document " + (selectedProject.getChildren().size() + 1),selectedProject);
         MainFrame.getInstance().getTree().addDocument(selectedProject, document);
         MainFrame.getInstance().getSubject().notifyAllObservers();
     }

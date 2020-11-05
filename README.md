@@ -22,7 +22,7 @@ Alat - Računarski program koji služi programerima ili korisnicima za razvoj, k
 
 Interaktivan - Program koji trenutno reaguje i odgovara čim korisnik deluje. Korišćenje interaktivnog softvera podseća na održavanje konverzacije, gde odgovori korisnika menjaju način na koji sistem funkcioniše.
 
-Softverski proizvod - Konačan rezultat razvojnog ciklusa. Podrazumeva softver koji je licenciran ili na drugi način ponuđen, obezbeđen ili dostupan.
+Softverski proizvod - Konačan rezultat razvojnog ciklusa. Podrazumeva softver koji je licenciran ili na drugi način obezbeđen ili dostupan.
 
 Korisnik - Pojedinac ili organizacioni sistem koji stupa u interakciju sa softverom i koristi ga kao alat.
 

@@ -4,8 +4,8 @@
 
 ## Formalizacija vizije projekta - Rukovalac dokumentima 
 ### 1. Uvod
-Svakodnevno se generiše enormna količina dokumenata koje je potrebno usmeriti i sistematizovati.   
-U nastojanju da se omogući rukovanje dokumentima, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
+
+U nastojanju da se omogući rukovanje dokumentima, razvija se ideja o softverskom proizvodu - **Rukovalac dokumentima (RuDok)**. 
 > Svrha rada jeste da objedini i definiše karakteristike Rukovaoca dokumentima.
 
 Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, **događajima upravljan**, **programski alat**.   
@@ -36,11 +36,7 @@ Funkcionalnosti koje Rukovalac dokumentima nudi:
 * **rukovanje radnim prostorima alata**
 * **deljenje dokumenata**
 
-Deljenje dokumenata se može vršiti na nekoliko načina:
-1.  deljenje celih dokumenata - između kolekcija dokumenata
-2.  deljenje delova dokumenata(stranica) - između kolekcija dokumenata
-3.  deljenja delova stranice - izmedju razlicitih stranica ili dokumenata
-
+Deljenje dokumenata podrazumeva deljenje celih dokumenata, deljenje delova dokumenata(stranica) i deljenje delova stranica.    
 Kao GUI orijentisan alat, svojim grafičkim elementima će omogućiti korisnicima upotrebu svih pojedinosti softvera.
 
 #### 3.1 Šta izdvaja RuDok od drugih proizvoda?
@@ -52,11 +48,13 @@ Korisnici će moći da slobodno formiraju radne prostore koji sadrže kolekcije 
 Konkretan dokument može imati proizvoljan broj stranica, a svaka stranica proizvoljan broj slotova, vidljivih na radnoj površini. 
 
 
-### 4. Pregled korisnika i primena
+### 4. Pregled korisnika i primena                                                                             
 
 Osnovni cilj RuDok-a je da služi svim korisnicima pri rešavanju problema.  
-Stoga, RuDok neće biti namenjen ni za jednog specifičnog pojedinca ili sistem, već za slobodno tržište.
-Potencijalni korisnici mogu biti: eksperti koji vladaju domenom problema, veliki poslovni sistemi, ali i pojedinci koji ne rukuju često dokumentima.
+Stoga, RuDok neće biti namenjen ni za jednog specifičnog pojedinca ili sistem, već za slobodno tržište.       
+Potencijalni korisnici mogu biti: eksperti koji vladaju domenom problema u radu sa dokumentima, poslovni sistemi, ali i pojedinci koji ne rukuju često dokumentima.
 
 Uz određena prilagođavanja Rukovalac dokumentima može naći primenu u: **računovodstvu**,  **pravnim službama**, **obrazovanju i edukaciji**, **štamparskoj i izdavačkoj delatnosti**, **bankarstvu**, kao i u srodnim granama.
 
+### 5. Logo
+![](/layer128.png)

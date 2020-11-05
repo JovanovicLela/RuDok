@@ -4,10 +4,8 @@
 
 ## Formalizacija vizije projekta - Rukovalac dokumentima 
 ### 1. Sažetak
-Svakodnevno se generiše enormna količina informacija koje je potrebno usmeriti i sistematizovati.   
-Dokumenti sadrže informacije. 
-Posledično, upravljanje dokumentima i pronalaženje informacija predstavlja ključnu odrednicu organizacije.   
-U nastojanju da se omogući dizajniranje i operativna upotreba dokumenata, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
+Svakodnevno se generiše enormna količina dokumenata koje je potrebno usmeriti i sistematizovati.   
+U nastojanju da se omogući rukovanje dokumentima, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
 > Svrha rada jeste da objedini i definiše karakteristike Rukovaoca dokumentima.
 
 ### 2. Uvod
@@ -51,7 +49,8 @@ Kao GUI orijentisan alat, svojim grafičkim elementima će omogućiti korisnicim
 Na tržištu postoje slični proizvodi. Office paket, integrisana razvojna okruženja Eclipse i Intellij su neki od primera. Za razliku od njih, Rukovalac dokumentima će imati mogućnost struktuiranog prikaza dokumenata.
 > Prepoznatljiva karakteristika: hijerarhijska struktura
 
-Korisnici će moći da slobodno formiraju radne prostore koji sadrže kolekcije dokumenata. Konkretan dokument može imati proizvoljan broj stranica, a svaka stranica proizvoljan broj slotova, vidljivih na radnoj površini. 
+Korisnici će moći da slobodno formiraju radne prostore koji sadrže kolekcije dokumenata.  
+Konkretan dokument može imati proizvoljan broj stranica, a svaka stranica proizvoljan broj slotova, vidljivih na radnoj površini. 
 
 
 ### 5. Pregled korisnika i primena

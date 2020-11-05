@@ -2,6 +2,7 @@ package dsw.rudok.app.gui.swing.view;
 
 import dsw.rudok.app.core.Repository;
 import dsw.rudok.app.gui.swing.controller.ActionManager;
+import dsw.rudok.app.gui.swing.observer.Subject;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
 import lombok.Getter;
@@ -23,7 +24,7 @@ public class MainFrame extends JFrame{
     private JTree workspaceTree;
     private ProjectPanel desktop;
     private JMenuBar menu;
-
+    private Subject subject = new Subject();
     private MainFrame(){
 
     }
@@ -91,4 +92,5 @@ public class MainFrame extends JFrame{
     public RuTree getTree(){
         return tree;
     }
+    public Subject getSubject(){return subject;}
 }

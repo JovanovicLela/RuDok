@@ -3,19 +3,18 @@
 # **Rukovalac dokumentima (RuDok)**
 
 ## Formalizacija vizije projekta - Rukovalac dokumentima 
-### 1. Sažetak
+### 1. Uvod
 Svakodnevno se generiše enormna količina dokumenata koje je potrebno usmeriti i sistematizovati.   
 U nastojanju da se omogući rukovanje dokumentima, razvija se ideja o softverskom proizvodu- **Rukovalac dokumentima (RuDok)**. 
 > Svrha rada jeste da objedini i definiše karakteristike Rukovaoca dokumentima.
 
-### 2. Uvod
 Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, **događajima upravljan**, **programski alat**.   
 **Osnovna namena** je da služi pojedincima i poslovnim sistemima koji u osnovi svoje delatnosti imaju rad sa dokumentima.     
 **Osnovne mogućnosti bi bile:** kreiranje, upravljanje, dizajn, skladištenje i deljenje dokumenata.
 
 ***Ključni pojmovi:***  _dokument_, _alat_, _interaktivan_, _softverski proizvod_, _korisnik_
 
-### 3. Rečnik pojmova
+### 2. Rečnik pojmova
 
 Dokument - Složen proizvod namenjen komunikaciji ili čuvanju kolekcije podataka.
 
@@ -27,7 +26,7 @@ Softverski proizvod - Konačan rezultat razvojnog ciklusa. Podrazumeva softver k
 
 Korisnik - Pojedinac ili organizacioni sistem koji stupa u interakciju sa softverom i koristi ga kao alat.
 
-### 4. Osnovne funkcionalnosti
+### 3. Osnovne funkcionalnosti
 
 Ideja je da razvijemo alat koji će korisnicima omogućiti opis, definisanje, operativnu upotrebu, trajno čuvanje dokumenata proizvoljne strukture, kao i slobodno formiranje kolekcija dokumenata i radnih prostora koji sadrže te kolekcije.
 
@@ -44,7 +43,7 @@ Deljenje dokumenata se može vršiti na nekoliko načina:
 
 Kao GUI orijentisan alat, svojim grafičkim elementima će omogućiti korisnicima upotrebu svih pojedinosti softvera.
 
-#### 4.1 Šta izdvaja Rukovalac dokumentima od drugih?
+#### 3.1 Šta izdvaja Rukovalac dokumentima od drugih?
 
 Na tržištu postoje slični proizvodi. Office paket, integrisana razvojna okruženja Eclipse i Intellij su neki od primera. Za razliku od njih, Rukovalac dokumentima će imati mogućnost struktuiranog prikaza dokumenata.
 > Prepoznatljiva karakteristika: hijerarhijska struktura
@@ -53,7 +52,7 @@ Korisnici će moći da slobodno formiraju radne prostore koji sadrže kolekcije 
 Konkretan dokument može imati proizvoljan broj stranica, a svaka stranica proizvoljan broj slotova, vidljivih na radnoj površini. 
 
 
-### 5. Pregled korisnika i primena
+### 4. Pregled korisnika i primena
 
 Osnovna zamisao RuDok-a je da služi svim korisnicima pri rešavanju problema.  
 Stoga, RuDok neće biti namenjen ni za jednog specifičnog pojedinca ili sistem, već za slobodno tržište.

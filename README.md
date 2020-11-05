@@ -6,7 +6,7 @@
 ### 1. Uvod
 
 U nastojanju da se omogući rukovanje dokumentima, razvija se ideja o softverskom proizvodu - **Rukovalac dokumentima (RuDok)**. 
-> Svrha rada jeste da objedini i definiše karakteristike Rukovaoca dokumentima.
+> Svrha rada jeste da objedini i definiše karakteristike RuDok-a.
 
 Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, **događajima upravljan**, **programski alat**.   
 **Osnovna namena** je da služi pojedincima i poslovnim sistemima koji u osnovi svoje delatnosti imaju rad sa dokumentima.     

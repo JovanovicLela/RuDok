@@ -43,7 +43,7 @@ Deljenje dokumenata se može vršiti na nekoliko načina:
 
 Kao GUI orijentisan alat, svojim grafičkim elementima će omogućiti korisnicima upotrebu svih pojedinosti softvera.
 
-#### 3.1 Šta izdvaja Rukovalac dokumentima od drugih?
+#### 3.1 Šta izdvaja RuDok od drugih proizvoda?
 
 Na tržištu postoje slični proizvodi. Office paket, integrisana razvojna okruženja Eclipse i Intellij su neki od primera. Za razliku od njih, Rukovalac dokumentima će imati mogućnost struktuiranog prikaza dokumenata.
 > Prepoznatljiva karakteristika: hijerarhijska struktura
@@ -54,7 +54,7 @@ Konkretan dokument može imati proizvoljan broj stranica, a svaka stranica proiz
 
 ### 4. Pregled korisnika i primena
 
-Osnovna zamisao RuDok-a je da služi svim korisnicima pri rešavanju problema.  
+Osnovni cilj RuDok-a je da služi svim korisnicima pri rešavanju problema.  
 Stoga, RuDok neće biti namenjen ni za jednog specifičnog pojedinca ili sistem, već za slobodno tržište.
 Potencijalni korisnici mogu biti: eksperti koji vladaju domenom problema, veliki poslovni sistemi, ali i pojedinci koji ne rukuju često dokumentima.
 

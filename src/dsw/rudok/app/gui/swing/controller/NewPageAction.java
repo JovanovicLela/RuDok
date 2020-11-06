@@ -4,6 +4,8 @@ import com.sun.tools.javac.Main;
 import dsw.rudok.app.gui.swing.observer.Observer;
 import dsw.rudok.app.gui.swing.view.MainFrame;
 import dsw.rudok.app.repository.Document;
+import dsw.rudok.app.repository.Page;
+import dsw.rudok.app.repository.node.RuNode;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -31,17 +33,16 @@ public class NewPageAction extends  AbstractRudokAction implements Observer {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-//nesto
-        System.out.println("Bilo sta");
-        System.out.println(" sta");
-        System.out.println("Bilo sta");
-        System.out.println("Bilo sta");
-        System.out.println("Bilo sta");
-        System.out.println("Bilo sta");
-        System.out.println("Bilo sta");
-        System.out.println("Bilo sta");
 
+        RuNode selectedRuNode = MainFrame.getInstance().getTree().getSelectedRuNode();
 
+        if((selectedRuNode == null) || !(selectedRuNode instanceof  Document){
+            return;
+        }
+        Document selectedDocument = (Document) selectedRuNode;
+        Page page = new Page("Page: "+ (selectedDocument.getChildren().size()), selectedDocument);
+        MainFrame.getInstance().getTree().addPage(selectedDocument, page);
+        MainFrame.getInstance().getSubject().notifyAllObservers();
 
     }
 }

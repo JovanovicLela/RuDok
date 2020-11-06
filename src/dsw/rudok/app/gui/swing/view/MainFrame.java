@@ -5,14 +5,11 @@ import dsw.rudok.app.gui.swing.controller.ActionManager;
 import dsw.rudok.app.gui.swing.observer.Subject;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
-import lombok.Getter;
-import lombok.Setter;
+
 
 import javax.swing.*;
 import java.awt.*;
 
-@Getter
-@Setter
 public class MainFrame extends JFrame{
 
     private static  MainFrame instance = null;
@@ -95,4 +92,56 @@ public class MainFrame extends JFrame{
         return tree;
     }
     public Subject getSubject(){return subject;}
+
+    public static void setInstance(MainFrame instance) {
+        MainFrame.instance = instance;
+    }
+
+    public void setActionManager(ActionManager actionManager) {
+        this.actionManager = actionManager;
+    }
+
+    public AboutDialog getAboutDialog() {
+        return aboutDialog;
+    }
+
+    public void setAboutDialog(AboutDialog aboutDialog) {
+        this.aboutDialog = aboutDialog;
+    }
+
+    public Repository getDocumentRepository() {
+        return documentRepository;
+    }
+
+    public void setTree(RuTree tree) {
+        this.tree = tree;
+    }
+
+    public JToolBar getToolBar() {
+        return toolBar;
+    }
+
+    public void setToolBar(JToolBar toolBar) {
+        this.toolBar = toolBar;
+    }
+
+    public ProjectPanel getDesktop() {
+        return desktop;
+    }
+
+    public void setDesktop(ProjectPanel desktop) {
+        this.desktop = desktop;
+    }
+
+    public JMenuBar getMenu() {
+        return menu;
+    }
+
+    public void setMenu(JMenuBar menu) {
+        this.menu = menu;
+    }
+
+    public void setSubject(Subject subject) {
+        this.subject = subject;
+    }
 }

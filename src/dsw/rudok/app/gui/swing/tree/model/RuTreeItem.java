@@ -2,16 +2,13 @@ package dsw.rudok.app.gui.swing.tree.model;
 
 import dsw.rudok.app.repository.node.RuNode;
 import dsw.rudok.app.repository.node.RuNodeComposite;
-import lombok.Data;
-import lombok.Getter;
+
 
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
 import java.util.Enumeration;
 import java.util.Iterator;
 
-@Data
-@Getter
 public class RuTreeItem extends DefaultMutableTreeNode{
 
     private  String name;
@@ -96,6 +93,22 @@ public class RuTreeItem extends DefaultMutableTreeNode{
             return  this.nodeModel.equals(otherObj.nodeModel);
         }
         return false;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public RuNode getNodeModel() {
+        return nodeModel;
+    }
+
+    public void setNodeModel(RuNode nodeModel) {
+        this.nodeModel = nodeModel;
     }
 
     @Override

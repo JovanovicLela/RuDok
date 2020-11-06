@@ -3,9 +3,8 @@ package dsw.rudok.app.gui.swing;
 import dsw.rudok.app.core.Gui;
 import dsw.rudok.app.core.Repository;
 import dsw.rudok.app.gui.swing.view.MainFrame;
-import lombok.Setter;
 
-@Setter
+
 public class SwingGui implements Gui {
 
     private MainFrame instance;

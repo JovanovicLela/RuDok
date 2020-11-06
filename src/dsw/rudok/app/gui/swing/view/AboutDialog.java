@@ -27,6 +27,7 @@ public class AboutDialog  extends JDialog {
         lelaSl = new JLabel(img1);
         lelaOpis = new JLabel("<html>Lela Jovanović <br/>ljovanovic5919rn@raf.rs</html>");
         lelaOpis.setForeground(Color.BLACK);
+        lelaOpis.setFont(new Font("Times New Roman", Font.PLAIN, 21));
 
         img2 = new ImageIcon(getClass().getResource("redIcon.png"));
         Image image2 = img2.getImage();
@@ -36,6 +37,7 @@ public class AboutDialog  extends JDialog {
         andrijanaSl = new JLabel(img2);
         andrijanaOpis = new JLabel("<html>Andrijana Dimić <br/>adimic7820rn@raf.rs</html>");
         andrijanaOpis.setForeground(Color.BLACK);
+        andrijanaOpis.setFont(new Font("Times New Roman", Font.PLAIN, 21));
 
         add(lelaSl);
         add(lelaOpis);
@@ -43,7 +45,7 @@ public class AboutDialog  extends JDialog {
         add(andrijanaOpis);
 
         setLayout(new GridLayout(2, 2, 10, 10));
-        getContentPane().setBackground(Color.LIGHT_GRAY);
+        getContentPane().setBackground(Color.lightGray);
         setResizable(false);
         setVisible(false);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

@@ -8,8 +8,14 @@ public class MyMenuBar extends JMenuBar {
     public MyMenuBar(){
         JMenu fileMenu = new JMenu("File");
         fileMenu.setMnemonic(KeyEvent.VK_F);
-        fileMenu.add(MainFrame.getInstance().getActionManager().getExitAction());
+
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewProjectAction());
+        fileMenu.add(MainFrame.getInstance().getActionManager().getNewDocumentAction());
+        fileMenu.add(MainFrame.getInstance().getActionManager().getNewPageAction());
+        fileMenu.add(MainFrame.getInstance().getActionManager().getNewSlotAction());
+        fileMenu.addSeparator();
+        fileMenu.add(MainFrame.getInstance().getActionManager().getExitAction());
+
 
         JMenu aboutMenu = new JMenu("About");
         aboutMenu.setMnemonic(KeyEvent.VK_A);

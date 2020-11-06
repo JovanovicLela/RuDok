@@ -24,7 +24,8 @@ public class MainFrame extends JFrame{
     private JTree workspaceTree;
     private ProjectPanel desktop;
     private JMenuBar menu;
-    private Subject subject = new Subject();
+    private Subject subject = new Subject(); //observer pattern
+
     private MainFrame(){
 
     }
@@ -54,7 +55,7 @@ public class MainFrame extends JFrame{
         toolBar = new ToolBar();
         add(toolBar, BorderLayout.NORTH);
 
-        desktop = new ProjectPanel();
+        desktop = new ProjectPanel(); // vec dodato
 
         aboutDialog = new AboutDialog();
         setAboutDialog(aboutDialog);
@@ -63,6 +64,7 @@ public class MainFrame extends JFrame{
         scroll.setMinimumSize(new Dimension(200,150));
         JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,scroll,desktop);
         getContentPane().add(split,BorderLayout.CENTER);
+
         split.setDividerLocation(250);
         split.setOneTouchExpandable(true);
 

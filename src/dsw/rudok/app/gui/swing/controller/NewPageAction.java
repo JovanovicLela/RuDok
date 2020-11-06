@@ -23,26 +23,28 @@ public class NewPageAction extends  AbstractRudokAction implements Observer {
         MainFrame.getInstance().getSubject().attach(this);
     }
 
-    @Override
-    public void update() {
-        if(MainFrame.getInstance().getTree().getSelectedRuNode() instanceof Document){
-            setEnabled(true);
-        }
-        setEnabled(false);
-    }
 
     @Override
     public void actionPerformed(ActionEvent e) {
 
         RuNode selectedRuNode = MainFrame.getInstance().getTree().getSelectedRuNode();
 
-        if((selectedRuNode == null) || !(selectedRuNode instanceof  Document){
+        if((selectedRuNode == null) || !(selectedRuNode instanceof  Document)){
             return;
         }
         Document selectedDocument = (Document) selectedRuNode;
-        Page page = new Page("Page: "+ (selectedDocument.getChildren().size()), selectedDocument);
+        Page page = new Page("Page: "+ (selectedDocument.getChildren().size() + 1), selectedDocument);
         MainFrame.getInstance().getTree().addPage(selectedDocument, page);
         MainFrame.getInstance().getSubject().notifyAllObservers();
 
+    }
+
+    @Override
+    public void update() {
+        if(MainFrame.getInstance().getTree().getSelectedRuNode() instanceof Document) {
+            setEnabled(true);
+        }else {
+            setEnabled(false);
+        }
     }
 }

@@ -48,7 +48,7 @@ public class RuTreeCellEditor extends DefaultTreeCellEditor implements ActionLis
             ((Workspace) clicked.getNodeModel()).setName(e.getActionCommand());
         }
         else {
-            ((Workspace) clicked.getNodeModel()).setName(e.getActionCommand());
+          //  ((Workspace) clicked.getNodeModel()).setName(e.getActionCommand());
         }
 
 

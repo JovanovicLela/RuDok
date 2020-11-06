@@ -55,7 +55,6 @@ public class MainFrame extends JFrame{
         desktop = new ProjectPanel(); // vec dodato
 
         aboutDialog = new AboutDialog();
-        setAboutDialog(aboutDialog);
 
         JScrollPane scroll = new JScrollPane(workspaceTree);
         scroll.setMinimumSize(new Dimension(200,150));
@@ -64,8 +63,6 @@ public class MainFrame extends JFrame{
 
         split.setDividerLocation(250);
         split.setOneTouchExpandable(true);
-
-
 
     }
     public static MainFrame getInstance(){

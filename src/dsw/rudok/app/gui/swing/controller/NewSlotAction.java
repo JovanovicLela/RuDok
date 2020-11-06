@@ -25,9 +25,11 @@ public class NewSlotAction extends  AbstractRudokAction implements Observer {
 
     @Override
     public void update() {
-        if(MainFrame.getInstance().getTree().getSelectedRuNode() instanceof Page)
+        if (MainFrame.getInstance().getTree().getSelectedRuNode() instanceof Page) {
             setEnabled(true);
-        setEnabled(false);
+        } else {
+            setEnabled(false);
+        }
     }
 
     @Override

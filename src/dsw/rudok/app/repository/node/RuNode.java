@@ -10,6 +10,7 @@ public abstract class RuNode {
         this.parent = parent;
     }
 
+
     @Override
     public boolean equals(Object obj) {
         if (obj != null && obj instanceof  RuNode){

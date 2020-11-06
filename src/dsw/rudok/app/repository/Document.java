@@ -3,6 +3,7 @@ package dsw.rudok.app.repository;
 import dsw.rudok.app.repository.node.RuNode;
 import dsw.rudok.app.repository.node.RuNodeComposite;
 
+
 public class Document extends RuNodeComposite {
 
   public Document(String name, RuNode parent){

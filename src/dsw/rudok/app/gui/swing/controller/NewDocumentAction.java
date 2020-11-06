@@ -14,7 +14,7 @@ public class NewDocumentAction extends  AbstractRudokAction implements Observer 
 
     public  NewDocumentAction(){
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.CTRL_MASK));
-        putValue(SMALL_ICON, loadIcon("images/newDocument1.png"));
+        putValue(SMALL_ICON, loadIcon("images/newDocument.png"));
         putValue(NAME, "New Document");
         putValue(SHORT_DESCRIPTION, "New Document");
 

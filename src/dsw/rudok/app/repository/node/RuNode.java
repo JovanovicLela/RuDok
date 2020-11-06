@@ -1,10 +1,5 @@
 package dsw.rudok.app.repository.node;
 
-import lombok.Setter;
-import lombok.Getter;
-@Setter
-@Getter
-
 public abstract class RuNode {
 
     private String name;
@@ -24,8 +19,25 @@ public abstract class RuNode {
         return  false;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public RuNode getParent() {
+        return parent;
+    }
+
+    public void setParent(RuNode parent) {
+        this.parent = parent;
+    }
+
     @Override
     public String toString() {
         return "RuNode [name = "+ name + "]";
     }
 }
+

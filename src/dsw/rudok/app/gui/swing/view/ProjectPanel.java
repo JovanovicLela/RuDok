@@ -2,7 +2,7 @@ package dsw.rudok.app.gui.swing.view;
 
 import dsw.rudok.app.repository.Document;
 import dsw.rudok.app.repository.Project;
-import lombok.val;
+
 
 import javax.swing.*;
 import java.awt.*;

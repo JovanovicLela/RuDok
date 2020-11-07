@@ -27,7 +27,7 @@ public class AppCore extends ApplicationFramework {
     public static void main(String[] args) {
         Repository repository = new RepositoryImpl();
         Gui gui = new SwingGui(repository);
-        //System.out.println("Tekst neki");
+        System.out.println("Tekst neki");
         ApplicationFramework appCore = AppCore.getInstance();
         appCore.initialise(gui, repository);
         appCore.run();

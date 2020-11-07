@@ -36,8 +36,7 @@ Funkcionalnosti koje Rukovalac dokumentima nudi:
 * **rukovanje radnim prostorima alata**
 * **deljenje dokumenata**
 
-Deljenje dokumenata podrazumeva deljenje celih dokumenata, deljenje delova dokumenata(stranica) i deljenje delova stranica.    
-Kao GUI orijentisan alat, svojim grafičkim elementima će omogućiti korisnicima upotrebu svih pojedinosti softvera.
+Deljenje dokumenata podrazumeva deljenje celih dokumenata, deljenje delova dokumenata(stranica) i deljenje delova stranica. 
 
 #### 3.1 Šta izdvaja RuDok od drugih proizvoda?
 

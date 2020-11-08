@@ -2,7 +2,7 @@
 
 # **Rukovalac dokumentima (RuDok)**
 
-## Formalizacija vizije projekta - Rukovalac dokumentima 
+## Formalizacija vizije projekta - Rukovalac dokumentima  
 ### 1. Uvod
 
 U nastojanju da se korisnicima pomogne prilikom rukovanja dokumentima, razvija se ideja o softverskom proizvodu - **Rukovalac dokumentima (RuDok)**. 

@@ -16,7 +16,7 @@ Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, 
 
 ### 2. Rečnik pojmova
 
-Dokument - Složen proizvod namenjen komunikaciji ili čuvanju kolekcije podataka.
+Dokument - Složen proizvod namenjen čuvanju kolekcije podataka, sa potencijalno multimedijalnim sadržajem.
 
 Alat - Softver koji služi programerima ili korisnicima za razvoj, upotrebu, održavanje ili podržavanje drugog softvera za određenu funkcionalnost.
 

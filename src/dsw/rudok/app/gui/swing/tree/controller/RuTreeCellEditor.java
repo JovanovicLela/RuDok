@@ -1,7 +1,10 @@
 package dsw.rudok.app.gui.swing.tree.controller;
 
+import dsw.rudok.app.gui.swing.errorhandler.ErrorHandlerImpl;
 import dsw.rudok.app.gui.swing.tree.model.RuTreeItem;
+import dsw.rudok.app.gui.swing.view.MainFrame;
 import dsw.rudok.app.repository.Workspace;
+import dsw.rudok.app.repository.node.RuNode;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultTreeCellEditor;
@@ -43,13 +46,13 @@ public class RuTreeCellEditor extends DefaultTreeCellEditor implements ActionLis
             return;
         RuTreeItem clicked = (RuTreeItem) clickedOn;
 
-        if(clicked.getNodeModel() instanceof Workspace){
-            clicked.setName(e.getActionCommand());
-            ((Workspace) clicked.getNodeModel()).setName(e.getActionCommand());
-        }
-        else {
-          //  ((Workspace) clicked.getNodeModel()).setName(e.getActionCommand());
-        }
+       if(e.getActionCommand().isEmpty()){
+           MainFrame.getInstance().getError().onError(ErrorHandlerImpl.ERROR_CODE_INVALID_NAME);
+
+       }else{
+           clicked.setName(e.getActionCommand());
+           ((RuNode)clicked.getNodeModel()).setName(e.getActionCommand());
+       }
 
 
     }

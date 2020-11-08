@@ -3,6 +3,7 @@ package dsw.rudok.app.gui.swing.view;
 import dsw.rudok.app.core.Repository;
 import dsw.rudok.app.gui.swing.controller.ActionManager;
 import dsw.rudok.app.gui.swing.errorhandler.ErrorHandler;
+import dsw.rudok.app.gui.swing.errorhandler.ErrorObserver;
 import dsw.rudok.app.gui.swing.observer.Subject;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
@@ -11,7 +12,7 @@ import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
 import javax.swing.*;
 import java.awt.*;
 
-public class MainFrame extends JFrame{
+public class MainFrame extends JFrame implements ErrorObserver {
 
     private static  MainFrame instance = null;
     private ActionManager actionManager;
@@ -54,6 +55,7 @@ public class MainFrame extends JFrame{
         toolBar = new ToolBar();
         add(toolBar, BorderLayout.NORTH);
 
+        error.addObserver(this);
         desktop = new ProjectPanel();
 
         aboutDialog = new AboutDialog();
@@ -158,6 +160,12 @@ public class MainFrame extends JFrame{
     }
 
     public void setSubject(Subject subject) {
+
         this.subject = subject;
     }
+
+     @Override
+     public void showWarning(String message){
+        JOptionPane.showMessageDialog(null,message);
+     }
 }

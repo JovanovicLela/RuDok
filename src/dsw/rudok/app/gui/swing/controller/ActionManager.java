@@ -11,6 +11,7 @@ public class ActionManager {
     private NewPageAction newPageAction;
     private NewSlotAction newSlotAction;
 
+    private RenameAction renameAction;
     private CLoseTab cLoseTab;
     private CloseAllTabs closeAllTabs;
 
@@ -29,8 +30,17 @@ public class ActionManager {
         newPageAction = new NewPageAction();
         newSlotAction = new NewSlotAction();
 
+        renameAction = new RenameAction();
         cLoseTab = new CLoseTab();
         closeAllTabs = new CloseAllTabs();
+    }
+
+    public RenameAction getRenameAction() {
+        return renameAction;
+    }
+
+    public void setRenameAction(RenameAction renameAction) {
+        this.renameAction = renameAction;
     }
 
     public CloseAllTabs getCloseAllTabs() {

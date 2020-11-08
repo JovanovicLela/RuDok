@@ -33,14 +33,17 @@ public class MainFrame extends JFrame implements ErrorObserver {
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                Object[] opcije = {"Da, želim da sačuvam", "Ne, ne želim da sačuvam"};
+                Object[] opcije;
+                opcije = new Object[]{"Cancel", "Exit"};
 
-                int odgovor = JOptionPane.showOptionDialog(MainFrame.getInstance(),"Da li želite da sačuvate radni prostor?", "Quit: Continue",
+                int odgovor = JOptionPane.showOptionDialog(MainFrame.getInstance(), "Do you want to exit workspace?", "Confirm exit",
                         JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcije, opcije[1]);
-                if(odgovor == JOptionPane.YES_OPTION){
-                    return;//treba dodati za save, za sada nije uradjeno
+                if (odgovor == JOptionPane.YES_OPTION) {
+                    MainFrame.getInstance().setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
                 }
-                System.exit(0);
+                if (odgovor == JOptionPane.NO_OPTION) {
+                    System.exit(0);
+                }
 
             }
         });

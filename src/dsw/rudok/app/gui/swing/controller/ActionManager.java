@@ -12,6 +12,7 @@ public class ActionManager {
     private NewSlotAction newSlotAction;
 
     private CLoseTab cLoseTab;
+    private CloseAllTabs closeAllTabs;
 
 
 
@@ -29,6 +30,15 @@ public class ActionManager {
         newSlotAction = new NewSlotAction();
 
         cLoseTab = new CLoseTab();
+        closeAllTabs = new CloseAllTabs();
+    }
+
+    public CloseAllTabs getCloseAllTabs() {
+        return closeAllTabs;
+    }
+
+    public void setCloseAllTabs(CloseAllTabs closeAllTabs) {
+        this.closeAllTabs = closeAllTabs;
     }
 
     public CLoseTab getcLoseTab() {

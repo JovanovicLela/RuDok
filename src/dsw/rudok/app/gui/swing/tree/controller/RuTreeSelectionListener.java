@@ -20,9 +20,9 @@ public class RuTreeSelectionListener implements TreeSelectionListener {
 
         MainFrame.getInstance().getSubject().notifyAllObservers();
         // privremeno resenje dok se ne implementira tacka 6
-        if(!"Workspace".equals(treeItemSelected.getName())){
-            MainFrame.getInstance().getDesktop().setProjectName(treeItemSelected.getName());
-        }
+       //if(!"Workspace".equals(treeItemSelected.getName())){
+         //   MainFrame.getInstance().getDesktop().setProjectName(treeItemSelected.getName());
+        //}
 
     }
 }

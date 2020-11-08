@@ -2,6 +2,7 @@ package dsw.rudok.app.gui.swing.view;
 
 import dsw.rudok.app.core.Repository;
 import dsw.rudok.app.gui.swing.controller.ActionManager;
+import dsw.rudok.app.gui.swing.errorhandler.ErrorHandler;
 import dsw.rudok.app.gui.swing.observer.Subject;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
@@ -21,6 +22,7 @@ public class MainFrame extends JFrame{
     private JTree workspaceTree;
     private ProjectPanel desktop;
     private JMenuBar menu;
+    private ErrorHandler error;
     private Subject subject = new Subject(); //observer pattern
 
     private MainFrame(){
@@ -98,6 +100,14 @@ public class MainFrame extends JFrame{
         return tree;
     }
     public Subject getSubject(){return subject;}
+
+    public ErrorHandler getError() {
+        return error;
+    }
+
+    public void setError(ErrorHandler error) {
+        this.error = error;
+    }
 
     public static void setInstance(MainFrame instance) {
         MainFrame.instance = instance;

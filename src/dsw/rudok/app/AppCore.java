@@ -4,6 +4,8 @@ import dsw.rudok.app.core.ApplicationFramework;
 import dsw.rudok.app.core.Gui;
 import dsw.rudok.app.core.Repository;
 import dsw.rudok.app.gui.swing.SwingGui;
+import dsw.rudok.app.gui.swing.errorhandler.ErrorHandler;
+import dsw.rudok.app.gui.swing.errorhandler.ErrorHandlerImpl;
 import dsw.rudok.app.repository.RepositoryImpl;
 
 public class AppCore extends ApplicationFramework {
@@ -26,11 +28,10 @@ public class AppCore extends ApplicationFramework {
 
     public static void main(String[] args) {
         Repository repository = new RepositoryImpl();
-        Gui gui = new SwingGui(repository);
-        System.out.println("Tekst neki");
-        System.out.println("Tekst ");
-
+        ErrorHandler error = new ErrorHandlerImpl();
+        Gui gui = new SwingGui(repository,error);
         ApplicationFramework appCore = AppCore.getInstance();
+
         appCore.initialise(gui, repository);
         appCore.run();
     }

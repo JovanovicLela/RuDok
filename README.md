@@ -26,8 +26,10 @@ Softverski proizvod - Konačan rezultat razvojnog ciklusa. Podrazumeva softver k
 
 Korisnik - Pojedinac ili organizacioni sistem koji stupa u interakciju sa softverom i koristi ga kao alat.
 
-### 3. Osnovne funkcionalnosti
+### 3. Pregled proizvoda
+> Problem koji rešavamo i funkcionalnosti
 
+Poslovni sistemi svakodnevno generišu enormnu količinu dokumenata koje je potrebno usmeriti i sistematizovati.
 Ideja je da razvijemo alat koji će korisnicima omogućiti opis, definisanje, operativnu upotrebu, trajno čuvanje dokumenata proizvoljne strukture, kao i slobodno formiranje kolekcija dokumenata i radnih prostora koji sadrže te kolekcije.
 
 Funkcionalnosti koje Rukovalac dokumentima nudi:
@@ -36,7 +38,6 @@ Funkcionalnosti koje Rukovalac dokumentima nudi:
 * **rukovanje radnim prostorima alata**
 * **deljenje dokumenata**
 
-Deljenje dokumenata podrazumeva deljenje celih dokumenata, deljenje delova dokumenata(stranica) i deljenje delova stranica. 
 
 #### 3.1 Šta izdvaja RuDok od drugih proizvoda?
 

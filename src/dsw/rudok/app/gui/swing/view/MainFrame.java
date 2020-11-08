@@ -5,7 +5,6 @@ import dsw.rudok.app.gui.swing.controller.ActionManager;
 import dsw.rudok.app.gui.swing.observer.Subject;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
-import javafx.scene.control.ScrollBar;
 
 
 import javax.swing.*;

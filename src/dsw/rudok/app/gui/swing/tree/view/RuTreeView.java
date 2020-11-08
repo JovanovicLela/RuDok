@@ -12,6 +12,7 @@ public class RuTreeView extends JTree {
     public RuTreeView(DefaultTreeModel defaultTreeModel){
         setModel(defaultTreeModel);
         RuTreeCellRenderer ruTreeCellRenderer = new RuTreeCellRenderer();
+
         addTreeSelectionListener(new RuTreeSelectionListener());
         addMouseListener(new RuTreeMouseListener());
         setCellEditor(new RuTreeCellEditor(this, ruTreeCellRenderer));

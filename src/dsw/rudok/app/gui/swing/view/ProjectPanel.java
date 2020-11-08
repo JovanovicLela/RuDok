@@ -59,6 +59,14 @@ public class ProjectPanel extends JPanel implements Observer {
         projectNameLabel.setText(projectName);
     }
 
+    public JTabbedPane getTabbedPane() {
+        return tabbedPane;
+    }
+
+    public void setTabbedPane(JTabbedPane tabbedPane) {
+        this.tabbedPane = tabbedPane;
+    }
+
     public void setOpenedProject(Project openedProject) {
         this.openedProject = openedProject;
     }
@@ -67,3 +75,4 @@ public class ProjectPanel extends JPanel implements Observer {
         preview();
     }
 }
+

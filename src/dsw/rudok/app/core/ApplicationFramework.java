@@ -1,6 +1,6 @@
 package dsw.rudok.app.core;
 
-import dsw.rudok.app.gui.swing.errorhandler.ErrorHandler;
+import dsw.rudok.app.gui.swing.errorHandler.ErrorHandler;
 
 public abstract class ApplicationFramework {
 

@@ -4,8 +4,8 @@ import dsw.rudok.app.core.ApplicationFramework;
 import dsw.rudok.app.core.Gui;
 import dsw.rudok.app.core.Repository;
 import dsw.rudok.app.gui.swing.SwingGui;
-import dsw.rudok.app.gui.swing.errorhandler.ErrorHandler;
-import dsw.rudok.app.gui.swing.errorhandler.ErrorHandlerImpl;
+import dsw.rudok.app.gui.swing.errorHandler.ErrorHandler;
+import dsw.rudok.app.gui.swing.errorHandler.ErrorHandlerImpl;
 import dsw.rudok.app.repository.RepositoryImpl;
 
 public class AppCore extends ApplicationFramework {

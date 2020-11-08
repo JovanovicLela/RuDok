@@ -14,6 +14,8 @@ public class MyMenuBar extends JMenuBar {
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewPageAction());
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewSlotAction());
         fileMenu.addSeparator();
+        fileMenu.add(MainFrame.getInstance().getActionManager().getcLoseTab());
+        fileMenu.addSeparator();
         fileMenu.add(MainFrame.getInstance().getActionManager().getExitAction());
 
 

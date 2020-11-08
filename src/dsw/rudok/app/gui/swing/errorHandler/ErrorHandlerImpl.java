@@ -1,4 +1,4 @@
-package dsw.rudok.app.gui.swing.errorhandler;
+package dsw.rudok.app.gui.swing.errorHandler;
 
 import java.util.ArrayList;
 import java.util.List;

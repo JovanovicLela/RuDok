@@ -1,9 +1,8 @@
 package dsw.rudok.app.gui.swing.tree.controller;
 
-import dsw.rudok.app.gui.swing.errorhandler.ErrorHandlerImpl;
+import dsw.rudok.app.gui.swing.errorHandler.ErrorHandlerImpl;
 import dsw.rudok.app.gui.swing.tree.model.RuTreeItem;
 import dsw.rudok.app.gui.swing.view.MainFrame;
-import dsw.rudok.app.repository.Workspace;
 import dsw.rudok.app.repository.node.RuNode;
 
 import javax.swing.*;

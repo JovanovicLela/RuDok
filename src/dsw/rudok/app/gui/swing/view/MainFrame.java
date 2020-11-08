@@ -2,8 +2,8 @@ package dsw.rudok.app.gui.swing.view;
 
 import dsw.rudok.app.core.Repository;
 import dsw.rudok.app.gui.swing.controller.ActionManager;
-import dsw.rudok.app.gui.swing.errorhandler.ErrorHandler;
-import dsw.rudok.app.gui.swing.errorhandler.ErrorObserver;
+import dsw.rudok.app.gui.swing.errorHandler.ErrorHandler;
+import dsw.rudok.app.gui.swing.errorHandler.ErrorObserver;
 import dsw.rudok.app.gui.swing.observer.Subject;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
@@ -11,6 +11,8 @@ import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 public class MainFrame extends JFrame implements ErrorObserver {
 
@@ -27,6 +29,22 @@ public class MainFrame extends JFrame implements ErrorObserver {
     private Subject subject = new Subject(); //observer pattern
 
     private MainFrame(){
+        setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                Object[] opcije = {"Da, želim da sačuvam", "Ne, ne želim da sačuvam"};
+
+                int odgovor = JOptionPane.showOptionDialog(MainFrame.getInstance(),"Da li želite da sačuvate radni prostor?", "Quit: Continue",
+                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcije, opcije[1]);
+                if(odgovor == JOptionPane.YES_OPTION){
+                    return;//treba dodati za save, za sada nije uradjeno
+                }
+                System.exit(0);
+
+            }
+        });
+
 
     }
     private void initialise(){

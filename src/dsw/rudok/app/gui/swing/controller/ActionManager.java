@@ -3,11 +3,17 @@ package dsw.rudok.app.gui.swing.controller;
 public class ActionManager {
 
     private ExitAction exitAction;
+
     private AboutAction aboutAction;
+
     private NewProjectAction newProjectAction;
     private NewDocumentAction newDocumentAction;
     private NewPageAction newPageAction;
     private NewSlotAction newSlotAction;
+
+    private CLoseTab cLoseTab;
+
+
 
     public  ActionManager(){
         initialiseActions();
@@ -21,6 +27,16 @@ public class ActionManager {
         newDocumentAction = new NewDocumentAction();
         newPageAction = new NewPageAction();
         newSlotAction = new NewSlotAction();
+
+        cLoseTab = new CLoseTab();
+    }
+
+    public CLoseTab getcLoseTab() {
+        return cLoseTab;
+    }
+
+    public void setcLoseTab(CLoseTab cLoseTab) {
+        this.cLoseTab = cLoseTab;
     }
 
     public ExitAction getExitAction() {

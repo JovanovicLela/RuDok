@@ -28,7 +28,5 @@ public class DocumentPanel extends JPanel {
             add(panelPage);
         }
 
-
-
     }
 }

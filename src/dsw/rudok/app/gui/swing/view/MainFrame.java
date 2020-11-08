@@ -52,7 +52,7 @@ public class MainFrame extends JFrame{
         toolBar = new ToolBar();
         add(toolBar, BorderLayout.NORTH);
 
-        desktop = new ProjectPanel(); // vec dodato
+        desktop = new ProjectPanel();
 
         aboutDialog = new AboutDialog();
 

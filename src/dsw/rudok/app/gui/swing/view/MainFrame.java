@@ -5,6 +5,7 @@ import dsw.rudok.app.gui.swing.controller.ActionManager;
 import dsw.rudok.app.gui.swing.observer.Subject;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
+import javafx.scene.control.ScrollBar;
 
 
 import javax.swing.*;
@@ -57,12 +58,21 @@ public class MainFrame extends JFrame{
         aboutDialog = new AboutDialog();
 
         JScrollPane scroll = new JScrollPane(workspaceTree);
-        scroll.setMinimumSize(new Dimension(200,150));
-        JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT,scroll,desktop);
-        getContentPane().add(split,BorderLayout.CENTER);
+
+
+        scroll.setMinimumSize(new Dimension(200, 150));
+        scroll.setVerticalScrollBarPolicy(22);
+        scroll.setVisible(true);
+
+        JSplitPane split = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, scroll, desktop);
+        split.setVisible(true);
+
+        getContentPane().add(split,  BorderLayout.CENTER);
 
         split.setDividerLocation(250);
         split.setOneTouchExpandable(true);
+
+        setLocationRelativeTo(null);
 
     }
     public static MainFrame getInstance(){

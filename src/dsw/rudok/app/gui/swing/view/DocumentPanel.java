@@ -22,7 +22,6 @@ public class DocumentPanel extends JPanel {
 
         setLayout(new GridLayout(document.getChildren().size(), 1));
 
-
         for(int i = 0; i < document.getChildren().size(); i++){
             JPanel panelPage = new JPanel();
             panelPage.setBorder(BorderFactory.createEtchedBorder());
@@ -32,9 +31,5 @@ public class DocumentPanel extends JPanel {
             add(panelPage);
 
         }
-
-
-
-
     }
 }

@@ -5,7 +5,7 @@
 ## Formalizacija vizije projekta - Rukovalac dokumentima 
 ### 1. Uvod
 
-U nastojanju da se omogući rukovanje dokumentima, razvija se ideja o softverskom proizvodu - **Rukovalac dokumentima (RuDok)**. 
+U nastojanju da se korisnicima pomogne prilikom rukovanja dokumentima, razvija se ideja o softverskom proizvodu - **Rukovalac dokumentima (RuDok)**. 
 > Svrha rada jeste da objedini i definiše karakteristike i namenu RuDok-a.
 
 Zamisao je da Rukovalac dokumentima bude **interaktivan**, **GUI orijentisan**, **događajima upravljan**, **programski alat**.   

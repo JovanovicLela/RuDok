@@ -3,5 +3,5 @@ package dsw.rudok.app.gui.swing.errorHandler;
 public interface ErrorHandler {
 
     void addObserver(ErrorObserver errorObserver);
-    void onError(int error);
+    void onError(ErrorType error);
 }

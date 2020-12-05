@@ -32,7 +32,11 @@ public class AppCore extends ApplicationFramework {
         Gui gui = new SwingGui(repository,error);
         ApplicationFramework appCore = AppCore.getInstance();
 
-        appCore.initialise(gui, repository);
+        appCore.initialise(gui, repository,error);
         appCore.run();
     }
+     public ErrorHandler getError(){
+        return error;
+     }
+
 }

@@ -1,5 +1,5 @@
 package dsw.rudok.app.gui.swing.errorHandler;
 
 public interface ErrorObserver {
-    void showWarning(String message);
+    void showWarning(Object message);
 }

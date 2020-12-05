@@ -1,5 +1,7 @@
 package dsw.rudok.app.core;
 
-public interface Gui {
+import dsw.rudok.app.gui.swing.errorHandler.ErrorObserver;
+
+public interface Gui extends  ErrorObserver {
     void start();
 }

@@ -12,17 +12,17 @@ public class ErrorHandlerImpl implements ErrorHandler {
     public ErrorHandlerImpl(){
     }
     @Override
-    public void onError(int code){
+    public void onError(ErrorType code){
         switch (code){
-            case ERROR_CODE_INVALID_NAME: {
-            notifyObservers("Polje ne sme biti prazno, molim vas unesite tekst. ");
+            case EMPTY_NODE_ERROR: {
+            notifyObservers(new MyError(1,"Polje ne sme biti prazno, molim Vas unesite tekst.", "Prazan čvor"));
             }
         }
     }
 
-    private void notifyObservers(String message){
+    private void notifyObservers(MyError myError){
         for(ErrorObserver observer : observers){
-            observer.showWarning(message);
+            observer.showWarning(myError);
         }
     }
 

@@ -1,6 +1,5 @@
 package dsw.rudok.app.gui.swing.controller;
 
-import dsw.rudok.app.gui.swing.observer.Observer;
 import dsw.rudok.app.gui.swing.view.MainFrame;
 
 import javax.swing.*;

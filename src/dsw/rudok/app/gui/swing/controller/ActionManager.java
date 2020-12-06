@@ -14,6 +14,7 @@ public class ActionManager {
     private RenameAction renameAction;
     private CLoseTab cLoseTab;
     private CloseAllTabs closeAllTabs;
+    private DeleteNodeAction deleteNodeAction;
 
 
 
@@ -33,6 +34,15 @@ public class ActionManager {
         renameAction = new RenameAction();
         cLoseTab = new CLoseTab();
         closeAllTabs = new CloseAllTabs();
+        deleteNodeAction = new DeleteNodeAction();
+    }
+
+    public DeleteNodeAction getDeleteNodeAction() {
+        return deleteNodeAction;
+    }
+
+    public void setDeleteNodeAction(DeleteNodeAction deleteNodeAction) {
+        this.deleteNodeAction = deleteNodeAction;
     }
 
     public RenameAction getRenameAction() {

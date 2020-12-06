@@ -22,7 +22,6 @@ public class ProjectPanel extends JPanel implements Observer {
         setLayout(new BorderLayout());
         add(projectNameLabel);
         add(tabbedPane);
-
         MainFrame.getInstance().getSubject().attach(this);
 
     }
@@ -32,7 +31,6 @@ public class ProjectPanel extends JPanel implements Observer {
         if(openedProject == null){
             return;
         }
-
         setProjectName(openedProject.getName());
         setTabbedPane(openedProject);
     }

@@ -15,4 +15,11 @@ public interface RuTree {
     void addDocument(Project project, Document document);
     void addPage(Document document, Page page);
     void addSlot(Page page, Slot slot);
+
+    void deleteProject(Project project);
+    void deleteDocument(Project project, Document document);
+    void deletePage(Document document, Page page);
+    void deleteSlot(Page page, Slot slot);
+
+
 }

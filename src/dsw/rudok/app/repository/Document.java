@@ -21,6 +21,17 @@ public class Document extends RuNodeComposite {
    }
 
     @Override
+    public void removeChild(RuNode child) {
+        if(child != null && child instanceof Page){
+            Page page = (Page) child;
+            if(!this.getChildren().contains(page)){
+                this.getChildren().remove(page);
+            }
+        }
+
+    }
+
+    @Override
     public void update() {
         notifyAll();
     }

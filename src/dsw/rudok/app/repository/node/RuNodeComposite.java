@@ -13,6 +13,7 @@ public abstract class RuNodeComposite extends  RuNode {
     }
 
     public  abstract  void addChild(RuNode child);
+    public  abstract  void removeChild(RuNode child);
 
     public RuNodeComposite(String name, RuNode parent, List<RuNode> children) {
         super(name, parent);

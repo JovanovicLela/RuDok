@@ -15,8 +15,22 @@ public class Workspace extends RuNodeComposite {
             Project project = (Project) child;
             if(!this.getChildren().contains(project)){
                 this.getChildren().add(project);
+
             }
         }
+
+    }
+
+    @Override
+    public void removeChild(RuNode child) {
+        if(child != null && child instanceof Project){
+            Project project = (Project) child;
+            if(this.getChildren().contains(project)){
+                this.getChildren().remove(project);
+
+            }
+        }
+
     }
 
     @Override

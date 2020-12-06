@@ -70,6 +70,47 @@ public class RuTreeImplementation implements RuTree {
         SwingUtilities.updateComponentTreeUI(treeView);
     }
 
+    @Override
+    public void deleteProject(Project project) {
+        RuNode nodeModel =((RuTreeItem)treeModel.getRoot()).getNodeModel();
+        ((RuTreeItem)treeModel.getRoot()).add(new RuTreeItem(project));
+        ((Workspace)nodeModel).removeChild(project);
+        SwingUtilities.updateComponentTreeUI(treeView);
+
+    }
+
+    @Override
+    public void deleteDocument(Project project, Document document) {
+        RuTreeItem selectedItem = getSelectedRuTreeItem();
+        if(selectedItem == null)
+            return;
+        selectedItem.add(new RuTreeItem(document));
+        project.removeChild(document);
+        SwingUtilities.updateComponentTreeUI(treeView);
+    }
+
+    @Override
+    public void deletePage(Document document, Page page) {
+        RuTreeItem selectedItem = getSelectedRuTreeItem();
+        if(selectedItem == null)
+            return;
+        selectedItem.add(new RuTreeItem(page));
+        document.removeChild(page);
+        SwingUtilities.updateComponentTreeUI(treeView);
+
+    }
+
+    @Override
+    public void deleteSlot(Page page, Slot slot) {
+        RuTreeItem selectedItem = getSelectedRuTreeItem();
+        if(selectedItem == null)
+            return;
+        selectedItem.remove(new RuTreeItem(slot));
+        page.removeChild(slot);
+        SwingUtilities.updateComponentTreeUI(treeView);
+
+    }
+
     private  RuTreeItem getSelectedRuTreeItem(){
         Object obj = treeView.getLastSelectedPathComponent();
         if((obj == null)  || !(obj instanceof  RuTreeItem))

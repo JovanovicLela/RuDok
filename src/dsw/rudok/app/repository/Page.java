@@ -14,8 +14,21 @@ public class Page extends RuNodeComposite {
             Slot slot =(Slot) child;
             if(!this.getChildren().contains(slot)){
                 this.getChildren().add(slot);
+
             }
         }
+    }
+
+    @Override
+    public void removeChild(RuNode child) {
+        if(child != null && child instanceof Slot){
+            Slot slot =(Slot) child;
+            if(this.getChildren().contains(slot)){
+                this.getChildren().remove(slot);
+
+            }
+        }
+
     }
 
     @Override

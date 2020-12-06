@@ -29,10 +29,11 @@ public class AppCore extends ApplicationFramework {
     public static void main(String[] args) {
         Repository repository = new RepositoryImpl();
         ErrorHandler error = new ErrorHandlerImpl();
+
         Gui gui = new SwingGui(repository,error);
         ApplicationFramework appCore = AppCore.getInstance();
 
-        appCore.initialise(gui, repository,error);
+        appCore.initialise(gui, repository, error);
         appCore.run();
     }
      public ErrorHandler getError(){

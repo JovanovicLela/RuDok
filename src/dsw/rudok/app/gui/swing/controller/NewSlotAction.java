@@ -43,6 +43,6 @@ public class NewSlotAction extends  AbstractRudokAction implements Observer {
         Page selectedPage = (Page) selectedRuNode;
         Slot slot = new Slot("Slot " + (selectedPage.getChildren().size() + 1), selectedPage);
         MainFrame.getInstance().getTree().addSlot(selectedPage, slot);
-        MainFrame.getInstance().getSubject().notifyAllObservers();
+       // MainFrame.getInstance().getSubject().notifyAllObservers();
     }
 }

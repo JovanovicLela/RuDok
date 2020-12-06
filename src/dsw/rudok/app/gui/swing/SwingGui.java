@@ -13,7 +13,7 @@ public class SwingGui implements Gui {
     private Repository documentRepository;
     private ErrorHandler error;
 
-    public SwingGui(Repository documentRepository,ErrorHandler error) {
+    public SwingGui(Repository documentRepository, ErrorHandler error) {
         this.error = error;
         this.documentRepository = documentRepository;
     }

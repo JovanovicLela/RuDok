@@ -17,4 +17,9 @@ public class Page extends RuNodeComposite {
             }
         }
     }
+
+    @Override
+    public void update() {
+        notifyAll();
+    }
 }

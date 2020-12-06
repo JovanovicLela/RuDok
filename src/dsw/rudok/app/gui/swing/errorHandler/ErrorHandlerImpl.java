@@ -3,7 +3,7 @@ package dsw.rudok.app.gui.swing.errorHandler;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ErrorHandlerImpl implements ErrorHandler {
+public class ErrorHandlerImpl implements  ErrorHandler{
 
     public static final int ERROR_CODE_INVALID_NAME = 1;
 
@@ -16,6 +16,9 @@ public class ErrorHandlerImpl implements ErrorHandler {
         switch (code){
             case EMPTY_NODE_ERROR: {
             notifyObservers(new MyError(1,"Polje ne sme biti prazno, molim Vas unesite tekst.", "Prazan čvor"));
+            }
+            case NOTHING_SELECTED: {
+                notifyObservers(new MyError(1,"Nothing is selected, please select item.", "Nothing selected"));
             }
         }
     }

@@ -15,8 +15,14 @@ public class Project extends RuNodeComposite {
             Document document = (Document) child;
             if (!this.getChildren().contains(document)) {
                 this.getChildren().add(document);
+                this.notifyAll();
             }
         }
+    }
+
+    @Override
+    public void update() {
+        notifyAll();
     }
 }
 

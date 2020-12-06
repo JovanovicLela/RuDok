@@ -7,6 +7,8 @@ public class MyMenuBar extends JMenuBar {
 
     public MyMenuBar(){
         JMenu fileMenu = new JMenu("File");
+        JMenu editMenu = new JMenu("Edit");
+
         fileMenu.setMnemonic(KeyEvent.VK_F);
 
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewProjectAction());
@@ -14,9 +16,9 @@ public class MyMenuBar extends JMenuBar {
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewPageAction());
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewSlotAction());
         fileMenu.addSeparator();
-        fileMenu.add(MainFrame.getInstance().getActionManager().getRenameAction());
-        fileMenu.add(MainFrame.getInstance().getActionManager().getcLoseTab());
-        fileMenu.add(MainFrame.getInstance().getActionManager().getCloseAllTabs());
+        editMenu.add(MainFrame.getInstance().getActionManager().getRenameAction());
+        editMenu.add(MainFrame.getInstance().getActionManager().getcLoseTab());
+        editMenu.add(MainFrame.getInstance().getActionManager().getCloseAllTabs());
         fileMenu.addSeparator();
         fileMenu.add(MainFrame.getInstance().getActionManager().getExitAction());
 
@@ -26,6 +28,7 @@ public class MyMenuBar extends JMenuBar {
         aboutMenu.add(MainFrame.getInstance().getActionManager().getAboutAction());
 
         this.add(fileMenu);
+        this.add(editMenu);
         this.add(aboutMenu);
     }
 }

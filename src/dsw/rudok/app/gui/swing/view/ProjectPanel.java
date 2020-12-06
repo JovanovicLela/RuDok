@@ -1,11 +1,9 @@
 package dsw.rudok.app.gui.swing.view;
 
-import com.sun.tools.javac.Main;
 import dsw.rudok.app.gui.swing.observer.Observer;
 import dsw.rudok.app.repository.Document;
 import dsw.rudok.app.repository.Project;
 import dsw.rudok.app.repository.node.RuNode;
-
 
 import javax.swing.*;
 import java.awt.*;
@@ -44,6 +42,7 @@ public class ProjectPanel extends JPanel implements Observer {
 
         for(RuNode ruNodeDoc: project.getChildren()){
             Document document = (Document) ruNodeDoc;
+            tabbedPane.setFont( new Font( "Dialog", Font.BOLD|Font.ITALIC, 12 ) );
             tabbedPane.add(project.getName() + " - " + document.getName(), new DocumentPanel(project.getName(), document));
 
         }

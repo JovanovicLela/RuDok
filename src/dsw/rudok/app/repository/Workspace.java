@@ -18,4 +18,9 @@ public class Workspace extends RuNodeComposite {
             }
         }
     }
+
+    @Override
+    public void update() {
+        this.notifyAll();
+    }
 }

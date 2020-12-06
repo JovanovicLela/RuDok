@@ -41,6 +41,6 @@ public class NewDocumentAction extends  AbstractRudokAction implements Observer 
         Project selectedProject = (Project) selectedRuNode;
         Document document = new Document("Document " + (selectedProject.getChildren().size() + 1),selectedProject);
         MainFrame.getInstance().getTree().addDocument(selectedProject, document);
-        MainFrame.getInstance().getSubject().notifyAllObservers();
+      //  MainFrame.getInstance().getSubject().notifyAllObservers();
     }
 }

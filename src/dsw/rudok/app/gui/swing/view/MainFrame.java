@@ -3,13 +3,10 @@ package dsw.rudok.app.gui.swing.view;
 import dsw.rudok.app.core.Repository;
 import dsw.rudok.app.gui.swing.controller.ActionManager;
 import dsw.rudok.app.gui.swing.errorHandler.ErrorHandler;
-import dsw.rudok.app.gui.swing.errorHandler.ErrorObserver;
 import dsw.rudok.app.gui.swing.errorHandler.MyError;
 import dsw.rudok.app.gui.swing.observer.Subject;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
-import lombok.val;
-
 
 import javax.swing.*;
 import java.awt.*;
@@ -49,8 +46,6 @@ public class MainFrame extends JFrame  {
 
             }
         });
-
-
     }
     private void initialise(){
         actionManager = new ActionManager();
@@ -60,7 +55,9 @@ public class MainFrame extends JFrame  {
         tree = new RuTreeImplementation();
         workspaceTree = tree.generateTree(documentRepository.getWorkspace());
         initialiseGUI();
+
     }
+
     private void initialiseGUI(){
 
         Toolkit kit = Toolkit.getDefaultToolkit();
@@ -70,7 +67,8 @@ public class MainFrame extends JFrame  {
         setSize(screenWidth / 2,screenHeight / 2);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setTitle("RuDok app");
+        setTitle("RuDok");
+
 
         menu = new MyMenuBar();
         setJMenuBar(menu);
@@ -83,8 +81,6 @@ public class MainFrame extends JFrame  {
         aboutDialog = new AboutDialog();
 
         JScrollPane scroll = new JScrollPane(workspaceTree);
-
-
         scroll.setMinimumSize(new Dimension(200, 150));
         scroll.setVerticalScrollBarPolicy(22);
         scroll.setVisible(true);
@@ -93,9 +89,11 @@ public class MainFrame extends JFrame  {
         split.setVisible(true);
 
         getContentPane().add(split,  BorderLayout.CENTER);
-
         split.setDividerLocation(250);
         split.setOneTouchExpandable(true);
+
+        ImageIcon img = new ImageIcon(getClass().getResource("layer32-min.png"));
+        this.setIconImage(img.getImage());
 
         setLocationRelativeTo(null);
 

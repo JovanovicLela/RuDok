@@ -19,4 +19,9 @@ public class Document extends RuNodeComposite {
           }
       }
    }
+
+    @Override
+    public void update() {
+        notifyAll();
+    }
 }

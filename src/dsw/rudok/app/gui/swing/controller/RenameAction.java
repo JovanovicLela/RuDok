@@ -1,16 +1,16 @@
 package dsw.rudok.app.gui.swing.controller;
 
 import dsw.rudok.app.gui.swing.view.MainFrame;
+import dsw.rudok.app.repository.Workspace;
 
 import javax.swing.*;
+import javax.swing.tree.TreePath;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
 public class RenameAction extends  AbstractRudokAction{
 
-    private JTextField textField;
-    private int selectedIndex;
 
 
 
@@ -24,9 +24,17 @@ public class RenameAction extends  AbstractRudokAction{
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        Object obj = MainFrame.getInstance().getWorkspaceTree().getLeadSelectionPath();
 
-         //   selectedIndex = MainFrame.getInstance().getDesktop().getTabbedPane().getSelectedIndex();
-         //MainFrame.getInstance().getDesktop().getTabbedPane().setTitleAt(selectedIndex, String.valueOf(textArea));
+        if(obj == null){
+            return;
+        }
+
+        Object object = ((TreePath)obj).getLastPathComponent();
+        if(object == null || object instanceof Workspace){
+            return;
+        }
+        MainFrame.getInstance().getWorkspaceTree().startEditingAtPath((TreePath)obj);
 
         }
 

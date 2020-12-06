@@ -8,4 +8,8 @@ public class Slot  extends RuNode {
        super(name,parent);
    }
 
+    @Override
+    public void update() {
+        notifyAll();
+    }
 }

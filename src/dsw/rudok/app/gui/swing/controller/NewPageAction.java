@@ -35,7 +35,7 @@ public class NewPageAction extends  AbstractRudokAction implements Observer {
         Document selectedDocument = (Document) selectedRuNode;
         Page page = new Page("Page: "+ (selectedDocument.getChildren().size() + 1), selectedDocument);
         MainFrame.getInstance().getTree().addPage(selectedDocument, page);
-        MainFrame.getInstance().getSubject().notifyAllObservers();
+     //   MainFrame.getInstance().getSubject().notifyAllObservers();
 
     }
 

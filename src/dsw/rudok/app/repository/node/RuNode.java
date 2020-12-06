@@ -1,6 +1,8 @@
 package dsw.rudok.app.repository.node;
 
-public abstract class RuNode {
+import dsw.rudok.app.gui.swing.observer.Observer;
+
+public abstract class RuNode implements Observer {
 
     private String name;
     private RuNode parent;
@@ -26,6 +28,7 @@ public abstract class RuNode {
 
     public void setName(String name) {
         this.name = name;
+        notifyAll();
     }
 
     public RuNode getParent() {

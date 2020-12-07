@@ -3,9 +3,8 @@ package dsw.rudok.app.repository.elements;
 import dsw.rudok.app.gui.swing.view.painters.ElementPainter;
 
 import java.awt.*;
-import java.io.Serializable;
 
-public abstract class DiagramElement implements Serializable {
+public abstract class DiagramElement {
 
     protected Paint paint;
     protected Stroke stroke;

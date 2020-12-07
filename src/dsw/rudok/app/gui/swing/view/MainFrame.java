@@ -26,6 +26,7 @@ public class MainFrame extends JFrame  {
     private JMenuBar menu;
     private ErrorHandler error;
     private Subject subject = new Subject(); //observer pattern
+    private Palette palette;
 
     private MainFrame(){
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -75,6 +76,9 @@ public class MainFrame extends JFrame  {
 
         toolBar = new ToolBar();
         add(toolBar, BorderLayout.NORTH);
+
+        palette = new Palette();
+        getContentPane().add(palette, BorderLayout.EAST);
 
         desktop = new ProjectPanel();
 

@@ -16,6 +16,15 @@ public class ActionManager {
     private CloseAllTabs closeAllTabs;
     private DeleteNodeAction deleteNodeAction;
 
+    private PHandCursorAction PHandCursorAction;
+    private PRectangleAction PRectangleAction;
+    private PCircleAction PCircleAction;
+    private PTriangleAction PTriangleAction;
+    private ResizeAction resizeAction;
+    private MoveAction moveAction;;
+    private RotateAction rotateAction;
+    private DeleteElementAction deleteElementAction;
+
 
 
     public  ActionManager(){
@@ -35,6 +44,51 @@ public class ActionManager {
         cLoseTab = new CLoseTab();
         closeAllTabs = new CloseAllTabs();
         deleteNodeAction = new DeleteNodeAction();
+
+        resizeAction = new ResizeAction();
+        moveAction = new MoveAction();
+        rotateAction = new RotateAction();
+        deleteElementAction = new DeleteElementAction();
+
+        //paleta
+        PHandCursorAction = new PHandCursorAction();
+        PRectangleAction = new PRectangleAction();
+        PCircleAction = new PCircleAction();
+        PTriangleAction = new PTriangleAction();
+
+
+    }
+
+    public PHandCursorAction getHandCursorAction() {
+        return PHandCursorAction;
+    }
+
+    public void setHandCursorAction(PHandCursorAction PHandCursorAction) {
+        this.PHandCursorAction = PHandCursorAction;
+    }
+
+    public PRectangleAction getRectangleAction() {
+        return PRectangleAction;
+    }
+
+    public void setRectangleAction(PRectangleAction PRectangleAction) {
+        this.PRectangleAction = PRectangleAction;
+    }
+
+    public PCircleAction getCircleAction() {
+        return PCircleAction;
+    }
+
+    public void setCircleAction(PCircleAction PCircleAction) {
+        this.PCircleAction = PCircleAction;
+    }
+
+    public PTriangleAction getTriangleAction() {
+        return PTriangleAction;
+    }
+
+    public void setTriangleAction(PTriangleAction PTriangleAction) {
+        this.PTriangleAction = PTriangleAction;
     }
 
     public DeleteNodeAction getDeleteNodeAction() {

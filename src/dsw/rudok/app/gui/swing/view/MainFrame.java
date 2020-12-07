@@ -92,7 +92,7 @@ public class MainFrame extends JFrame  {
         split.setDividerLocation(250);
         split.setOneTouchExpandable(true);
 
-        ImageIcon img = new ImageIcon(getClass().getResource("layer32-min.png"));
+        ImageIcon img = new ImageIcon(getClass().getResource("images/layer32-min.png"));
         this.setIconImage(img.getImage());
 
         setLocationRelativeTo(null);

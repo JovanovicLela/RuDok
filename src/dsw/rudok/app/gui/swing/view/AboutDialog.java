@@ -19,7 +19,7 @@ public class AboutDialog  extends JDialog {
         setSize(screenWidth / 3, screenHeight / 2);
         setLocationRelativeTo(null);
 
-        img1 = new ImageIcon(getClass().getResource("blueIcon.png"));
+        img1 = new ImageIcon(getClass().getResource("images/blueIcon.png"));
         Image image1 = img1.getImage();
         Image newImg1 = image1.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
         img1 = new ImageIcon(newImg1);
@@ -29,7 +29,7 @@ public class AboutDialog  extends JDialog {
         lelaOpis.setForeground(Color.BLACK);
         lelaOpis.setFont(new Font("Times New Roman", Font.PLAIN, 21));
 
-        img2 = new ImageIcon(getClass().getResource("redIcon.png"));
+        img2 = new ImageIcon(getClass().getResource("images/redIcon.png"));
         Image image2 = img2.getImage();
         Image newImg2 = image2.getScaledInstance(150, 150, Image.SCALE_SMOOTH);
         img2 = new ImageIcon(newImg2);

@@ -11,8 +11,20 @@ public class InputOutputPainter extends  DevicePainter{
 
         shape = new GeneralPath();
 
-      //  if(device.get)
+        if(device.getType() == InputOutputElement.INPUT){
+
+            ((GeneralPath) shape).moveTo(device.getPosition().getX(), device.getPosition().getY());
+            ((GeneralPath) shape).lineTo(device.getPosition().getX()-5, device.getPosition().getY());
+
+        }else if(device.getType() == InputOutputElement.OUTPUT){
+
+            ((GeneralPath)shape).moveTo(device.getPosition().getX(),device.getPosition().getY());
+            ((GeneralPath)shape).lineTo(device.getPosition().getX()+5,device.getPosition().getY());
+
+        }
+
+        }
 
 
-    }
+
 }

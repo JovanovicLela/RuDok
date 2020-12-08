@@ -5,7 +5,6 @@ import dsw.rudok.app.gui.swing.event.UpdateListener;
 import dsw.rudok.app.gui.swing.view.painters.ElementPainter;
 import dsw.rudok.app.repository.Diagram;
 import dsw.rudok.app.repository.elements.DiagramDevice;
-import dsw.rudok.app.repository.elements.RectangleElement;
 
 import javax.swing.*;
 import java.awt.*;
@@ -87,10 +86,10 @@ public class DiagramView extends JInternalFrame implements UpdateListener {
 
                 Paint fill = new Color(255, 255, 255);
 
-                RectangleElement rectangle = new RectangleElement(fill, new BasicStroke(2f), new Dimension(100, 50), position);
-
-                rectangle.setName("Rectangle " + diagram.getModel().getElementCount());
-                diagram.getModel().addDiagramElements(rectangle);
+               // RectangleElement rectangle = new RectangleElement(fill, new BasicStroke(2f), new Dimension(100, 50), position);
+// kada se uradi StateManager otkomentarisati !
+                //rectangle.setName("Rectangle " + diagram.getModel().getElementCount());
+              //  diagram.getModel().addDiagramElements(rectangle);
 
             }
         }

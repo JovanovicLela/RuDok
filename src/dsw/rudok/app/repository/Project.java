@@ -1,17 +1,21 @@
 package dsw.rudok.app.repository;
 
+import dsw.rudok.app.gui.swing.event.UpdateEvent;
+import dsw.rudok.app.gui.swing.event.UpdateListener;
 import dsw.rudok.app.repository.node.RuNode;
 import dsw.rudok.app.repository.node.RuNodeComposite;
 
 import java.io.File;
 
-public class Project extends RuNodeComposite {
+public class Project extends RuNodeComposite implements UpdateListener {
 
     private File projectFile;
     private transient boolean changed;
 
     public Project(String name, RuNode parent) {
         super(name, parent);
+        this.changed = false;
+        this.projectFile = null;
     }
 
     @Override
@@ -56,6 +60,11 @@ public class Project extends RuNodeComposite {
     @Override
     public void update() {
         notifyAll();
+    }
+
+    @Override
+    public void updatePerformed(UpdateEvent e) {
+        setChanged(true);
     }
 }
 

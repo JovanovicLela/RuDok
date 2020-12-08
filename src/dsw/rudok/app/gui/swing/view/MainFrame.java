@@ -16,17 +16,23 @@ import java.awt.event.WindowEvent;
 public class MainFrame extends JFrame  {
 
     private static  MainFrame instance = null;
+
     private ActionManager actionManager;
+
     private AboutDialog aboutDialog;
-    private Repository documentRepository;
-    private RuTree tree;
     private JToolBar toolBar;
-    private JTree workspaceTree;
     private ProjectPanel desktop;
     private JMenuBar menu;
+    private Palette palette;
+    private JDesktopPane desktopPane;
+
+    private Repository documentRepository;
+    private RuTree tree;
+    private JTree workspaceTree;
+
     private ErrorHandler error;
     private Subject subject = new Subject(); //observer pattern
-    private Palette palette;
+
 
     private MainFrame(){
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
@@ -81,6 +87,7 @@ public class MainFrame extends JFrame  {
         getContentPane().add(palette, BorderLayout.EAST);
 
         desktop = new ProjectPanel();
+        desktopPane = new JDesktopPane();
 
         aboutDialog = new AboutDialog();
 
@@ -110,6 +117,9 @@ public class MainFrame extends JFrame  {
         return  instance;
     }
 
+    public JDesktopPane getDesktopPane() {
+        return desktopPane;
+    }
 
     public ActionManager getActionManager(){
         return actionManager;

@@ -39,8 +39,7 @@ public class DevicePainter extends  ElementPainter{
 
     }
 
-    @Override
-    public boolean elementAt(DiagramElement element, Point pos) {
+    public boolean isElementAt( Point pos){
         return getShape().contains(pos);
     }
 

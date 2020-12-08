@@ -15,9 +15,11 @@ public abstract class DiagramElement {
 
     protected ElementPainter elementPainter;
 
-    public DiagramElement(Paint paint, Stroke stroke) {
+    public DiagramElement(Stroke stroke, Paint paint, Color strokeColor) {
         this.paint = paint;
         this.stroke = stroke;
+        this.strokeColor = strokeColor;
+
     }
 
     public Paint getPaint() {

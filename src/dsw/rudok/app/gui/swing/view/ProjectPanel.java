@@ -22,6 +22,15 @@ public class ProjectPanel extends JPanel implements Observer {
         setLayout(new BorderLayout());
         add(projectNameLabel);
         add(tabbedPane);
+
+
+        JScrollPane scroll1 = new JScrollPane(tabbedPane);
+        scroll1.setMinimumSize(new Dimension(200, 150));
+        scroll1.setVerticalScrollBarPolicy(22);
+        scroll1.setVisible(true);
+        add(scroll1,  BorderLayout.CENTER);
+
+
         MainFrame.getInstance().getSubject().attach(this);
 
     }
@@ -31,8 +40,8 @@ public class ProjectPanel extends JPanel implements Observer {
         if(openedProject == null){
             return;
         }
-        setProjectName(openedProject.getName());
         setTabbedPane(openedProject);
+        setPreferredSize(new Dimension(300, 300));
     }
 
     private  void setTabbedPane(Project project){
@@ -42,7 +51,7 @@ public class ProjectPanel extends JPanel implements Observer {
             Document document = (Document) ruNodeDoc;
             tabbedPane.setFont( new Font( "Dialog", Font.BOLD|Font.ITALIC, 12 ) );
             tabbedPane.add(project.getName() + " - " + document.getName(), new DocumentPanel(project.getName(), document));
-
+            setProjectName(openedProject.getName());
         }
 
     }

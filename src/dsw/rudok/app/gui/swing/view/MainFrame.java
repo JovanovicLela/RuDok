@@ -108,6 +108,7 @@ public class MainFrame extends JFrame  {
 
         setLocationRelativeTo(null);
 
+
     }
     public static MainFrame getInstance(){
         if(instance == null){

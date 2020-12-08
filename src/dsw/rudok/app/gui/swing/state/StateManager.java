@@ -20,19 +20,19 @@ public class StateManager {
         currentState = selectState;
     }
 
-    public void setCircleSate(CircleSate circleSate) {
+    public void setCircleSate() {
         currentState = circleSate;
     }
 
-    public void setLinkState(LinkState linkState) {
+    public void setLinkState() {
         currentState = linkState;
     }
 
-    public void setRectangleState(RectangleState rectangleState) {
+    public void setRectangleState() {
         currentState = rectangleState;
     }
 
-    public void setSelectState(SelectState selectState) {
+    public void setSelectState() {
         currentState = selectState;
     }
 

@@ -3,8 +3,10 @@ package dsw.rudok.app.repository;
 import dsw.rudok.app.gui.swing.event.UpdateEvent;
 import dsw.rudok.app.gui.swing.event.UpdateListener;
 import dsw.rudok.app.repository.elements.DiagramDevice;
+import dsw.rudok.app.repository.elements.DiagramElement;
 
 import javax.swing.event.EventListenerList;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -37,6 +39,22 @@ public class DiagramModel {
     public String toString() {
         return name;
 
+    }
+
+    public int getDeviceAtPosition(Point point){
+        for(int i = getDeviceCount()-1; i >= 0; i--) {
+            DiagramElement device = getDeviceAt(i);
+            if (device.getElementPainter().isElementAt(point)) {
+                return i;
+            }
+        }
+        return -1;
+    }
+    public  int getDeviceCount(){
+        return  diagramElements.size();
+    }
+    public  DiagramElement getDeviceAt(int i){
+        return  diagramElements.get(i);
     }
 
     public int getElementCount(){

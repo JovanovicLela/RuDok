@@ -7,6 +7,7 @@ import dsw.rudok.app.repository.node.RuNode;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreePath;
 
 public class RuTreeImplementation implements RuTree {
 
@@ -28,6 +29,19 @@ public class RuTreeImplementation implements RuTree {
             return  null;
         return  selectedItem.getNodeModel();
     }
+
+   @Override
+    public Project getCurrentProject() {
+
+            TreePath path = treeView.getSelectionPath();
+            for(int i = 0; i < path.getPathCount(); i++){
+                if(path.getPathComponent(i) instanceof  Project){
+                    return  (Project) path.getPathComponent(i);
+                }
+            }
+            return  null;
+        }//novo*/
+
 
     @Override
     public void addProject(Project project){

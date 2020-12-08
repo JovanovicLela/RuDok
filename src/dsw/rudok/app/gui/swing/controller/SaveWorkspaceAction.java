@@ -1,4 +1,13 @@
 package dsw.rudok.app.gui.swing.controller;
 
-public class SaveWorkspaceAction {
+import java.awt.event.ActionEvent;
+
+public class SaveWorkspaceAction extends AbstractRudokAction{
+    public SaveWorkspaceAction() {
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+    }
 }

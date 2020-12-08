@@ -11,10 +11,15 @@ public class ActionManager {
     private NewPageAction newPageAction;
     private NewSlotAction newSlotAction;
 
+    private SaveDiagramAction saveDiagramAction;
+    private SaveProjectAction saveProjectAction;
+    private SaveWorkspaceAction saveWorkspaceAction;
+
     private RenameAction renameAction;
     private CLoseTab cLoseTab;
     private CloseAllTabs closeAllTabs;
     private DeleteNodeAction deleteNodeAction;
+
 
     private PHandCursorAction PHandCursorAction;
     private PRectangleAction PRectangleAction;
@@ -24,6 +29,8 @@ public class ActionManager {
     private MoveAction moveAction;;
     private RotateAction rotateAction;
     private DeleteElementAction deleteElementAction;
+
+
 
 
 
@@ -39,6 +46,10 @@ public class ActionManager {
         newDocumentAction = new NewDocumentAction();
         newPageAction = new NewPageAction();
         newSlotAction = new NewSlotAction();
+
+        saveDiagramAction = new SaveDiagramAction();
+        saveProjectAction = new SaveProjectAction();
+        saveWorkspaceAction = new SaveWorkspaceAction();
 
         renameAction = new RenameAction();
         cLoseTab = new CLoseTab();
@@ -57,6 +68,30 @@ public class ActionManager {
         PTriangleAction = new PTriangleAction();
 
 
+    }
+
+    public SaveDiagramAction getSaveDiagramAction() {
+        return saveDiagramAction;
+    }
+
+    public void setSaveDiagramAction(SaveDiagramAction saveDiagramAction) {
+        this.saveDiagramAction = saveDiagramAction;
+    }
+
+    public SaveProjectAction getSaveProjectAction() {
+        return saveProjectAction;
+    }
+
+    public void setSaveProjectAction(SaveProjectAction saveProjectAction) {
+        this.saveProjectAction = saveProjectAction;
+    }
+
+    public SaveWorkspaceAction getSaveWorkspaceAction() {
+        return saveWorkspaceAction;
+    }
+
+    public void setSaveWorkspaceAction(SaveWorkspaceAction saveWorkspaceAction) {
+        this.saveWorkspaceAction = saveWorkspaceAction;
     }
 
     public PHandCursorAction getHandCursorAction() {

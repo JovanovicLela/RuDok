@@ -110,6 +110,7 @@ public class MainFrame extends JFrame  {
         return  instance;
     }
 
+
     public ActionManager getActionManager(){
         return actionManager;
     }

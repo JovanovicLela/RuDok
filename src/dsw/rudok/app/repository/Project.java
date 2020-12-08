@@ -3,7 +3,12 @@ package dsw.rudok.app.repository;
 import dsw.rudok.app.repository.node.RuNode;
 import dsw.rudok.app.repository.node.RuNodeComposite;
 
+import java.io.File;
+
 public class Project extends RuNodeComposite {
+
+    private File projectFile;
+    private transient boolean changed;
 
     public Project(String name, RuNode parent) {
         super(name, parent);
@@ -30,6 +35,22 @@ public class Project extends RuNodeComposite {
             }
         }
 
+    }
+
+    public boolean isChanged() {
+        return changed;
+    }
+
+    public void setChanged(boolean changed) {
+        this.changed = changed;
+    }
+
+    public File getProjectFile() {
+        return projectFile;
+    }
+
+    public void setProjectFile(File projectFile) {
+        this.projectFile = projectFile;
     }
 
     @Override

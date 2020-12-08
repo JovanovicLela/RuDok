@@ -9,7 +9,8 @@ public class ToolBar extends JToolBar {
         setFloatable(false);
 
         add (MainFrame.getInstance().getActionManager().getExitAction());
-        add (MainFrame.getInstance().getActionManager().getAboutAction()) ;
+        add (MainFrame.getInstance().getActionManager().getSaveProjectAction());
+        add (MainFrame.getInstance().getActionManager().getAboutAction());
         addSeparator();
         add (MainFrame.getInstance().getActionManager().getNewProjectAction());
         add(MainFrame.getInstance().getActionManager().getNewDocumentAction());

@@ -10,6 +10,7 @@ public interface RuTree {
     JTree generateTree(Workspace workspace);
 
     RuNode getSelectedRuNode();
+    Project getCurrentProject();
 
     void addProject(Project project);
     void addDocument(Project project, Document document);

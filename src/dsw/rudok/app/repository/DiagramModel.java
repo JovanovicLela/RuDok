@@ -15,9 +15,12 @@ public class DiagramModel {
     private static int count = 0;
     private String name;
 
-    protected ArrayList<DiagramDevice> diagramElements = new ArrayList<DiagramDevice>();
+    protected ArrayList<DiagramElement> diagramElements = new ArrayList<DiagramElement>();
     EventListenerList listenerList = new EventListenerList();
     UpdateEvent updateEvent = null;
+
+
+
 
     public static int getCount() {
         return count;
@@ -38,9 +41,8 @@ public class DiagramModel {
     @Override
     public String toString() {
         return name;
-
     }
-
+// metoda koja pronalazi indeks elem koji se nalazi na  zadatim koordinatama
     public int getDeviceAtPosition(Point point){
         for(int i = getDeviceCount()-1; i >= 0; i--) {
             DiagramElement device = getDeviceAt(i);
@@ -60,7 +62,8 @@ public class DiagramModel {
     public int getElementCount(){
         return  diagramElements.size();
     }
-    public Iterator<DiagramDevice> getDeviceIterator(){
+
+    public Iterator<DiagramElement> getDeviceIterator(){
         return diagramElements.iterator();
     }
     public  void addDiagramElements(DiagramDevice device){
@@ -75,7 +78,7 @@ public class DiagramModel {
         listenerList.remove(UpdateListener.class, l);
     }
 
-    protected  void fireUpdatePerformed(){
+    protected  void fireUpdatePerformed(){ //svim listenerima se javlja da se dogadjaj dogodio
         Object[] listeners = listenerList.getListenerList();
 
         for(int i = listeners.length-1; i>=0; i-=1){

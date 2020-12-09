@@ -6,6 +6,9 @@ import java.awt.*;
 
 public abstract class DiagramElement {
 
+    // ova klasa nam daje opis bilo kog elementa,
+    // takodje opisuje i linkove dijagrama i elemente dijagrama
+
     protected Paint paint;
     protected Stroke stroke;
     protected Color strokeColor;

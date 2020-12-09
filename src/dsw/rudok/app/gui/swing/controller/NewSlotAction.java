@@ -3,8 +3,6 @@ package dsw.rudok.app.gui.swing.controller;
 import dsw.rudok.app.gui.swing.observer.Observer;
 import dsw.rudok.app.gui.swing.view.MainFrame;
 import dsw.rudok.app.repository.Page;
-import dsw.rudok.app.repository.Slot;
-import dsw.rudok.app.repository.node.RuNode;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -35,14 +33,23 @@ public class NewSlotAction extends  AbstractRudokAction implements Observer {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        RuNode selectedRuNode = MainFrame.getInstance().getTree().getSelectedRuNode();
+      /*  RuNode selectedRuNode = MainFrame.getInstance().getTree().getSelectedRuNode();
 
         if((selectedRuNode == null) || !(selectedRuNode instanceof  Page))
             return;
 
         Page selectedPage = (Page) selectedRuNode;
         Slot slot = new Slot("Slot " + (selectedPage.getChildren().size() + 1), selectedPage);
-        MainFrame.getInstance().getTree().addSlot(selectedPage, slot);
+        MainFrame.getInstance().getTree().addSlot(selectedPage, slot);*/
        // MainFrame.getInstance().getSubject().notifyAllObservers();
+
+
+        Object p = MainFrame.getInstance().getWorkspaceTree().getLastSelectedPathComponent();
+        if(p instanceof Page){
+           // Diagram d = new Diagram("New diagram");
+          //  ((Page)p).addChild(d);
+
+        }
+
     }
 }

@@ -25,6 +25,8 @@ public class MainFrame extends JFrame  {
     private JMenuBar menu;
     private Palette palette;
     private JDesktopPane desktopPane;
+    // desktopPane ce u sebi sadrzati kolekciju view-a, gde svaki od njih
+    // predstavlja jedan JInternalFrame i na sebe iscrtava komponente
 
     private Repository documentRepository;
     private RuTree tree;

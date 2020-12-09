@@ -18,21 +18,22 @@ public class DiagramView extends JInternalFrame implements UpdateListener {
     // Ova klasa iscrtava na sebe sve komponente koje se nalaze u DiagramModelu
     // a DiagramModel dobijamo iz Diagrama
 
-
     static  int openFrameCount = 0;
     static final int xOffset = 40, yOffset = 40; // koristimo ih za odedjivanje pozicije unutrasnjeg prozora
     private Diagram diagram;
     private JPanel framework;
 
+
     public DiagramView() {
 
-        super("", true, true, true, true);
+        super("Workspace", true, true, true, true);
 
         setLocation(xOffset * openFrameCount, yOffset * openFrameCount);
         setIconifiable(true);
         setClosable(true);
-        setSize(400, 400);
+       // setSize(new Dimension(150, 400));
         setVisible(true);
+        setResizable(true);
 
         openFrameCount += 1;
 
@@ -106,24 +107,5 @@ public class DiagramView extends JInternalFrame implements UpdateListener {
             }
         }
     }
-
-  /*  private class MouseController extends MouseAdapter{
-
-        public  void mousePressed(MouseEvent e ){
-
-            if(e.getButton() == MouseEvent.BUTTON1){
-
-                Point position = e.getPoint();
-                GeneralPath gp = new GeneralPath();
-
-                Paint fill = new Color(255, 255, 255);
-*/
-               // RectangleElement rectangle = new RectangleElement(fill, new BasicStroke(2f), new Dimension(100, 50), position);
-// kada se uradi StateManager otkomentarisati !
-                //rectangle.setName("Rectangle " + diagram.getModel().getElementCount());
-              //  diagram.getModel().addDiagramElements(rectangle);
-
-
-
 
 }

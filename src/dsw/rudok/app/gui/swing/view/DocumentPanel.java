@@ -15,39 +15,38 @@ public class DocumentPanel extends JPanel {
         this.projectName = projectName;
         this.document = document;
 
-
         if(document == null || (document.getChildren().size() == 0)){
          return;
         }
 
        setLayout(new GridLayout(document.getChildren().size(), 1));
-
-
        // setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
         for(int i = 0; i < document.getChildren().size(); i++){
 
-            JPanel panelPage = new JPanel();
+
+
+            DiagramView diagramView = new DiagramView();
+            diagramView.setBorder(BorderFactory.createEtchedBorder());
+            diagramView.setVisible(true);
+            diagramView.setAutoscrolls(true);
+            diagramView.setBackground(Color.getHSBColor(0.5f,0.2f,1f));
+            diagramView.setResizable(true);
+            diagramView.setPreferredSize(new Dimension(150, 355));
+
+
+
+           /* JPanel panelPage = new JPanel();
             panelPage.setBorder(BorderFactory.createEtchedBorder());
             panelPage.setVisible(true);
             panelPage.setAutoscrolls(true);
             panelPage.setPreferredSize(new Dimension(150, 355));
-
-            //panelPage.setMinimumSize(new Dimension(300, 300));
-
-
-            //panelPage.setAlignmentX(Component.CENTER_ALIGNMENT);
-            //panelPage.setPreferredSize(new Dimension(100, 500));
-            //panelPage.setMaximumSize(new Dimension(100, 500));
-           // panelPage.setSize(new Dimension(150, 100));
-            /*JScrollPane scroll1 = new JScrollPane(panelPage);
-            scroll1.setMinimumSize(new Dimension(200, 150));
-            scroll1.setVerticalScrollBarPolicy(22);
-            scroll1.setVisible(true);
-            add(scroll1,  BorderLayout.CENTER);
 */
             JLabel lblPage = new JLabel(projectName + " - " + document.getName() + " - " + document.getChildren().get(i).getName());
-            panelPage.add(lblPage);
-            add(panelPage);
+            diagramView.add(lblPage);
+
+            //diagramView.setTitle(projectName + " - " + document.getName() + " - " + document.getChildren().get(i).getName());
+
+            add(diagramView);
 
         }
 

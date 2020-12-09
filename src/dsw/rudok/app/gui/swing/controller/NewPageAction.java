@@ -1,6 +1,5 @@
 package dsw.rudok.app.gui.swing.controller;
 
-import com.sun.tools.javac.Main;
 import dsw.rudok.app.gui.swing.observer.Observer;
 import dsw.rudok.app.gui.swing.view.MainFrame;
 import dsw.rudok.app.repository.Document;
@@ -36,6 +35,9 @@ public class NewPageAction extends  AbstractRudokAction implements Observer {
         Page page = new Page("Page: "+ (selectedDocument.getChildren().size() + 1), selectedDocument);
         MainFrame.getInstance().getTree().addPage(selectedDocument, page);
      //   MainFrame.getInstance().getSubject().notifyAllObservers();
+
+
+
 
     }
 

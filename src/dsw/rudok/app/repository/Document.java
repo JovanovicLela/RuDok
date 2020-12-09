@@ -10,6 +10,7 @@ public class Document extends RuNodeComposite {
       super(name,parent);
   }
 
+
    @Override
     public void addChild(RuNode child){
       if(child != null && child instanceof Page){

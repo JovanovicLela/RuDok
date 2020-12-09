@@ -3,7 +3,11 @@ package dsw.rudok.app.repository;
 import dsw.rudok.app.repository.node.RuNode;
 import dsw.rudok.app.repository.node.RuNodeComposite;
 
+import java.util.ArrayList;
+
 public class Page extends RuNodeComposite {
+
+    private ArrayList<Diagram> diagrams = new ArrayList<Diagram>();
 
     public Page(String name, RuNode parent){
         super(name,parent);
@@ -28,6 +32,11 @@ public class Page extends RuNodeComposite {
 
             }
         }
+
+    }
+    public void addDiagram(Diagram diagram){
+        diagrams.add(diagram);
+        diagram.setName( this.getName()+" - Diagram  - Graphical editor:"+String.valueOf(diagrams.size()));
 
     }
 

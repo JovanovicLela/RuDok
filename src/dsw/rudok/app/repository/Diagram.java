@@ -12,9 +12,9 @@ public class Diagram implements TreeNode {
     private StateManager stateManager = new StateManager(this);
 
 
-   // public Diagram(String diagramName) {
-      //  name = diagramName;
-    //}
+    public Diagram(String diagramName) {
+        name = diagramName;
+    }
     public  void startCircleState(){
         stateManager.setCircleSate();
     }

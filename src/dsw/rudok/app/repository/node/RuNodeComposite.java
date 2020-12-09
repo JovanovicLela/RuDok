@@ -7,6 +7,7 @@ public abstract class RuNodeComposite extends  RuNode {
 
     List<RuNode> children;
 
+
     public RuNodeComposite(String name, RuNode parent) {
         super(name, parent);
         this.children = new ArrayList<>();

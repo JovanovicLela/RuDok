@@ -28,6 +28,9 @@ public class DiagramView extends JInternalFrame implements UpdateListener {
 
         super("Workspace", true, true, true, true);
 
+        ImageIcon img = new ImageIcon(getClass().getResource("images/diagramView.png"));
+        this.setFrameIcon(img);
+
         setLocation(xOffset * openFrameCount, yOffset * openFrameCount);
         setIconifiable(true);
         setClosable(true);

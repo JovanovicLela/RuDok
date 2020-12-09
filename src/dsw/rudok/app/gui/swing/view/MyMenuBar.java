@@ -17,10 +17,12 @@ public class MyMenuBar extends JMenuBar {
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewSlotAction());
         fileMenu.addSeparator();
         fileMenu.add(MainFrame.getInstance().getActionManager().getSaveProjectAction());
+
         editMenu.add(MainFrame.getInstance().getActionManager().getRenameAction());
         editMenu.add(MainFrame.getInstance().getActionManager().getcLoseTab());
         editMenu.add(MainFrame.getInstance().getActionManager().getCloseAllTabs());
         editMenu.add(MainFrame.getInstance().getActionManager().getDeleteNodeAction());
+
         fileMenu.addSeparator();
         fileMenu.add(MainFrame.getInstance().getActionManager().getExitAction());
 

@@ -15,16 +15,18 @@ public class ActionManager {
     private SaveProjectAction saveProjectAction;
     private SaveWorkspaceAction saveWorkspaceAction;
 
+
     private RenameAction renameAction;
     private CLoseTab cLoseTab;
     private CloseAllTabs closeAllTabs;
     private DeleteNodeAction deleteNodeAction;
 
-
+    //paleta
     private PHandCursorAction PHandCursorAction;
     private PRectangleAction PRectangleAction;
     private PCircleAction PCircleAction;
     private PTriangleAction PTriangleAction;
+
     private ResizeAction resizeAction;
     private MoveAction moveAction;;
     private RotateAction rotateAction;

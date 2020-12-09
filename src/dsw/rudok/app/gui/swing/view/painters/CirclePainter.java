@@ -13,5 +13,24 @@ public class CirclePainter extends  DevicePainter{
         shape = new GeneralPath();
         // .. nastavak, poceti odavde
 
+        ((GeneralPath)shape).moveTo(or.getPosition().getX() + or.getSize().getWidth() / 2, or.getPosition().getY());
+
+        ((GeneralPath)shape).quadTo(or.getPosition().getX()+or.getSize().getWidth(), or.getPosition().getY(),
+                or.getPosition().getX()+or.getSize().getWidth(), or.getPosition().getY() + or.getSize().getHeight()/2);
+
+        ((GeneralPath)shape).quadTo(or.getPosition().getX()+or.getSize().getWidth(), or.getPosition().getY()+or.getSize().getHeight(),
+                or.getPosition().getX()+or.getSize().getWidth()/2, or.getPosition().getY()+or.getSize().getHeight());
+
+        ((GeneralPath)shape).quadTo(or.getPosition().getX(), or.getPosition().getY()+or.getSize().getHeight(),
+                or.getPosition().getX(), or.getPosition().getY()+or.getSize().getHeight()/2);
+
+
+        ((GeneralPath)shape).quadTo(or.getPosition().getX(), or.getPosition().getY(),
+                or.getPosition().getX()+or.getSize().getWidth()/2,or.getPosition().getY());
+
+
+
+
+
     }
 }

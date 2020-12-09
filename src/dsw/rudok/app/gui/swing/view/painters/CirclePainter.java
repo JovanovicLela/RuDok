@@ -5,13 +5,16 @@ import dsw.rudok.app.repository.elements.DiagramElement;
 
 import java.awt.geom.GeneralPath;
 
+// Circle painter specificno zaduzen z
+
 public class CirclePainter extends  DevicePainter{
+
     public CirclePainter(DiagramElement device) {
         super(device);
 
         CircleElement or = (CircleElement) device;
         shape = new GeneralPath();
-        // .. nastavak, poceti odavde
+
 
         ((GeneralPath)shape).moveTo(or.getPosition().getX() + or.getSize().getWidth() / 2, or.getPosition().getY());
 

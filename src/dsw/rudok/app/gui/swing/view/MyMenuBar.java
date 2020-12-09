@@ -8,6 +8,7 @@ public class MyMenuBar extends JMenuBar {
     public MyMenuBar(){
         JMenu fileMenu = new JMenu("File");
         JMenu editMenu = new JMenu("Edit");
+        JMenu windowMenu = new JMenu("Window");
 
         fileMenu.setMnemonic(KeyEvent.VK_F);
 
@@ -17,15 +18,20 @@ public class MyMenuBar extends JMenuBar {
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewSlotAction());
         fileMenu.addSeparator();
         fileMenu.add(MainFrame.getInstance().getActionManager().getSaveProjectAction());
+        fileMenu.addSeparator();
+        fileMenu.add(MainFrame.getInstance().getActionManager().getExitAction());
 
         editMenu.add(MainFrame.getInstance().getActionManager().getRenameAction());
         editMenu.add(MainFrame.getInstance().getActionManager().getcLoseTab());
         editMenu.add(MainFrame.getInstance().getActionManager().getCloseAllTabs());
         editMenu.add(MainFrame.getInstance().getActionManager().getDeleteNodeAction());
 
-        fileMenu.addSeparator();
-        fileMenu.add(MainFrame.getInstance().getActionManager().getExitAction());
-
+        windowMenu.add(MainFrame.getInstance().getActionManager().getCascadeDiagramAction());
+        windowMenu.add(MainFrame.getInstance().getActionManager().getTileHorizontallyDiagramAction());
+        windowMenu.add(MainFrame.getInstance().getActionManager().getTileVerticallyDiagramAction());
+        windowMenu.addSeparator();
+        windowMenu.add(MainFrame.getInstance().getActionManager().getCloseDiagramAction());
+        windowMenu.add(MainFrame.getInstance().getActionManager().getCloseAllDiagramAction());
 
         JMenu aboutMenu = new JMenu("About");
         aboutMenu.setMnemonic(KeyEvent.VK_A);
@@ -33,6 +39,8 @@ public class MyMenuBar extends JMenuBar {
 
         this.add(fileMenu);
         this.add(editMenu);
+        this.add(windowMenu);
         this.add(aboutMenu);
+
     }
 }

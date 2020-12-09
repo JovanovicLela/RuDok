@@ -27,6 +27,12 @@ public class ActionManager {
     private PCircleAction PCircleAction;
     private PTriangleAction PTriangleAction;
 
+    private CascadeDiagramAction cascadeDiagramAction;
+    private TileHorizontallyDiagramAction tileHorizontallyDiagramAction;
+    private TileVerticallyDiagramAction tileVerticallyDiagramAction;
+    private CloseDiagramAction closeDiagramAction;
+    private CloseAllDiagramAction closeAllDiagramAction;
+
     private ResizeAction resizeAction;
     private MoveAction moveAction;;
     private RotateAction rotateAction;
@@ -58,18 +64,58 @@ public class ActionManager {
         closeAllTabs = new CloseAllTabs();
         deleteNodeAction = new DeleteNodeAction();
 
-        resizeAction = new ResizeAction();
-        moveAction = new MoveAction();
-        rotateAction = new RotateAction();
-        deleteElementAction = new DeleteElementAction();
-
         //paleta
         PHandCursorAction = new PHandCursorAction();
         PRectangleAction = new PRectangleAction();
         PCircleAction = new PCircleAction();
         PTriangleAction = new PTriangleAction();
 
+        resizeAction = new ResizeAction();
+        moveAction = new MoveAction();
+        rotateAction = new RotateAction();
+        deleteElementAction = new DeleteElementAction();
 
+        cascadeDiagramAction = new CascadeDiagramAction();
+        tileHorizontallyDiagramAction = new TileHorizontallyDiagramAction();
+        tileVerticallyDiagramAction = new TileVerticallyDiagramAction();
+        closeDiagramAction = new CloseDiagramAction();
+        closeAllDiagramAction = new CloseAllDiagramAction();
+    }
+
+    public CloseDiagramAction getCloseDiagramAction() {
+        return closeDiagramAction;
+    }
+
+    public CloseAllDiagramAction getCloseAllDiagramAction() {
+        return closeAllDiagramAction;
+    }
+
+    public CascadeDiagramAction getCascadeDiagramAction() {
+        return cascadeDiagramAction;
+    }
+
+    public TileHorizontallyDiagramAction getTileHorizontallyDiagramAction() {
+        return tileHorizontallyDiagramAction;
+    }
+
+    public TileVerticallyDiagramAction getTileVerticallyDiagramAction() {
+        return tileVerticallyDiagramAction;
+    }
+
+    public ResizeAction getResizeAction() {
+        return resizeAction;
+    }
+
+    public MoveAction getMoveAction() {
+        return moveAction;
+    }
+
+    public RotateAction getRotateAction() {
+        return rotateAction;
+    }
+
+    public DeleteElementAction getDeleteElementAction() {
+        return deleteElementAction;
     }
 
     public SaveDiagramAction getSaveDiagramAction() {

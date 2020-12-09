@@ -52,6 +52,7 @@ public class NewSlotAction extends  AbstractRudokAction implements Observer {
         Object p = MainFrame.getInstance().getWorkspaceTree().getLastSelectedPathComponent();
         if(p instanceof Page){
             Diagram d = new Diagram("New diagram");
+            ((Page)p).addDiagram(d); // novo u odnosu na ranije pokusaje
             SwingUtilities.updateComponentTreeUI(MainFrame.getInstance().getWorkspaceTree());
 
             DiagramView view=new DiagramView();

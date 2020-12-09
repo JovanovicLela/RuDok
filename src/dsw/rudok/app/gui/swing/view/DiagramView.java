@@ -5,12 +5,14 @@ import dsw.rudok.app.gui.swing.event.UpdateListener;
 import dsw.rudok.app.gui.swing.view.painters.ElementPainter;
 import dsw.rudok.app.repository.Diagram;
 import dsw.rudok.app.repository.elements.DiagramElement;
+import dsw.rudok.app.repository.elements.RectangleElement;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionListener;
+import java.awt.geom.GeneralPath;
 import java.util.Iterator;
 
 public class DiagramView extends JInternalFrame implements UpdateListener {
@@ -48,6 +50,28 @@ public class DiagramView extends JInternalFrame implements UpdateListener {
         DiagramController c = new DiagramController();
         framework.addMouseListener(c);
         framework.addMouseMotionListener(c);
+    }
+
+    private class MouseController extends MouseAdapter{
+
+        public void mousePressed(MouseEvent e) {
+
+            if (e.getButton()==MouseEvent.BUTTON1){
+                Point position = e.getPoint();
+                GeneralPath gp=new GeneralPath();
+
+                //Paint fill = new GradientPaint(position.x, position.y, Color.RED,
+                //	position.x+100, position.y+50, Color.BLUE);
+                Paint fill = new Color(255,255,255);
+
+
+                RectangleElement rectangle = new RectangleElement(position, new Dimension(100,50),new BasicStroke(2f),fill, Color.BLUE);
+                rectangle.setName("Rectangle " + diagram.getModel().getElementCount());
+                diagram.getModel().addDiagramElements(rectangle);
+            }
+        }
+
+
     }
 
 
@@ -97,7 +121,7 @@ public class DiagramView extends JInternalFrame implements UpdateListener {
                 ElementPainter painter = d.getElementPainter();
                 painter.paint(g2, d);
             }
-              System.out.println("Izvrsen paintComponent (metoda view-a)");*/
+           */
        // UPDATE
 
             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
@@ -108,6 +132,8 @@ public class DiagramView extends JInternalFrame implements UpdateListener {
                 painter.paint(g2, element);
 
             }
+            System.out.println("IzvrÅ¡ena paintComponent metoda view-a");
+
         }
     }
 

@@ -7,6 +7,13 @@ public class RepositoryImpl implements Repository{
     private Workspace root;
 
 
+    @Override // novo dodato
+    public void addProject(Project project) {
+        getWorkspace().addProject(project);
+     //   SwingUtilities.updateComponentTreeUI();
+
+    }
+
     @Override
     public Workspace getWorkspace() {
         return root;

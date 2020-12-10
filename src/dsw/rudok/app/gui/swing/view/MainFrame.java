@@ -73,6 +73,8 @@ public class MainFrame extends JFrame  {
         tree = new RuTreeImplementation();
 
         workspaceTree = tree.generateTree(documentRepository.getWorkspace());
+        ToolTipManager.sharedInstance().registerComponent(workspaceTree);
+
         initialiseGUI();
 
     }
@@ -84,7 +86,6 @@ public class MainFrame extends JFrame  {
         int screenHeight =  screenSize.height;
         int screenWidth = screenSize.width;
         setSize(screenWidth / 2,screenHeight / 2);
-        //setSize(new Dimension(950, 550));
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("RuDok");

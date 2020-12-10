@@ -35,6 +35,26 @@ public class NewPageAction extends  AbstractRudokAction implements Observer {
         Page page = new Page("Page: "+ (selectedDocument.getChildren().size() + 1), selectedDocument);
         MainFrame.getInstance().getTree().addPage(selectedDocument, page);
      //   MainFrame.getInstance().getSubject().notifyAllObservers();
+/*
+
+        Project p=new Project(" ");
+        MainFrame.getInstance().getWorkspaceTree().addProject(p);
+        Diagram d=new Diagram(" ");
+        p.addDiagram(d);
+
+
+
+        DiagramView view=new DiagramView();
+        view.setDiagram(d);
+        AppCore.getInstance().getDesktop().add(view);
+*/
+
+       /* try {
+            view.setSelected(true);
+        } catch (PropertyVetoException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }*/
 
 
 

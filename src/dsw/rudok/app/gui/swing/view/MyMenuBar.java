@@ -11,6 +11,7 @@ public class MyMenuBar extends JMenuBar {
         JMenu windowMenu = new JMenu("Window");
 
         fileMenu.setMnemonic(KeyEvent.VK_F);
+        windowMenu.setMnemonic(KeyEvent.VK_W);
 
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewProjectAction());
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewDocumentAction());
@@ -31,6 +32,7 @@ public class MyMenuBar extends JMenuBar {
         windowMenu.add(MainFrame.getInstance().getActionManager().getTileVerticallyDiagramAction());
         windowMenu.addSeparator();
         windowMenu.add(MainFrame.getInstance().getActionManager().getCloseDiagramAction());
+        windowMenu.addSeparator();
         windowMenu.add(MainFrame.getInstance().getActionManager().getCloseAllDiagramAction());
 
         JMenu aboutMenu = new JMenu("About");

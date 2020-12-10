@@ -55,7 +55,7 @@ public class NewSlotAction extends  AbstractRudokAction implements Observer {
             ((Page)p).addDiagram(d); // novo u odnosu na ranije pokusaje
             SwingUtilities.updateComponentTreeUI(MainFrame.getInstance().getWorkspaceTree());
 
-            DiagramView view=new DiagramView();
+            DiagramView view = new DiagramView((Page)p); // nova prosledjena stranica
            // DiagramView diagramView = new DiagramView();
             /*view.setBorder(BorderFactory.createEtchedBorder());
             view.setVisible(true);

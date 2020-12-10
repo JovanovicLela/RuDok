@@ -57,11 +57,21 @@ public class MainFrame extends JFrame  {
         });
     }
     private void initialise(){
+
         actionManager = new ActionManager();
+
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            SwingUtilities.updateComponentTreeUI(this);
+        } catch (Exception e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
     public void initialiseWorkspaceTree(){
         tree = new RuTreeImplementation();
+
         workspaceTree = tree.generateTree(documentRepository.getWorkspace());
         initialiseGUI();
 

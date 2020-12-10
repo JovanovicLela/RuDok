@@ -1,8 +1,9 @@
 package dsw.rudok.app.gui.swing.tree.model;
 
+import dsw.rudok.app.repository.Project;
+import dsw.rudok.app.repository.Workspace;
 import dsw.rudok.app.repository.node.RuNode;
 import dsw.rudok.app.repository.node.RuNodeComposite;
-
 
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
@@ -18,6 +19,10 @@ public class RuTreeItem extends DefaultMutableTreeNode{
         this.nodeModel = nodeModel;
         this.name = nodeModel.getName();
     }
+    public void addProject(Project project){
+        ((Workspace)getRoot()).addProject(project);
+    }
+
 
     public RuTreeItem(String name, RuNode nodeModel) {
         this.name = name;

@@ -4,6 +4,7 @@ import dsw.rudok.app.gui.swing.event.UpdateEvent;
 import dsw.rudok.app.gui.swing.event.UpdateListener;
 import dsw.rudok.app.gui.swing.view.painters.ElementPainter;
 import dsw.rudok.app.repository.Diagram;
+import dsw.rudok.app.repository.Page;
 import dsw.rudok.app.repository.elements.DiagramElement;
 import dsw.rudok.app.repository.elements.RectangleElement;
 
@@ -15,6 +16,8 @@ import java.awt.event.MouseMotionListener;
 import java.awt.geom.GeneralPath;
 import java.util.Iterator;
 
+// PAGE VIEW
+
 public class DiagramView extends JInternalFrame implements UpdateListener {
 
     // Ova klasa iscrtava na sebe sve komponente koje se nalaze u DiagramModelu
@@ -24,9 +27,10 @@ public class DiagramView extends JInternalFrame implements UpdateListener {
     static final int xOffset = 40, yOffset = 40; // koristimo ih za odedjivanje pozicije unutrasnjeg prozora
     private Diagram diagram;
     private JPanel framework;
+    private Page page;
 
-
-    public DiagramView() {
+// novo: prosledjena stranica
+    public DiagramView(Page page) {
 
         super("Workspace", true, true, true, true);
 

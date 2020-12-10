@@ -1,10 +1,7 @@
 package dsw.rudok.app.gui.swing.tree.view;
 
 import dsw.rudok.app.gui.swing.tree.model.RuTreeItem;
-import dsw.rudok.app.repository.Document;
-import dsw.rudok.app.repository.Project;
-import dsw.rudok.app.repository.Slot;
-import dsw.rudok.app.repository.Workspace;
+import dsw.rudok.app.repository.*;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultTreeCellRenderer;
@@ -33,21 +30,27 @@ public class RuTreeCellRenderer extends DefaultTreeCellRenderer {
             if (imageURL != null)
                 icon = new ImageIcon(imageURL);
             setIcon(icon);
-        }else if (((RuTreeItem) value).getNodeModel() instanceof Slot) {
+        } else if (((RuTreeItem) value).getNodeModel() instanceof Slot) {
             URL imageURL = getClass().getResource("images/slot.png");
             Icon icon = null;
             if (imageURL != null)
                 icon = new ImageIcon(imageURL);
             setIcon(icon);
-        }
-        else if (((RuTreeItem) value).getNodeModel() instanceof Document) {
+        } else if (((RuTreeItem) value).getNodeModel() instanceof Document) {
             URL imageURL = getClass().getResource("images/doc.png");
             Icon icon = null;
             if (imageURL != null)
                 icon = new ImageIcon(imageURL);
             setIcon(icon);
-        }
-        return this;
-    }
+        } else if (((RuTreeItem) value).getNodeModel() instanceof Page) {
+            URL imageURL = getClass().getResource("images/page.png");
+            Icon icon = null;
+            if (imageURL != null)
+                icon = new ImageIcon(imageURL);
+            setIcon(icon);
 
+    }
+        return this;
+
+}
 }

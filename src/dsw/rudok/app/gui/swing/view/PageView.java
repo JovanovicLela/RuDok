@@ -1,8 +1,11 @@
 package dsw.rudok.app.gui.swing.view;
 
 import dsw.rudok.app.gui.swing.state.CircleSate;
+import dsw.rudok.app.gui.swing.state.RectangleState;
+import dsw.rudok.app.gui.swing.state.TriangleState;
 import dsw.rudok.app.repository.Page;
 import dsw.rudok.app.repository.Slot;
+import dsw.rudok.app.repository.SlotFactory;
 
 import javax.swing.*;
 import java.awt.*;
@@ -64,8 +67,20 @@ public class PageView extends JInternalFrame{
             @Override
             public void mousePressed(MouseEvent e) {
                 Slot slot = null;
-                if(MainFrame.getInstance().getStateManager().getCurrentState() instanceof CircleSate)
-                    return; // ....
+                if (MainFrame.getInstance().getStateManager().getCurrentState() instanceof CircleSate){
+                    slot = SlotFactory.createSlot("Slot" + (page.getChildren().size() + 1),
+                            page, e.getX(), e.getY(), 40, 40, SlotFactory.SlotType.CIRCLE);
+                MainFrame.getInstance().getTree().addSlot(page, slot);
+            }else if(MainFrame.getInstance().getStateManager().getCurrentState() instanceof RectangleState){
+                    slot = SlotFactory.createSlot("Slot" + (page.getChildren().size() + 1),
+                            page, e.getX(), e.getY(),40,20, SlotFactory.SlotType.RECTANGLE);
+                    MainFrame.getInstance().getTree().addSlot(page, slot);
+                }else if(MainFrame.getInstance().getStateManager().getCurrentState() instanceof TriangleState){
+                    ///crtamo trougao
+                }
+
+                 PageView.this.repaint();
+                  //  return; // ....
             }
         }
 

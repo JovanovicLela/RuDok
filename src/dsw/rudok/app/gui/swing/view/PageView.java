@@ -59,7 +59,7 @@ public class PageView extends JInternalFrame{
 
             for(int i = 0; i < page.getChildren().size(); i++){
                 Slot slot = (Slot) page.getChildren().get(i);
-                // ... treba nam view za sam slot koji ce da crta
+                SlotView.drawShape(slot, g2);
             }
         }
 
@@ -80,7 +80,6 @@ public class PageView extends JInternalFrame{
                 }
 
                  PageView.this.repaint();
-                  //  return; // ....
             }
         }
 

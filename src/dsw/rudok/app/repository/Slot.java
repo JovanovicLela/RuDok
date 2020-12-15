@@ -7,7 +7,7 @@ public abstract class Slot  extends RuNode {
     private double x;
     private double y;
 
-    //lokacija
+    //dimenzije
     private double width;
     private double height;
 

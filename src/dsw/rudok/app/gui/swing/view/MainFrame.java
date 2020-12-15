@@ -35,6 +35,7 @@ public class MainFrame extends JFrame  {
     private ErrorHandler error;
     private Subject subject = new Subject(); //observer pattern
 
+    public  boolean saved = true;
 
     private MainFrame(){
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);

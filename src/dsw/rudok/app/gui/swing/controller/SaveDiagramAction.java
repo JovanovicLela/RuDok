@@ -11,7 +11,7 @@ public class SaveDiagramAction extends  AbstractRudokAction{
     public SaveDiagramAction() {
 
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
-        putValue(SMALL_ICON, loadIcon("images/saveDiagram"));
+        putValue(SMALL_ICON, loadIcon("images/saveDiagram.png"));
         putValue(NAME, "Save diagram");
         putValue(SHORT_DESCRIPTION, "Save diagram");
 

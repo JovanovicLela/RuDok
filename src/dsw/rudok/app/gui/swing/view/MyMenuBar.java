@@ -6,12 +6,16 @@ import java.awt.event.KeyEvent;
 public class MyMenuBar extends JMenuBar {
 
     public MyMenuBar(){
+
         JMenu fileMenu = new JMenu("File");
         JMenu editMenu = new JMenu("Edit");
         JMenu windowMenu = new JMenu("Window");
+        JMenu aboutMenu = new JMenu("About");
 
         fileMenu.setMnemonic(KeyEvent.VK_F);
         windowMenu.setMnemonic(KeyEvent.VK_W);
+        aboutMenu.setMnemonic(KeyEvent.VK_A);
+
 
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewProjectAction());
         fileMenu.add(MainFrame.getInstance().getActionManager().getNewDocumentAction());
@@ -32,11 +36,8 @@ public class MyMenuBar extends JMenuBar {
         windowMenu.add(MainFrame.getInstance().getActionManager().getTileVerticallyDiagramAction());
         windowMenu.addSeparator();
         windowMenu.add(MainFrame.getInstance().getActionManager().getCloseDiagramAction());
-        windowMenu.addSeparator();
         windowMenu.add(MainFrame.getInstance().getActionManager().getCloseAllDiagramAction());
 
-        JMenu aboutMenu = new JMenu("About");
-        aboutMenu.setMnemonic(KeyEvent.VK_A);
         aboutMenu.add(MainFrame.getInstance().getActionManager().getAboutAction());
 
         this.add(fileMenu);

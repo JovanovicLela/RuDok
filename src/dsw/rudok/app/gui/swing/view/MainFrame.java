@@ -5,6 +5,7 @@ import dsw.rudok.app.gui.swing.controller.ActionManager;
 import dsw.rudok.app.gui.swing.errorHandler.ErrorHandler;
 import dsw.rudok.app.gui.swing.errorHandler.MyError;
 import dsw.rudok.app.gui.swing.observer.Subject;
+import dsw.rudok.app.gui.swing.state.StateManager;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
 
@@ -18,6 +19,7 @@ public class MainFrame extends JFrame  {
     private static  MainFrame instance = null;
 
     private ActionManager actionManager;
+    private StateManager stateManager;
 
     private AboutDialog aboutDialog;
     private JToolBar toolBar;
@@ -60,6 +62,7 @@ public class MainFrame extends JFrame  {
     private void initialise(){
 
         actionManager = new ActionManager();
+        stateManager = new StateManager();
 
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
@@ -135,6 +138,10 @@ public class MainFrame extends JFrame  {
 
     public JDesktopPane getDesktopPane() {
         return desktopPane;
+    }
+
+    public StateManager getStateManager() {
+        return stateManager;
     }
 
     public ActionManager getActionManager(){

@@ -1,42 +1,41 @@
 package dsw.rudok.app.gui.swing.state;
 
-import dsw.rudok.app.repository.Diagram;
-
 public class StateManager {
 
     private State currentState;
 
-    CircleSate circleSate;
-    LinkState linkState;
-    RectangleState rectangleState;
-    SelectState selectState;
+    private CircleSate circleSate;
+    private RectangleState rectangleState;
+    private TriangleState triangleState;
+    private SelectState selectState;
 
-    public StateManager(Diagram med) {
+    public StateManager() {
 
-        circleSate = new CircleSate(med);
-        linkState = new LinkState(med);
-        rectangleState = new RectangleState(med);
-        selectState = new SelectState(med);
-        currentState = selectState;
-    }
-
-    public void setCircleSate() {
-        currentState = circleSate;
-    }
-
-    public void setLinkState() {
-        currentState = linkState;
-    }
-
-    public void setRectangleState() {
-        currentState = rectangleState;
-    }
-
-    public void setSelectState() {
+        circleSate = new CircleSate();
+        rectangleState = new RectangleState();
+        triangleState = new TriangleState();
+        selectState = new SelectState();
         currentState = selectState;
     }
 
     public State getCurrentState() {
         return currentState;
     }
+
+    public void setCircleSate() {
+        currentState = circleSate;
+    }
+
+    public void setRectangleState() {
+        currentState = rectangleState;
+    }
+
+    public void setTriangleState() {
+        currentState = triangleState;
+    }
+
+    public void setSelectState() {
+        currentState = selectState;
+    }
 }
+

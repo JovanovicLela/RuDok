@@ -52,9 +52,7 @@ public class Document extends RuNodeComposite {
         return super.getName();
     }
 
-    public Diagram getDiagram(int index) {
-        return diagrams.get(index);
-    }
+
 
     public int getDiagramIndex(Diagram diagram) {
         return diagrams.indexOf(diagram);

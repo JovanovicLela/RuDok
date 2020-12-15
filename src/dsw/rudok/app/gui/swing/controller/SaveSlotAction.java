@@ -6,9 +6,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
-public class SaveDiagramAction extends  AbstractRudokAction{
+public class SaveSlotAction extends  AbstractRudokAction{
 
-    public SaveDiagramAction() {
+    public SaveSlotAction() {
 
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
         putValue(SMALL_ICON, loadIcon("images/saveDiagram.png"));

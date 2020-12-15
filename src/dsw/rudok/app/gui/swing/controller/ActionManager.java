@@ -11,7 +11,7 @@ public class ActionManager {
     private NewPageAction newPageAction;
     private NewSlotAction newSlotAction;
 
-    private SaveDiagramAction saveDiagramAction;
+    private SaveSlotAction saveSlotAction;
     private SaveProjectAction saveProjectAction;
     private SaveWorkspaceAction saveWorkspaceAction;
 
@@ -55,7 +55,7 @@ public class ActionManager {
         newPageAction = new NewPageAction();
         newSlotAction = new NewSlotAction();
 
-        saveDiagramAction = new SaveDiagramAction();
+        saveSlotAction = new SaveSlotAction();
         saveProjectAction = new SaveProjectAction();
         saveWorkspaceAction = new SaveWorkspaceAction();
 
@@ -118,12 +118,12 @@ public class ActionManager {
         return deleteElementAction;
     }
 
-    public SaveDiagramAction getSaveDiagramAction() {
-        return saveDiagramAction;
+    public SaveSlotAction getSaveDiagramAction() {
+        return saveSlotAction;
     }
 
-    public void setSaveDiagramAction(SaveDiagramAction saveDiagramAction) {
-        this.saveDiagramAction = saveDiagramAction;
+    public void setSaveDiagramAction(SaveSlotAction saveSlotAction) {
+        this.saveSlotAction = saveSlotAction;
     }
 
     public SaveProjectAction getSaveProjectAction() {

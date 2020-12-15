@@ -2,7 +2,7 @@ package dsw.rudok.app.repository;
 
 import dsw.rudok.app.repository.node.RuNode;
 
-public class Slot  extends RuNode {
+public abstract class Slot  extends RuNode {
    //pozicija
     private double x;
     private double y;

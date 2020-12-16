@@ -1,6 +1,5 @@
 package dsw.rudok.app.gui.swing.controller;
 
-import dsw.rudok.app.gui.swing.view.PageView;
 import dsw.rudok.app.gui.swing.view.MainFrame;
 
 import javax.swing.*;
@@ -18,12 +17,6 @@ public class PTriangleAction extends AbstractRudokAction{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-
-        PageView dw = null;
-
-        if (MainFrame.getInstance().getWorkspaceTree().isSelectionEmpty())
-            return;
-
-      //  ((DiagramView) MainFrame.getInstance().getDesktopPane().)
+        MainFrame.getInstance().getStateManager().setTriangleState();
     }
 }

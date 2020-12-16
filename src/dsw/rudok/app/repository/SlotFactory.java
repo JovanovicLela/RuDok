@@ -11,9 +11,7 @@ public class SlotFactory {
         case RECTANGLE:
             return new SlotRectangle(slotName, page, x, y, width, height);
         case TRIANGLE:
-
-            ///zavrsiti
-            return null;
+            return new SlotTriangle(slotName, page, x, y, width, height);
     }
     return null;
 

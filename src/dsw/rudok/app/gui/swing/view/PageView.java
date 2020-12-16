@@ -55,7 +55,7 @@ public class PageView extends JInternalFrame{
             super.paintComponent(g);
 
             Graphics2D g2 = (Graphics2D) g; // ALt + enter(quick fix)
-            // g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.8f));
+             g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.8f));
 
             for(int i = 0; i < page.getChildren().size(); i++){
                 Slot slot = (Slot) page.getChildren().get(i);
@@ -76,7 +76,8 @@ public class PageView extends JInternalFrame{
                             page, e.getX(), e.getY(),40,20, SlotFactory.SlotType.RECTANGLE);
                     MainFrame.getInstance().getTree().addSlot(page, slot);
                 }else if(MainFrame.getInstance().getStateManager().getCurrentState() instanceof TriangleState){
-                    ///crtamo trougao
+                    slot = SlotFactory.createSlot("Slot" + (page.getChildren().size() + 1),
+                            page, e.getX(), e.getY(), 40, 40, SlotFactory.SlotType.TRIANGLE);
                 }
 
                  PageView.this.repaint();

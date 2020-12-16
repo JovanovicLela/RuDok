@@ -6,12 +6,11 @@ import dsw.rudok.app.repository.SlotRectangle;
 import dsw.rudok.app.repository.SlotTriangle;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
-import java.awt.geom.Rectangle2D;
+import java.awt.geom.*;
 
 public class SlotView {
 
-    private static final Color DEFAULT_COLOR = Color.RED;
+    private static final Color DEFAULT_COLOR = Color.MAGENTA;
 
     public static void drawShape(Slot slot, Graphics2D g){
         if(slot == null || g == null){
@@ -25,7 +24,9 @@ public class SlotView {
             g.draw(new Rectangle2D.Double(slot.getX() - slot.getWidth() / 2, slot.getY()- slot.getWidth() / 2,
                     slot.getWidth(), slot.getHeight()));
         }else if(slot instanceof SlotTriangle){
-            //...trougao..
+            g.draw(new Rectangle2D.Double(slot.getX() - slot.getWidth() / 2, slot.getY()- slot.getWidth() / 2,
+                    slot.getWidth(), slot.getHeight()));
+
         }
     }
 }

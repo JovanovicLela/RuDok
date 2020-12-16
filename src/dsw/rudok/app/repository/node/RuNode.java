@@ -22,6 +22,11 @@ public abstract class RuNode implements Observer {
         return  false;
     }
 
+    @Override
+    public void update() {
+        notifyAll();
+    }
+
     public String getName() {
         return name;
     }
@@ -44,4 +49,5 @@ public abstract class RuNode implements Observer {
         return "RuNode [name = "+ name + "]";
     }
 }
+
 

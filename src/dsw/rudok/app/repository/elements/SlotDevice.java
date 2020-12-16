@@ -5,7 +5,7 @@ import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public abstract class DiagramDevice extends  DiagramElement{
+public abstract class SlotDevice extends SlotElement {
 
     protected Dimension size;
     protected Point2D position;
@@ -17,7 +17,7 @@ public abstract class DiagramDevice extends  DiagramElement{
     protected ArrayList<InputOutputElement> outputs = new ArrayList<InputOutputElement>();
 
 
-    public DiagramDevice(Point2D position, Dimension size, Stroke stroke, Paint paint, Color strokeColor, int inputNo, int outputNo) {
+    public SlotDevice(Point2D position, Dimension size, Stroke stroke, Paint paint, Color strokeColor, int inputNo, int outputNo) {
         super(stroke, paint, strokeColor);
         this.size = size;
 

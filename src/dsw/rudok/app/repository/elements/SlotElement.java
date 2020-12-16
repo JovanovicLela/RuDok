@@ -4,7 +4,7 @@ import dsw.rudok.app.gui.swing.view.painters.ElementPainter;
 
 import java.awt.*;
 
-public abstract class DiagramElement {
+public abstract class SlotElement {
 
     // ova klasa nam daje opis bilo kog elementa,
     // takodje opisuje i linkove dijagrama i elemente dijagrama
@@ -18,7 +18,7 @@ public abstract class DiagramElement {
 
     protected ElementPainter elementPainter;
 
-    public DiagramElement(Stroke stroke, Paint paint, Color strokeColor) {
+    public SlotElement(Stroke stroke, Paint paint, Color strokeColor) {
         this.paint = paint;
         this.stroke = stroke;
         this.strokeColor = strokeColor;

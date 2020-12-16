@@ -5,17 +5,17 @@ import dsw.rudok.app.gui.swing.view.painters.InputOutputPainter;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class InputOutputElement  extends  DiagramElement{
+public class InputOutputElement  extends SlotElement {
 
    public  static final  int INPUT = 0;
    public  static final  int OUTPUT = 1;
 
    protected Point2D position;
-   protected  DiagramDevice device;
+   protected SlotDevice device;
 
    protected int ioNo, type;
 
-    public InputOutputElement(Point2D position, Dimension size, Stroke stroke, Paint paint, Color strokeColor, DiagramDevice device, int ioNo, int type) {
+    public InputOutputElement(Point2D position, Dimension size, Stroke stroke, Paint paint, Color strokeColor, SlotDevice device, int ioNo, int type) {
         super(stroke, paint, strokeColor);
         this.position = position;
         this.device = device;
@@ -24,7 +24,7 @@ public class InputOutputElement  extends  DiagramElement{
         elementPainter = new InputOutputPainter(this);
     }
 
-    public static DiagramElement createDefault(Point2D pos, Stroke stroke, Paint paint, DiagramDevice device, int ioNo, int type){
+    public static SlotElement createDefault(Point2D pos, Stroke stroke, Paint paint, SlotDevice device, int ioNo, int type){
 
         Point2D position = (Point2D) pos.clone();
         position.setLocation(position.getX(), position.getY());
@@ -49,11 +49,11 @@ public class InputOutputElement  extends  DiagramElement{
         this.position = position;
     }
 
-    public DiagramDevice getDevice() {
+    public SlotDevice getDevice() {
         return device;
     }
 
-    public void setDevice(DiagramDevice device) {
+    public void setDevice(SlotDevice device) {
         this.device = device;
     }
 

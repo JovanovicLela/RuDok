@@ -5,7 +5,7 @@ import dsw.rudok.app.gui.swing.view.painters.TrianglePainter;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class TriangleElement extends DiagramDevice{
+public class TriangleElement extends SlotDevice {
 
     public TriangleElement(Point2D position, Dimension size, Stroke stroke, Paint paint, Color strokeColor) {
         super(position, size, stroke, paint, strokeColor, 3, 3);
@@ -13,7 +13,7 @@ public class TriangleElement extends DiagramDevice{
         elementPainter = new TrianglePainter(this);
     }
 
-    public static DiagramDevice createDefault(Point2D pos, int elemNo){
+    public static SlotDevice createDefault(Point2D pos, int elemNo){
 
         Point2D position = (Point2D) pos.clone();
         Paint fill = Color.WHITE;

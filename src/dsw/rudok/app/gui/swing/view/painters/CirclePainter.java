@@ -1,7 +1,7 @@
 package dsw.rudok.app.gui.swing.view.painters;
 
 import dsw.rudok.app.repository.elements.CircleElement;
-import dsw.rudok.app.repository.elements.DiagramElement;
+import dsw.rudok.app.repository.elements.SlotElement;
 
 import java.awt.geom.GeneralPath;
 
@@ -9,7 +9,7 @@ import java.awt.geom.GeneralPath;
 
 public class CirclePainter extends  DevicePainter{
 
-    public CirclePainter(DiagramElement device) {
+    public CirclePainter(SlotElement device) {
         super(device);
 
         CircleElement or = (CircleElement) device;

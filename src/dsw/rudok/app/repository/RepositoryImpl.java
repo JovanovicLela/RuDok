@@ -10,7 +10,7 @@ public class RepositoryImpl implements Repository{
     @Override // novo dodato
     public void addProject(Project project) {
         getWorkspace().addProject(project);
-     //   SwingUtilities.updateComponentTreeUI();
+        //SwingUtilities.updateComponentTreeUI(());
 
     }
 

@@ -6,7 +6,7 @@ import java.util.Enumeration;
 public class Diagram implements TreeNode {
 
     private  String name;
-    private  DiagramModel model = new DiagramModel();
+    private SlotModel model = new SlotModel();
 
 
     public Diagram(String diagramName) {
@@ -21,11 +21,11 @@ public class Diagram implements TreeNode {
         this.name = name;
     }
 
-    public DiagramModel getModel() {
+    public SlotModel getModel() {
         return model;
     }
 
-    public void setModel(DiagramModel model) {
+    public void setModel(SlotModel model) {
         this.model = model;
     }
 

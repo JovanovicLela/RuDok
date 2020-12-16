@@ -5,7 +5,7 @@ import dsw.rudok.app.repository.node.RuNodeComposite;
 
 import java.util.ArrayList;
 
-public class Workspace extends RuNodeComposite {
+public class Workspace extends RuNodeComposite{
 
     //kolekcija projekata, dodato novo
     private ArrayList<Project> projects = new ArrayList<Project>();
@@ -22,7 +22,6 @@ public class Workspace extends RuNodeComposite {
             if(!this.getChildren().contains(project)){
                 this.getChildren().add(project);
                 projects.add(project); // dodato novo
-
             }
         }
 
@@ -34,7 +33,6 @@ public class Workspace extends RuNodeComposite {
             Project project = (Project) child;
             if(this.getChildren().contains(project)){
                 this.getChildren().remove(project);
-
             }
         }
 

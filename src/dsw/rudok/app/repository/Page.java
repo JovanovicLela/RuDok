@@ -18,7 +18,6 @@ public class Page extends RuNodeComposite {
             Slot slot =(Slot) child;
             if(!this.getChildren().contains(slot)){
                 this.getChildren().add(slot);
-
             }
         }
     }
@@ -29,7 +28,6 @@ public class Page extends RuNodeComposite {
             Slot slot =(Slot) child;
             if(this.getChildren().contains(slot)){
                 this.getChildren().remove(slot);
-
             }
         }
 

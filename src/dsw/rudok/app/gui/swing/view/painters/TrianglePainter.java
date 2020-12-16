@@ -1,12 +1,12 @@
 package dsw.rudok.app.gui.swing.view.painters;
 
-import dsw.rudok.app.repository.elements.DiagramElement;
+import dsw.rudok.app.repository.elements.SlotElement;
 import dsw.rudok.app.repository.elements.TriangleElement;
 
 import java.awt.geom.GeneralPath;
 
 public class TrianglePainter extends DevicePainter{
-    public TrianglePainter(DiagramElement device) {
+    public TrianglePainter(SlotElement device) {
         super(device);
 
         TriangleElement triangle = (TriangleElement) device;

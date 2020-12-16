@@ -7,18 +7,18 @@ import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class LinkElement extends  DiagramElement{
+public class LinkElement extends SlotElement {
 
-    protected DiagramDevice startDevice;
+    protected SlotDevice startDevice;
     protected InputOutputElement output;
 
-    protected DiagramDevice endDevice;
+    protected SlotDevice endDevice;
     protected InputOutputElement input;
 
     protected ArrayList<Point2D> points=new ArrayList<Point2D>();
 
 
-    public LinkElement(DiagramDevice startDevice, InputOutputElement input, Stroke stroke, Paint paint, Color strokeColor) {
+    public LinkElement(SlotDevice startDevice, InputOutputElement input, Stroke stroke, Paint paint, Color strokeColor) {
         super(stroke, paint, strokeColor);
 
         this.startDevice = startDevice;
@@ -33,9 +33,9 @@ public class LinkElement extends  DiagramElement{
         elementPainter = new LinkPainter(this);
     }
 
-    public static DiagramElement createDefault(DiagramDevice startDevice,
-                                               InputOutputElement input,
-                                               int elemNo){
+    public static SlotElement createDefault(SlotDevice startDevice,
+                                            InputOutputElement input,
+                                            int elemNo){
         Paint fill = Color.WHITE;
         LinkElement or=new LinkElement(startDevice,
                 input,
@@ -53,15 +53,15 @@ public class LinkElement extends  DiagramElement{
         return points.iterator();
     }
 
-    public void setPainter(DiagramElement link){
+    public void setPainter(SlotElement link){
         elementPainter=new LinkPainter(link);
     }
 
-    public DiagramDevice getStartDevice() {
+    public SlotDevice getStartDevice() {
         return startDevice;
     }
 
-    public void setStartDevice(DiagramDevice startDevice) {
+    public void setStartDevice(SlotDevice startDevice) {
         this.startDevice = startDevice;
     }
 
@@ -73,11 +73,11 @@ public class LinkElement extends  DiagramElement{
         this.output = output;
     }
 
-    public DiagramDevice getEndDevice() {
+    public SlotDevice getEndDevice() {
         return endDevice;
     }
 
-    public void setEndDevice(DiagramDevice endDevice) {
+    public void setEndDevice(SlotDevice endDevice) {
         this.endDevice = endDevice;
     }
 

@@ -1,13 +1,13 @@
 package dsw.rudok.app.gui.swing.view.painters;
 
-import dsw.rudok.app.repository.elements.DiagramElement;
+import dsw.rudok.app.repository.elements.SlotElement;
 import dsw.rudok.app.repository.elements.RectangleElement;
 
 import java.awt.geom.GeneralPath;
 
 public class RectanglePainter extends DevicePainter{
 
-    public RectanglePainter(DiagramElement device) {
+    public RectanglePainter(SlotElement device) {
         super(device);
 
         RectangleElement rectangle = (RectangleElement) device;

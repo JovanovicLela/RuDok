@@ -55,7 +55,10 @@ public class PageView extends JInternalFrame{
             super.paintComponent(g);
 
             Graphics2D g2 = (Graphics2D) g; // ALt + enter(quick fix)
+
+           //providnost
              g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.8f));
+             g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
             for(int i = 0; i < page.getChildren().size(); i++){
                 Slot slot = (Slot) page.getChildren().get(i);

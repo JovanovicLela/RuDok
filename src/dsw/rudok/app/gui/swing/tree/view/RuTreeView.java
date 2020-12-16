@@ -61,21 +61,4 @@ public class RuTreeView extends JTree implements TreeSelectionListener {
     }
 
 
-
-
-
-
-
-
-    /*public Project getCurrentProject(){
-        TreePath path = getSelectionPath();
-        for(int i = 0; i < path.getPathCount(); i++){
-            if(path.getPathComponent(i) instanceof  Project){
-                return  (Project) path.getPathComponent(i);
-            }
-        }
-        return  null;
-    }
-*/
-
 }

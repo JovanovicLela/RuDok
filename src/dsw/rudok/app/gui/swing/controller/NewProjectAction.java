@@ -32,8 +32,6 @@ public class NewProjectAction extends  AbstractRudokAction{
         Project p = new Project("Project "+ (workspace.getChildren().size()+1), ws);
 
 
-
-
         MainFrame.getInstance().getTree().addProject(p);
     }
 }

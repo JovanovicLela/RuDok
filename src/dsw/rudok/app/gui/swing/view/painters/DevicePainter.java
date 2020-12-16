@@ -1,7 +1,7 @@
 package dsw.rudok.app.gui.swing.view.painters;
 
-import dsw.rudok.app.repository.elements.DiagramDevice;
-import dsw.rudok.app.repository.elements.DiagramElement;
+import dsw.rudok.app.repository.elements.SlotDevice;
+import dsw.rudok.app.repository.elements.SlotElement;
 import dsw.rudok.app.repository.elements.InputOutputElement;
 
 import java.awt.*;
@@ -12,13 +12,13 @@ public class DevicePainter extends  ElementPainter{
 
     protected  Shape shape;
 
-    public DevicePainter(DiagramElement device) {
+    public DevicePainter(SlotElement device) {
         super(device);
 
     }
 
     @Override
-    public void paint(Graphics2D g, DiagramElement element) {
+    public void paint(Graphics2D g, SlotElement element) {
 
         AffineTransform old = g.getTransform();
 
@@ -28,9 +28,9 @@ public class DevicePainter extends  ElementPainter{
         g.setPaint(element.getPaint());
         g.fill(getShape());
 
-        if(element instanceof DiagramDevice){
+        if(element instanceof SlotDevice){
             g.setPaint(Color.BLACK);
-            DiagramDevice device = (DiagramDevice)element;
+            SlotDevice device = (SlotDevice)element;
 
             // ako crtamo neki elem, potrbni su nam i jnegovi ulazi i izlazi
             Iterator it = device.getInputIterator();

@@ -2,20 +2,20 @@ package dsw.rudok.app.repository;
 
 import dsw.rudok.app.gui.swing.event.UpdateEvent;
 import dsw.rudok.app.gui.swing.event.UpdateListener;
-import dsw.rudok.app.repository.elements.DiagramDevice;
-import dsw.rudok.app.repository.elements.DiagramElement;
+import dsw.rudok.app.repository.elements.SlotDevice;
+import dsw.rudok.app.repository.elements.SlotElement;
 
 import javax.swing.event.EventListenerList;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class DiagramModel {
+public class SlotModel {
 
     private static int count = 0;
     private String name;
 
-    protected ArrayList<DiagramElement> diagramElements = new ArrayList<DiagramElement>();
+    protected ArrayList<SlotElement> diagramElements = new ArrayList<SlotElement>();
     EventListenerList listenerList = new EventListenerList();
     UpdateEvent updateEvent = null;
 
@@ -27,7 +27,7 @@ public class DiagramModel {
     }
 
     public static void setCount(int count) {
-         DiagramModel.count = count;
+         SlotModel.count = count;
     }
 
     public String getName() {
@@ -45,7 +45,7 @@ public class DiagramModel {
 // metoda koja pronalazi indeks elem koji se nalazi na  zadatim koordinatama
     public int getDeviceAtPosition(Point point){
         for(int i = getDeviceCount()-1; i >= 0; i--) {
-            DiagramElement device = getDeviceAt(i);
+            SlotElement device = getDeviceAt(i);
             if (device.getElementPainter().isElementAt(point)) {
                 return i;
             }
@@ -55,7 +55,7 @@ public class DiagramModel {
     public  int getDeviceCount(){
         return  diagramElements.size();
     }
-    public  DiagramElement getDeviceAt(int i){
+    public SlotElement getDeviceAt(int i){
         return  diagramElements.get(i);
     }
 
@@ -63,10 +63,10 @@ public class DiagramModel {
         return  diagramElements.size();
     }
 
-    public Iterator<DiagramElement> getDeviceIterator(){
+    public Iterator<SlotElement> getDeviceIterator(){
         return diagramElements.iterator();
     }
-    public  void addDiagramElements(DiagramDevice device){
+    public  void addDiagramElements(SlotDevice device){
 
         diagramElements.add(device);
         fireUpdatePerformed();

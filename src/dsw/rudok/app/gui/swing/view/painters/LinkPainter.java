@@ -1,13 +1,13 @@
 package dsw.rudok.app.gui.swing.view.painters;
 
-import dsw.rudok.app.repository.elements.DiagramElement;
+import dsw.rudok.app.repository.elements.SlotElement;
 import dsw.rudok.app.repository.elements.LinkElement;
 
 import java.awt.geom.GeneralPath;
 
 public class LinkPainter extends  DevicePainter{
 
-    public LinkPainter(DiagramElement device) {
+    public LinkPainter(SlotElement device) {
         super(device);
 
         LinkElement link = (LinkElement) device;

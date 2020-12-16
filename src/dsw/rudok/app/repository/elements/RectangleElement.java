@@ -5,14 +5,14 @@ import dsw.rudok.app.gui.swing.view.painters.RectanglePainter;
 import java.awt.*;
 import java.awt.geom.Point2D;
 
-public class RectangleElement extends  DiagramDevice{
+public class RectangleElement extends SlotDevice {
 
     public RectangleElement(Point2D position, Dimension size, Stroke stroke, Paint paint, Color strokeColor) {
         super(position, size, stroke, paint, strokeColor, 5, 3);
         elementPainter = new RectanglePainter(this);
     }
 
-    public static DiagramDevice createDefault(Point2D pos, int elemNo){
+    public static SlotDevice createDefault(Point2D pos, int elemNo){
         Point2D position = (Point2D) pos.clone();
 
         Paint fill = Color.WHITE;

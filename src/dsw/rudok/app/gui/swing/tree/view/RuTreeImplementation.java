@@ -7,11 +7,13 @@ import dsw.rudok.app.repository.node.RuNode;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultTreeModel;
+import javax.swing.tree.TreeNode;
 
 public class RuTreeImplementation implements RuTree {
 
     private RuTreeView treeView;
     private DefaultTreeModel treeModel;
+    private RuTreeItem root;
 
     @Override
     public JTree generateTree(Workspace workspace){
@@ -28,19 +30,6 @@ public class RuTreeImplementation implements RuTree {
             return  null;
         return  selectedItem.getNodeModel();
     }
-
- /*Override
-   public Project getCurrentProject() {
-
-            TreePath path = treeView.getSelectionPath();
-            for(int i = 0; i < path.getPathCount(); i++){
-                if(path.getPathComponent(i) instanceof  Project){
-                    return  (Project) path.getPathComponent(i);
-                }
-            }
-            return  null;
-        }//novo*/
-
 
     @Override
     public void addProject(Project project){
@@ -129,6 +118,35 @@ public class RuTreeImplementation implements RuTree {
         if((obj == null)  || !(obj instanceof  RuTreeItem))
             return  null;
         return (RuTreeItem) obj;
+    }
+
+    private  RuTreeItem getRuTreeItemForPage(Page page){
+
+        String pageName = page.getName();
+        String documentName = page.getParent().getName();
+        String projectName = page.getParent().getParent().getName();
+
+        for(int i = 0; i<root.getChildCount(); i++){
+            TreeNode project = root.getChildAt(i);
+            for(int j = 0; j<project.getChildCount(); j++){
+                TreeNode document = project.getChildAt(j);
+                for(int k = 0; k<document.getChildCount(); k++){
+                    TreeNode pageTreeNode = document.getChildAt(i);
+                    if(pageName.equals(((RuTreeItem)pageTreeNode).getName())
+                        && documentName.equals(((RuTreeItem)document).getName())
+                        && projectName.equals(((RuTreeItem)project).getName())){
+
+                        return (RuTreeItem) pageTreeNode;
+                    }
+                }
+            }
+        }
+        return  null;
+
+
+
+
+
     }
 
 

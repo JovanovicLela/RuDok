@@ -18,6 +18,7 @@ public class ProjectPanel extends JPanel implements Observer {
 
 
 
+
     public ProjectPanel(){
         setLayout(new BorderLayout());
         add(projectNameLabel);
@@ -55,7 +56,6 @@ public class ProjectPanel extends JPanel implements Observer {
         }
 
     }
-
 
     public void setProjectName(String projectName) {
         projectNameLabel.setText(projectName);

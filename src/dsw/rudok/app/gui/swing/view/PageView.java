@@ -23,6 +23,7 @@ public class PageView extends JInternalFrame{
     static final int xOffset = 40, yOffset = 40; // koristimo ih za odedjivanje pozicije unutrasnjeg prozora
     private JPanel framework;
     private Page page;
+ //   StateManager stateManager = new StateManager();
 
 // novo: prosledjena stranica
     public PageView(Page page, int pageNumber) {

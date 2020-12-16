@@ -1,5 +1,8 @@
 package dsw.rudok.app.gui.swing.controller;
 
+import dsw.rudok.app.gui.swing.view.MainFrame;
+import dsw.rudok.app.gui.swing.view.PageView;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -15,6 +18,10 @@ public class DeleteElementAction extends AbstractRudokAction{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+
+        PageView pw = null;
+
+        pw = (PageView) MainFrame.getInstance().getDesktopPane().getSelectedFrame();
 
     }
 }

@@ -91,8 +91,10 @@ public class MainFrame extends JFrame  {
         int screenWidth = screenSize.width;
         setSize(screenWidth / 2,screenHeight / 2);
         setLocationRelativeTo(null);
+        setVisible(true);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setTitle("RuDok");
+        //setExtendedState(getExtendedState()|JFrame.MAXIMIZED_BOTH);
 
 
         menu = new MyMenuBar();
@@ -123,9 +125,6 @@ public class MainFrame extends JFrame  {
 
         ImageIcon img = new ImageIcon(getClass().getResource("images/layer32-min.png"));
         this.setIconImage(img.getImage());
-
-        setLocationRelativeTo(null);
-
 
     }
     public static MainFrame getInstance(){

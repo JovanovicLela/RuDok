@@ -1,5 +1,6 @@
 package dsw.rudok.app.gui.swing.tree;
 
+import dsw.rudok.app.gui.swing.tree.model.RuTreeItem;
 import dsw.rudok.app.repository.*;
 import dsw.rudok.app.repository.node.RuNode;
 
@@ -10,7 +11,9 @@ public interface RuTree {
     JTree generateTree(Workspace workspace);
 
     RuNode getSelectedRuNode();
-  //  Project getCurrentProject();
+    RuTreeItem getRuTreeItemForPage(Page page);// novo
+    RuTreeItem getRuTreeItemForDocument(Document document);//novo
+
 
     void addProject(Project project);
     void addDocument(Project project, Document document);

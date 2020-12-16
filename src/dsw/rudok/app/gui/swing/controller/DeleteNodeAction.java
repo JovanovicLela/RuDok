@@ -23,7 +23,7 @@ public class DeleteNodeAction extends AbstractRudokAction  {
     public void actionPerformed(ActionEvent e) {
 
         RuNode selectedNode = MainFrame.getInstance().getTree().getSelectedRuNode();
-
+     //   MainFrame.getInstance().getTree().
 
         if(selectedNode instanceof  Project) {
             Project selectedProject = (Project) selectedNode;

@@ -6,6 +6,7 @@ import dsw.rudok.app.repository.elements.TriangleElement;
 import java.awt.geom.GeneralPath;
 
 public class TrianglePainter extends DevicePainter{
+
     public TrianglePainter(SlotElement device) {
         super(device);
 

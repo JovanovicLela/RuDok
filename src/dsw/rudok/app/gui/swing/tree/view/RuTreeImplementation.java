@@ -16,7 +16,7 @@ public class RuTreeImplementation implements RuTree {
     private RuTreeItem root;
 
     @Override
-    public JTree generateTree(Workspace workspace){
+    public JTree generateTree(Workspace workspace) {
         RuTreeItem root = new RuTreeItem(workspace);
         treeModel = new DefaultTreeModel(root);
         treeView = new RuTreeView(treeModel);
@@ -26,16 +26,16 @@ public class RuTreeImplementation implements RuTree {
     @Override
     public RuNode getSelectedRuNode() {
         RuTreeItem selectedItem = getSelectedRuTreeItem();
-        if(selectedItem == null)
-            return  null;
-        return  selectedItem.getNodeModel();
+        if (selectedItem == null)
+            return null;
+        return selectedItem.getNodeModel();
     }
 
     @Override
-    public void addProject(Project project){
-        RuNode nodeModel =((RuTreeItem)treeModel.getRoot()).getNodeModel();
-        ((RuTreeItem)treeModel.getRoot()).add(new RuTreeItem(project));
-        ((Workspace)nodeModel).addChild(project);
+    public void addProject(Project project) {
+        RuNode nodeModel = ((RuTreeItem) treeModel.getRoot()).getNodeModel();
+        ((RuTreeItem) treeModel.getRoot()).add(new RuTreeItem(project));
+        ((Workspace) nodeModel).addChild(project);
         SwingUtilities.updateComponentTreeUI(treeView);
 
     }
@@ -44,7 +44,7 @@ public class RuTreeImplementation implements RuTree {
     public void addDocument(Project project, Document document) {
 
         RuTreeItem selectedItem = getSelectedRuTreeItem();
-        if(selectedItem == null)
+        if (selectedItem == null)
             return;
         selectedItem.add(new RuTreeItem(document));
         project.addChild(document);
@@ -55,7 +55,7 @@ public class RuTreeImplementation implements RuTree {
     public void addPage(Document document, Page page) {
 
         RuTreeItem selectedItem = getSelectedRuTreeItem();
-        if(selectedItem == null)
+        if (selectedItem == null)
             return;
         selectedItem.add(new RuTreeItem(page));
         document.addChild(page);
@@ -65,7 +65,7 @@ public class RuTreeImplementation implements RuTree {
     @Override
     public void addSlot(Page page, Slot slot) {
         RuTreeItem selectedItem = getSelectedRuTreeItem();
-        if(selectedItem == null)
+        if (selectedItem == null)
             return;
         selectedItem.add(new RuTreeItem(slot));
         page.addChild(slot);
@@ -74,9 +74,9 @@ public class RuTreeImplementation implements RuTree {
 
     @Override
     public void deleteProject(Project project) {
-        RuNode nodeModel =((RuTreeItem)treeModel.getRoot()).getNodeModel();
-        ((RuTreeItem)treeModel.getRoot()).add(new RuTreeItem(project));
-        ((Workspace)nodeModel).removeChild(project);
+        RuNode nodeModel = ((RuTreeItem) treeModel.getRoot()).getNodeModel();
+        ((RuTreeItem) treeModel.getRoot()).add(new RuTreeItem(project));
+        ((Workspace) nodeModel).removeChild(project);
         SwingUtilities.updateComponentTreeUI(treeView);
 
     }
@@ -84,7 +84,7 @@ public class RuTreeImplementation implements RuTree {
     @Override
     public void deleteDocument(Project project, Document document) {
         RuTreeItem selectedItem = getSelectedRuTreeItem();
-        if(selectedItem == null)
+        if (selectedItem == null)
             return;
         selectedItem.add(new RuTreeItem(document));
         project.removeChild(document);
@@ -94,7 +94,7 @@ public class RuTreeImplementation implements RuTree {
     @Override
     public void deletePage(Document document, Page page) {
         RuTreeItem selectedItem = getSelectedRuTreeItem();
-        if(selectedItem == null)
+        if (selectedItem == null)
             return;
         selectedItem.add(new RuTreeItem(page));
         document.removeChild(page);
@@ -105,7 +105,7 @@ public class RuTreeImplementation implements RuTree {
     @Override
     public void deleteSlot(Page page, Slot slot) {
         RuTreeItem selectedItem = getSelectedRuTreeItem();
-        if(selectedItem == null)
+        if (selectedItem == null)
             return;
         selectedItem.remove(new RuTreeItem(slot));
         page.removeChild(slot);
@@ -113,41 +113,56 @@ public class RuTreeImplementation implements RuTree {
 
     }
 
-    private  RuTreeItem getSelectedRuTreeItem(){
+    private RuTreeItem getSelectedRuTreeItem() {
         Object obj = treeView.getLastSelectedPathComponent();
-        if((obj == null)  || !(obj instanceof  RuTreeItem))
-            return  null;
+        if ((obj == null) || !(obj instanceof RuTreeItem))
+            return null;
         return (RuTreeItem) obj;
     }
 
-    private  RuTreeItem getRuTreeItemForPage(Page page){
+    // prolazimo kroz celo stablo i trazimo Page Tree Item koji odgovora prosledjenom page objektu
+    public RuTreeItem getRuTreeItemForPage(Page page) {
 
         String pageName = page.getName();
         String documentName = page.getParent().getName();
         String projectName = page.getParent().getParent().getName();
 
-        for(int i = 0; i<root.getChildCount(); i++){
+        for (int i = 0; i < root.getChildCount(); i++) {
             TreeNode project = root.getChildAt(i);
-            for(int j = 0; j<project.getChildCount(); j++){
+            for (int j = 0; j < project.getChildCount(); j++) {
                 TreeNode document = project.getChildAt(j);
-                for(int k = 0; k<document.getChildCount(); k++){
+                for (int k = 0; k < document.getChildCount(); k++) {
                     TreeNode pageTreeNode = document.getChildAt(i);
-                    if(pageName.equals(((RuTreeItem)pageTreeNode).getName())
-                        && documentName.equals(((RuTreeItem)document).getName())
-                        && projectName.equals(((RuTreeItem)project).getName())){
+                    if (pageName.equals(((RuTreeItem) pageTreeNode).getName())
+                            && documentName.equals(((RuTreeItem) document).getName())
+                            && projectName.equals(((RuTreeItem) project).getName())) {
 
                         return (RuTreeItem) pageTreeNode;
                     }
                 }
             }
         }
-        return  null;
-
-
-
-
+        return null;
 
     }
 
+    public RuTreeItem getRuTreeItemForDocument(Document document) {
 
+        String documentName = document.getName();
+        String projectName = document.getParent().getName();
+
+        for (int i = 0; i < root.getChildCount(); i++) {
+            TreeNode project = root.getChildAt(i);
+            for (int j = 0; j < project.getChildCount(); j++) {
+                TreeNode documentTreeNode = project.getChildAt(i);
+                if (documentName.equals(((RuTreeItem) documentTreeNode).getName())
+                        && projectName.equals(((RuTreeItem) project).getName())) {
+
+                    return (RuTreeItem) documentTreeNode;
+                }
+            }
+        }
+        return null;
 }
+
+    }

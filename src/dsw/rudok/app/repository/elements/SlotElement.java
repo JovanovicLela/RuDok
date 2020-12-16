@@ -18,6 +18,8 @@ public abstract class SlotElement {
 
     protected ElementPainter elementPainter;
 
+    protected double rotate;
+
     public SlotElement(Stroke stroke, Paint paint, Color strokeColor) {
         this.paint = paint;
         this.stroke = stroke;
@@ -71,5 +73,13 @@ public abstract class SlotElement {
 
     public void setElementPainter(ElementPainter elementPainter) {
         this.elementPainter = elementPainter;
+    }
+
+    public double getRotate() {
+        return rotate;
+    }
+
+    public void setRotate(double rotate) {
+        this.rotate = rotate;
     }
 }

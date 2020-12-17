@@ -12,12 +12,12 @@ public class SelectState extends State {
     private int mouseButton = 0;
 
     public SelectState() {
-
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        super.mousePressed(e);
+
+
     }
 
 }

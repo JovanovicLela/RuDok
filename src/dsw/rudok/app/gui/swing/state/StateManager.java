@@ -1,5 +1,7 @@
 package dsw.rudok.app.gui.swing.state;
 
+import dsw.rudok.app.gui.swing.view.PageView;
+
 public class StateManager {
 
     private State currentState;

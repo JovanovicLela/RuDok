@@ -9,6 +9,7 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.TreeNode;
 import java.util.Enumeration;
 import java.util.Iterator;
+import java.util.Vector;
 
 public class RuTreeItem extends DefaultMutableTreeNode{
 
@@ -78,6 +79,10 @@ public class RuTreeItem extends DefaultMutableTreeNode{
         if(nodeModel instanceof RuNodeComposite){
             RuTreeItem toLookFor = new RuTreeItem(((RuNodeComposite) nodeModel).getChildren().get(childIndex));
 
+            if(super.children == null){
+                super.children = new Vector<>();
+            }
+            super.children.add(toLookFor); //novo
             Iterator childrenIterator = children.iterator();
             TreeNode current;
 

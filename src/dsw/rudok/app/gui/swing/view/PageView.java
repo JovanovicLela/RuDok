@@ -1,11 +1,11 @@
 package dsw.rudok.app.gui.swing.view;
 
-import dsw.rudok.app.gui.swing.state.CircleSate;
-import dsw.rudok.app.gui.swing.state.RectangleState;
-import dsw.rudok.app.gui.swing.state.TriangleState;
+import dsw.rudok.app.repository.state.CircleSate;
+import dsw.rudok.app.repository.state.RectangleState;
+import dsw.rudok.app.repository.state.TriangleState;
 import dsw.rudok.app.repository.Page;
-import dsw.rudok.app.repository.Slot;
-import dsw.rudok.app.repository.SlotFactory;
+import dsw.rudok.app.repository.slot.Slot;
+import dsw.rudok.app.repository.slot.SlotFactory;
 
 import javax.swing.*;
 import java.awt.*;

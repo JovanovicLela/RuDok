@@ -1,9 +1,9 @@
 package dsw.rudok.app.gui.swing.view;
 
-import dsw.rudok.app.repository.Slot;
-import dsw.rudok.app.repository.SlotCircle;
-import dsw.rudok.app.repository.SlotRectangle;
-import dsw.rudok.app.repository.SlotTriangle;
+import dsw.rudok.app.repository.slot.Slot;
+import dsw.rudok.app.repository.slot.SlotCircle;
+import dsw.rudok.app.repository.slot.SlotRectangle;
+import dsw.rudok.app.repository.slot.SlotTriangle;
 
 import java.awt.*;
 import java.awt.geom.*;

@@ -1,4 +1,4 @@
-package dsw.rudok.app.gui.swing.state;
+package dsw.rudok.app.repository.state;
 
 import java.awt.event.MouseEvent;
 

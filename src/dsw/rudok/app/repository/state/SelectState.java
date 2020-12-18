@@ -1,4 +1,4 @@
-package dsw.rudok.app.gui.swing.state;
+package dsw.rudok.app.repository.state;
 
 import dsw.rudok.app.gui.swing.view.PageView;
 

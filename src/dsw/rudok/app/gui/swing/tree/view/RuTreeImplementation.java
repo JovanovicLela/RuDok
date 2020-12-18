@@ -4,6 +4,7 @@ import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.model.RuTreeItem;
 import dsw.rudok.app.repository.*;
 import dsw.rudok.app.repository.node.RuNode;
+import dsw.rudok.app.repository.slot.Slot;
 
 import javax.swing.*;
 import javax.swing.tree.DefaultTreeModel;

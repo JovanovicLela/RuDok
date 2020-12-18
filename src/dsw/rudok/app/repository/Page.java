@@ -2,6 +2,7 @@ package dsw.rudok.app.repository;
 
 import dsw.rudok.app.repository.node.RuNode;
 import dsw.rudok.app.repository.node.RuNodeComposite;
+import dsw.rudok.app.repository.slot.Slot;
 
 import java.util.ArrayList;
 

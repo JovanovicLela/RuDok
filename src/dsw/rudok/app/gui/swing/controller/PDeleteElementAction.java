@@ -7,13 +7,13 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
-public class DeleteElementAction extends AbstractRudokAction{
+public class PDeleteElementAction extends AbstractRudokAction{
 
-    public DeleteElementAction() {
+    public PDeleteElementAction() {
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.CTRL_MASK));
-        putValue(SMALL_ICON, loadIcon("images/newDocument.png"));
-        putValue(NAME, "New Document");
-        putValue(SHORT_DESCRIPTION, "New Document");
+        putValue(SMALL_ICON, loadIcon("images/deleteElem.png"));
+        putValue(NAME, "Delete");
+        putValue(SHORT_DESCRIPTION, "Deletes the selected element");
     }
 
     @Override

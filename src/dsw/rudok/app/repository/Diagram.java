@@ -1,5 +1,7 @@
 package dsw.rudok.app.repository;
 
+import dsw.rudok.app.repository.slot.SlotModel;
+
 import javax.swing.tree.TreeNode;
 import java.util.Enumeration;
 

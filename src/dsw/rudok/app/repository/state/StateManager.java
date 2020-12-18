@@ -1,6 +1,4 @@
-package dsw.rudok.app.gui.swing.state;
-
-import dsw.rudok.app.gui.swing.view.PageView;
+package dsw.rudok.app.repository.state;
 
 public class StateManager {
 

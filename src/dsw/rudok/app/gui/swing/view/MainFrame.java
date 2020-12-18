@@ -5,7 +5,7 @@ import dsw.rudok.app.gui.swing.controller.ActionManager;
 import dsw.rudok.app.gui.swing.errorHandler.ErrorHandler;
 import dsw.rudok.app.gui.swing.errorHandler.MyError;
 import dsw.rudok.app.gui.swing.observer.Subject;
-import dsw.rudok.app.gui.swing.state.StateManager;
+import dsw.rudok.app.repository.state.StateManager;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
 

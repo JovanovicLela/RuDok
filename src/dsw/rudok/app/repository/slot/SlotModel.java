@@ -1,4 +1,4 @@
-package dsw.rudok.app.repository;
+package dsw.rudok.app.repository.slot;
 
 import dsw.rudok.app.gui.swing.event.UpdateEvent;
 import dsw.rudok.app.gui.swing.event.UpdateListener;

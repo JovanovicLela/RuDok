@@ -12,7 +12,7 @@ public class PTriangleAction extends AbstractRudokAction{
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_O, ActionEvent.CTRL_MASK));
         putValue(SMALL_ICON, loadIcon("images/triangle.jpg"));
         putValue(NAME, "Triangle");
-        putValue(SHORT_DESCRIPTION, "Triangle");
+        putValue(SHORT_DESCRIPTION, "Draw triangle");
     }
 
     @Override

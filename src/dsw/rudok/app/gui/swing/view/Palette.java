@@ -1,7 +1,6 @@
 package dsw.rudok.app.gui.swing.view;
 
 import javax.swing.*;
-import java.awt.*;
 
 public class Palette extends JToolBar {
 
@@ -18,7 +17,14 @@ public class Palette extends JToolBar {
         addSeparator();
         add(MainFrame.getInstance().getActionManager().getCircleAction());
         addSeparator();
-
+        add(MainFrame.getInstance().getActionManager().getRotateAction());
+        addSeparator();
+        add(MainFrame.getInstance().getActionManager().getResizeAction());
+        addSeparator();
+        add(MainFrame.getInstance().getActionManager().getMoveAction());
+        addSeparator();
+        add(MainFrame.getInstance().getActionManager().getDeleteElementAction());
+        addSeparator();
 
     }
 }

@@ -1,4 +1,6 @@
-package dsw.rudok.app.repository;
+package dsw.rudok.app.repository.slot;
+
+import dsw.rudok.app.repository.Page;
 
 public class SlotFactory {
 

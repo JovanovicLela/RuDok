@@ -26,20 +26,16 @@ public class ActionManager {
     private PRectangleAction PRectangleAction;
     private PCircleAction PCircleAction;
     private PTriangleAction PTriangleAction;
+    private PResizeAction PResizeAction;
+    private PRotateAction PRotateAction;
+    private PMoveAction PMoveAction;;
+    private dsw.rudok.app.gui.swing.controller.PDeleteElementAction PDeleteElementAction;
 
     private CascadeDiagramAction cascadeDiagramAction;
     private TileHorizontallyDiagramAction tileHorizontallyDiagramAction;
     private TileVerticallyDiagramAction tileVerticallyDiagramAction;
     private CloseDiagramAction closeDiagramAction;
     private CloseAllDiagramAction closeAllDiagramAction;
-
-    private ResizeAction resizeAction;
-    private MoveAction moveAction;;
-    private RotateAction rotateAction;
-    private DeleteElementAction deleteElementAction;
-
-
-
 
 
     public  ActionManager(){
@@ -69,11 +65,11 @@ public class ActionManager {
         PRectangleAction = new PRectangleAction();
         PCircleAction = new PCircleAction();
         PTriangleAction = new PTriangleAction();
+        PResizeAction = new PResizeAction();
+        PRotateAction = new PRotateAction();
+        PMoveAction = new PMoveAction();
+        PDeleteElementAction = new PDeleteElementAction();
 
-        resizeAction = new ResizeAction();
-        moveAction = new MoveAction();
-        rotateAction = new RotateAction();
-        deleteElementAction = new DeleteElementAction();
 
         cascadeDiagramAction = new CascadeDiagramAction();
         tileHorizontallyDiagramAction = new TileHorizontallyDiagramAction();
@@ -81,6 +77,15 @@ public class ActionManager {
         closeDiagramAction = new CloseDiagramAction();
         closeAllDiagramAction = new CloseAllDiagramAction();
     }
+
+    public SaveSlotAction getSaveSlotAction() {
+        return saveSlotAction;
+    }
+
+    public PResizeAction getResizeAction(){
+        return PResizeAction;
+    }
+
 
     public CloseDiagramAction getCloseDiagramAction() {
         return closeDiagramAction;
@@ -102,20 +107,15 @@ public class ActionManager {
         return tileVerticallyDiagramAction;
     }
 
-    public ResizeAction getResizeAction() {
-        return resizeAction;
-    }
 
-    public MoveAction getMoveAction() {
-        return moveAction;
+    public PRotateAction getRotateAction() {
+        return PRotateAction;
     }
-
-    public RotateAction getRotateAction() {
-        return rotateAction;
+    public PMoveAction getMoveAction(){
+        return PMoveAction;
     }
-
-    public DeleteElementAction getDeleteElementAction() {
-        return deleteElementAction;
+    public PDeleteElementAction getDeleteElementAction(){
+        return  PDeleteElementAction;
     }
 
     public SaveSlotAction getSaveDiagramAction() {

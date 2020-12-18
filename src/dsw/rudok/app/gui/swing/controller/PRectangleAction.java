@@ -13,7 +13,7 @@ public class PRectangleAction extends AbstractRudokAction {
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_O, ActionEvent.CTRL_MASK));
         putValue(SMALL_ICON, loadIcon("images/rectangle.jpg"));
         putValue(NAME, "Rectangle");
-        putValue(SHORT_DESCRIPTION, "Rectangle");
+        putValue(SHORT_DESCRIPTION, "Draw rectangle");
     }
 
     @Override

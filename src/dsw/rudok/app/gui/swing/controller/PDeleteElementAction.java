@@ -11,8 +11,8 @@ public class PDeleteElementAction extends AbstractRudokAction{
 
     public PDeleteElementAction() {
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.CTRL_MASK));
-        putValue(SMALL_ICON, loadIcon("images/deleteElem.png"));
-        putValue(NAME, "Delete");
+        putValue(SMALL_ICON, loadIcon("images/closeDiagram.png"));
+        putValue(NAME, "Delete element");
         putValue(SHORT_DESCRIPTION, "Deletes the selected element");
     }
 

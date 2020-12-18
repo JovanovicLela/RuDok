@@ -34,7 +34,7 @@ public class MyMenuBar extends JMenuBar {
         windowMenu.add(MainFrame.getInstance().getActionManager().getTileHorizontallyDiagramAction());
         windowMenu.add(MainFrame.getInstance().getActionManager().getTileVerticallyDiagramAction());
         windowMenu.addSeparator();
-        windowMenu.add(MainFrame.getInstance().getActionManager().getCloseDiagramAction());
+        windowMenu.add(MainFrame.getInstance().getActionManager().getDeleteElementAction());
         windowMenu.add(MainFrame.getInstance().getActionManager().getCloseAllDiagramAction());
 
         aboutMenu.add(MainFrame.getInstance().getActionManager().getAboutAction());

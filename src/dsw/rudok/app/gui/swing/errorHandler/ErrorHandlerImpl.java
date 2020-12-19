@@ -15,10 +15,13 @@ public class ErrorHandlerImpl implements  ErrorHandler{
     public void onError(ErrorType code){
         switch (code){
             case EMPTY_NODE_ERROR: {
-            notifyObservers(new MyError(1,"Polje ne sme biti prazno, molim Vas unesite tekst.", "Prazan čvor"));
+                notifyObservers(new MyError(1,"The field cannot be empty, please enter text.", "Empty node"));
             }
             case NOTHING_SELECTED: {
                 notifyObservers(new MyError(1,"Nothing is selected, please select item.", "Nothing selected"));
+            }
+            case NULL_SLOT: {
+                notifyObservers(new MyError(1, "Slot type cannot be null.", "Null slot"));
             }
         }
     }

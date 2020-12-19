@@ -1,11 +1,13 @@
 package dsw.rudok.app.gui.swing.view;
 
-import dsw.rudok.app.repository.state.CircleSate;
-import dsw.rudok.app.repository.state.RectangleState;
-import dsw.rudok.app.repository.state.TriangleState;
+import dsw.rudok.app.AppCore;
+import dsw.rudok.app.gui.swing.errorHandler.ErrorType;
 import dsw.rudok.app.repository.Page;
 import dsw.rudok.app.repository.slot.Slot;
 import dsw.rudok.app.repository.slot.SlotFactory;
+import dsw.rudok.app.repository.state.CircleSate;
+import dsw.rudok.app.repository.state.RectangleState;
+import dsw.rudok.app.repository.state.TriangleState;
 
 import javax.swing.*;
 import java.awt.*;
@@ -50,6 +52,13 @@ public class PageView extends JInternalFrame{
 
     public Slot getSelectedSlot() {
         return selectedSlot;
+    }
+    public int getNumberOfSlotsPerType(SlotFactory.SlotType slotType){
+        if(slotType == null){
+            AppCore.getInstance().getError().onError(ErrorType.NULL_SLOT);
+        }
+        return 0; //za sada
+
     }
 
     private class Framework extends  JPanel {

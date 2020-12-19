@@ -11,6 +11,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.geom.Rectangle2D;
 
 // PAGE VIEW
 
@@ -23,6 +24,7 @@ public class PageView extends JInternalFrame{
     static final int xOffset = 40, yOffset = 40; // koristimo ih za odedjivanje pozicije unutrasnjeg prozora
     private JPanel framework;
     private Page page;
+    private Slot selectedSlot = null;
  //   StateManager stateManager = new StateManager();
 
 // novo: prosledjena stranica
@@ -46,10 +48,16 @@ public class PageView extends JInternalFrame{
         add(framework);
     }
 
+    public Slot getSelectedSlot() {
+        return selectedSlot;
+    }
+
     private class Framework extends  JPanel {
 
         public Framework() {
+            FrameworkAdapter frameworkAdapter = new FrameworkAdapter();
             addMouseListener(new FrameworkAdapter());
+            addMouseMotionListener(frameworkAdapter);
         }
 
         protected void paintComponent(Graphics g) {
@@ -85,6 +93,32 @@ public class PageView extends JInternalFrame{
                 }
 
                  PageView.this.repaint();
+            }
+
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                if(selectedSlot == null){
+                    return;
+                }
+                int x = e.getX();
+                int y  =e.getY();
+                if(SlotView.getDownerRightSelectionRectangle(selectedSlot).contains(x,y)) {
+
+                    Rectangle2D selRectangle = SlotView.getDownerRightSelectionRectangle(selectedSlot);
+                    Rectangle2D newSelRectangle = new Rectangle2D.Double(x - 2.5, y - 2.5, 5, 5);
+
+                    double deltaX = newSelRectangle.getX() - selRectangle.getX();
+                    double deltaY = newSelRectangle.getY() - selRectangle.getY();
+
+                    if(selectedSlot.getWidth() + deltaX > 0){
+                        double x0 = selectedSlot.getX() - (selectedSlot.getWidth()/2);
+                        selectedSlot.setWidth(selectedSlot.getWidth() + deltaX);
+                        double newX = x0 + selectedSlot.getWidth()/2;
+                        selectedSlot.setX(newX);
+                    }
+
+                }
+
             }
         }
 

@@ -11,6 +11,9 @@ public abstract class Slot  extends RuNode {
     private double width;
     private double height;
 
+    private boolean isSelected = false;
+    private double rotate = 0;
+
    public Slot(String name, RuNode parent, double x, double y , double width, double height){
 
        super(name,parent);
@@ -20,6 +23,22 @@ public abstract class Slot  extends RuNode {
        this.height = height;
 
    }
+
+    public boolean isSelected() {
+        return isSelected;
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
+
+    public double getRotate() {
+        return rotate;
+    }
+
+    public void setRotate(double rotate) {
+        this.rotate = rotate;
+    }
 
     public double getHeight() {
         return height;

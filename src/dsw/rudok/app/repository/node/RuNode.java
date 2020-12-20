@@ -33,7 +33,7 @@ public abstract class RuNode implements Observer {
 
     public void setName(String name) {
         this.name = name;
-        notifyAll();
+        //notifyAll();
     }
 
     public RuNode getParent() {

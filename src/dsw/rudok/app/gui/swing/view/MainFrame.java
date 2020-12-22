@@ -25,6 +25,7 @@ public class MainFrame extends JFrame  {
     private JToolBar toolBar;
     private ProjectPanel desktop;
     private JMenuBar menu;
+    private StatusBar statusBar;
     private Palette palette;
     private JDesktopPane desktopPane;
     // desktopPane ce u sebi sadrzati kolekciju view-a, gde svaki od njih
@@ -105,6 +106,9 @@ public class MainFrame extends JFrame  {
 
         palette = new Palette();
         getContentPane().add(palette, BorderLayout.EAST);
+
+        statusBar = new StatusBar();
+        add(statusBar, BorderLayout.SOUTH);
 
         desktop = new ProjectPanel();
         desktopPane = new JDesktopPane();

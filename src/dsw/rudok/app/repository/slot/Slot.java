@@ -3,11 +3,12 @@ package dsw.rudok.app.repository.slot;
 import dsw.rudok.app.repository.node.RuNode;
 
 public abstract class Slot  extends RuNode {
-   //pozicija
+
+    // pozicija
     private double x;
     private double y;
 
-    //dimenzije
+    // dimenzije
     private double width;
     private double height;
 

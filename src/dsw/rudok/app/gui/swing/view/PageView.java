@@ -46,7 +46,7 @@ public class PageView extends JInternalFrame{
         setVisible(true);
         setResizable(true);
 
-        framework = new Framework(); // radna povrsina za dijagram
+        framework = new Framework(); // radna povrsina za crtanje slotova
         framework.setCursor(new Cursor(Cursor.HAND_CURSOR));
         framework.setBackground(Color.WHITE);
         framework.setFocusable(true);
@@ -130,7 +130,7 @@ public class PageView extends JInternalFrame{
                         return;
                     }
                     deselectAllSlots();
-                    slot = SlotFactory.createSlot("Rectangle " + (page.getChildren().size() + 1),
+                    slot = SlotFactory.createSlot("Rectangle " + (getNumberOfSlotsPerType(SlotFactory.SlotType.RECTANGLE) + 1),
                             page, e.getX(), e.getY(), 80, 40, SlotFactory.SlotType.RECTANGLE);
                     MainFrame.getInstance().getTree().addSlot(page, slot);
                 } else if (MainFrame.getInstance().getStateManager().getCurrentState() instanceof TriangleState) {
@@ -151,11 +151,13 @@ public class PageView extends JInternalFrame{
 
             @Override
             public void mouseDragged(MouseEvent e) {
+
                 if (selectedSlot == null) {
                     return;
                 }
                 int x = e.getX();
                 int y = e.getY();
+
                 if (SlotView.getDownerRightSelectionRectangle(selectedSlot).contains(x, y)) {
 
                     Rectangle2D selRectangle = SlotView.getDownerRightSelectionRectangle(selectedSlot);

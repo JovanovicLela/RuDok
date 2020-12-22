@@ -1,7 +1,5 @@
 package dsw.rudok.app.gui.swing.view;
 
-import dsw.rudok.app.AppCore;
-import dsw.rudok.app.gui.swing.errorHandler.ErrorType;
 import dsw.rudok.app.repository.Page;
 import dsw.rudok.app.repository.slot.Slot;
 import dsw.rudok.app.repository.slot.SlotCircle;
@@ -26,7 +24,7 @@ public class PageView extends JInternalFrame{
     // a DiagramModel dobijamo iz Diagrama
 
     static final int FRAME_WIDTH = 300, FRAME_HEIGHT = 300;
-    static final int xOffset = 40, yOffset = 40; // koristimo ih za odedjivanje pozicije unutrasnjeg prozora
+    static final int xOffset = 30, yOffset = 30; // koristimo ih za odedjivanje pozicije unutrasnjeg prozora
     private JPanel framework;
     private Page page;
     private Slot selectedSlot = null;
@@ -41,10 +39,7 @@ public class PageView extends JInternalFrame{
         this.setFrameIcon(img);
         setLocation(xOffset * pageNumber, yOffset * pageNumber);
         setSize(FRAME_WIDTH, FRAME_HEIGHT);
-        setIconifiable(true);
-        setClosable(true);
         setVisible(true);
-        setResizable(true);
 
         framework = new Framework(); // radna povrsina za crtanje slotova
         framework.setCursor(new Cursor(Cursor.HAND_CURSOR));
@@ -59,7 +54,8 @@ public class PageView extends JInternalFrame{
 
     public int getNumberOfSlotsPerType(SlotFactory.SlotType slotType){
         if(slotType == null){
-            AppCore.getInstance().getError().onError(ErrorType.NULL_SLOT);
+            throw new IllegalArgumentException("bla bla");
+           // AppCore.getInstance().getError().onError(ErrorType.NULL_SLOT);
         }
 
         int res = 0;
@@ -101,8 +97,8 @@ public class PageView extends JInternalFrame{
             Graphics2D g2 = (Graphics2D) g; // ALt + enter(quick fix)
 
             //providnost
-            g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.8f));
-            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+           // g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.8f));
+           // g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
             for (int i = 0; i < page.getChildren().size(); i++) {
                 Slot slot = (Slot) page.getChildren().get(i);
@@ -134,12 +130,13 @@ public class PageView extends JInternalFrame{
                             page, e.getX(), e.getY(), 80, 40, SlotFactory.SlotType.RECTANGLE);
                     MainFrame.getInstance().getTree().addSlot(page, slot);
                 } else if (MainFrame.getInstance().getStateManager().getCurrentState() instanceof TriangleState) {
-                    slot = SlotFactory.createSlot("Triangle " + (page.getChildren().size() + 1),
-                            page, e.getX(), e.getY(), 40, 40, SlotFactory.SlotType.TRIANGLE);
+                 //   slot = SlotFactory.createSlot("Triangle " + (page.getChildren().size() + 1),
+                         //   page, e.getX(), e.getY(), 40, 40, SlotFactory.SlotType.TRIANGLE);
                     // ... crtamo trougao .....
                 } else if(MainFrame.getInstance().getStateManager().getCurrentState() instanceof SelectState){
 
                     deselectAllSlots();
+
                     Slot s = selectedSlot(e.getX(), e.getY());
                     if(s != null){
                         s.setSelected(true);
@@ -184,7 +181,7 @@ public class PageView extends JInternalFrame{
                 if (SlotView.getUpperLeftSelectionRectangle(selectedSlot).contains(x, y)) {
 
                 }
-                if (SlotView.getDownerRightSelectionRectangle(selectedSlot).contains(x, y)) {
+                if (SlotView.getUpperRightSelectionRectangle(selectedSlot).contains(x, y)) {
 
                 }
                 if (SlotView.getDownerLeftSelectionRectangle(selectedSlot).contains(x, y)) {

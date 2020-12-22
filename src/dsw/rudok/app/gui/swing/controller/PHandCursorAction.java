@@ -1,6 +1,5 @@
 package dsw.rudok.app.gui.swing.controller;
 
-import dsw.rudok.app.gui.swing.view.PageView;
 import dsw.rudok.app.gui.swing.view.MainFrame;
 
 import javax.swing.*;
@@ -19,6 +18,7 @@ public class PHandCursorAction extends AbstractRudokAction {
 
     @Override
     public void actionPerformed(ActionEvent e) {
+        MainFrame.getInstance().getStateManager().setSelectState();
 
     }
 }

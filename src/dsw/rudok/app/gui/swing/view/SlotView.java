@@ -23,14 +23,16 @@ public class SlotView {
         if (slot instanceof SlotCircle) {
             g.draw(new Ellipse2D.Double(slot.getX() - slot.getWidth() / 2, slot.getY() - slot.getHeight()/ 2,
                     slot.getWidth(), slot.getHeight()));
+
             g.drawString(slot.getName(), (int)(slot.getX() - slot.getWidth()/4), (int) slot.getY());
         } else if (slot instanceof SlotRectangle) {
             g.draw(new Rectangle2D.Double(slot.getX() - slot.getWidth() / 2, slot.getY() - slot.getHeight() / 2,
                     slot.getWidth(), slot.getHeight()));
+
             g.drawString(slot.getName(), (int)(slot.getX() - slot.getWidth()/2 + 5), (int) slot.getY());
         } else if (slot instanceof SlotTriangle) {
-            g.draw(new Rectangle2D.Double(slot.getX() - slot.getWidth() / 2, slot.getY() - slot.getWidth() / 2,
-                    slot.getWidth(), slot.getHeight())); // .. nacrtati trougao...
+          //  g.draw(new Rectangle2D.Double(slot.getX() - slot.getWidth() / 2, slot.getY() - slot.getWidth() / 2,
+                //    slot.getWidth(), slot.getHeight())); // .. nacrtati trougao...
 
         }
         if (slot.isSelected()) {

@@ -5,9 +5,9 @@ import dsw.rudok.app.gui.swing.controller.ActionManager;
 import dsw.rudok.app.gui.swing.errorHandler.ErrorHandler;
 import dsw.rudok.app.gui.swing.errorHandler.MyError;
 import dsw.rudok.app.gui.swing.observer.Subject;
-import dsw.rudok.app.repository.state.StateManager;
 import dsw.rudok.app.gui.swing.tree.RuTree;
 import dsw.rudok.app.gui.swing.tree.view.RuTreeImplementation;
+import dsw.rudok.app.repository.state.StateManager;
 
 import javax.swing.*;
 import java.awt.*;
@@ -66,7 +66,13 @@ public class MainFrame extends JFrame  {
         stateManager = new StateManager();
 
         try {
-            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+            //UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+
+            final String DEFAULT_FONT_FAMILY = "Times New Roman";
+            final int DEFAULT_FONT_SIZE = 20;
+            UIManager.put("TextPane.font",
+                    new Font(DEFAULT_FONT_FAMILY, Font.BOLD, DEFAULT_FONT_SIZE));
+            UIManager.setLookAndFeel("javax.swing.plaf.metal.MetalLookAndFeel");
             SwingUtilities.updateComponentTreeUI(this);
         } catch (Exception e) {
             // TODO Auto-generated catch block

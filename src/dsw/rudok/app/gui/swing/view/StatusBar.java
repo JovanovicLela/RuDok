@@ -2,10 +2,12 @@ package dsw.rudok.app.gui.swing.view;
 
 import javax.swing.*;
 import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
 import java.util.Date;
 
 public class StatusBar extends JPanel {
 
+    public LocalDateTime now = null;
     private JTextField tfDate;
 
     public StatusBar() {
@@ -17,7 +19,8 @@ public class StatusBar extends JPanel {
 
         add(tfDate);
 
-
-
     }
+
+
+
 }

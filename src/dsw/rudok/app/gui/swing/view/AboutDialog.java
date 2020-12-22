@@ -1,6 +1,7 @@
 package dsw.rudok.app.gui.swing.view;
 
 import javax.swing.*;
+import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 import java.awt.*;
 
 public class AboutDialog  extends JDialog {
@@ -50,7 +51,11 @@ public class AboutDialog  extends JDialog {
         setVisible(false);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-
+        try {
+            UIManager.setLookAndFeel(new NimbusLookAndFeel());
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        }
 
 
     }

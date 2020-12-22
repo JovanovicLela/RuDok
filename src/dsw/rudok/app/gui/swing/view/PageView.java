@@ -9,6 +9,7 @@ import dsw.rudok.app.repository.slot.SlotFactory;
 import dsw.rudok.app.repository.slot.SlotRectangle;
 import dsw.rudok.app.repository.state.CircleSate;
 import dsw.rudok.app.repository.state.RectangleState;
+import dsw.rudok.app.repository.state.SelectState;
 import dsw.rudok.app.repository.state.TriangleState;
 
 import javax.swing.*;
@@ -113,19 +114,38 @@ public class PageView extends JInternalFrame{
             @Override
             public void mousePressed(MouseEvent e) {
                 Slot slot = null;
+
                 if (MainFrame.getInstance().getStateManager().getCurrentState() instanceof CircleSate) {
-                    slot = SlotFactory.createSlot("Slot" + (page.getChildren().size() + 1),
-                            page, e.getX(), e.getY(), 40, 40, SlotFactory.SlotType.CIRCLE);
+                    if(selectedSlot(e.getX(), e.getY()) != null){
+                        return;
+                    }
+                    deselectAllSlots();
+
+                    slot = SlotFactory.createSlot("Circle " + (getNumberOfSlotsPerType(SlotFactory.SlotType.CIRCLE) + 1),
+                            page, e.getX(), e.getY(), 80, 80, SlotFactory.SlotType.CIRCLE);
+
                     MainFrame.getInstance().getTree().addSlot(page, slot);
                 } else if (MainFrame.getInstance().getStateManager().getCurrentState() instanceof RectangleState) {
-                    slot = SlotFactory.createSlot("Slot" + (page.getChildren().size() + 1),
-                            page, e.getX(), e.getY(), 40, 20, SlotFactory.SlotType.RECTANGLE);
+                    if(selectedSlot(e.getX(), e.getY()) != null){
+                        return;
+                    }
+                    deselectAllSlots();
+                    slot = SlotFactory.createSlot("Rectangle " + (page.getChildren().size() + 1),
+                            page, e.getX(), e.getY(), 80, 40, SlotFactory.SlotType.RECTANGLE);
                     MainFrame.getInstance().getTree().addSlot(page, slot);
                 } else if (MainFrame.getInstance().getStateManager().getCurrentState() instanceof TriangleState) {
-                    slot = SlotFactory.createSlot("Slot" + (page.getChildren().size() + 1),
+                    slot = SlotFactory.createSlot("Triangle " + (page.getChildren().size() + 1),
                             page, e.getX(), e.getY(), 40, 40, SlotFactory.SlotType.TRIANGLE);
-                }
+                    // ... crtamo trougao .....
+                } else if(MainFrame.getInstance().getStateManager().getCurrentState() instanceof SelectState){
 
+                    deselectAllSlots();
+                    Slot s = selectedSlot(e.getX(), e.getY());
+                    if(s != null){
+                        s.setSelected(true);
+                        selectedSlot = s;
+                    }
+                }
                 PageView.this.repaint();
             }
 

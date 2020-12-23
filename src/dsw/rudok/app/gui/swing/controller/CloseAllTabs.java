@@ -10,7 +10,7 @@ import java.awt.event.KeyEvent;
 public class CloseAllTabs extends AbstractRudokAction implements  Observer{
 
     public CloseAllTabs() {
-        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_E, ActionEvent.CTRL_MASK));
+        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_T, ActionEvent.CTRL_MASK));
         putValue(SMALL_ICON, loadIcon("images/closeAllTabs.png"));
         putValue(NAME, "Close all tabs");
         putValue(SHORT_DESCRIPTION, "Closes all tabs");

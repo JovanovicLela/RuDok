@@ -22,6 +22,8 @@ public class MainFrame extends JFrame  {
     private StateManager stateManager;
 
     private AboutDialog aboutDialog;
+    private HelpDialog helpDialog;
+
     private JToolBar toolBar;
     private ProjectPanel desktop;
     private JMenuBar menu;
@@ -120,6 +122,7 @@ public class MainFrame extends JFrame  {
         desktopPane = new JDesktopPane();
 
         aboutDialog = new AboutDialog();
+        helpDialog = new HelpDialog();
 
         JScrollPane scroll = new JScrollPane(workspaceTree);
         scroll.setMinimumSize(new Dimension(200, 150));
@@ -143,6 +146,14 @@ public class MainFrame extends JFrame  {
             instance.initialise();
         }
         return  instance;
+    }
+
+    public HelpDialog getHelpDialog() {
+        return helpDialog;
+    }
+
+    public void setHelpDialog(HelpDialog helpDialog) {
+        this.helpDialog = helpDialog;
     }
 
     public JDesktopPane getDesktopPane() {

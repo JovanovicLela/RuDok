@@ -12,7 +12,7 @@ import java.io.File;
 public class SaveProjectAction extends AbstractRudokAction{
     public SaveProjectAction() {
 
-        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_F2, ActionEvent.CTRL_MASK));
+        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
         putValue(SMALL_ICON, loadIcon("images/saveP.png"));
         putValue(NAME, "Save project");
         putValue(SHORT_DESCRIPTION, "Save project");

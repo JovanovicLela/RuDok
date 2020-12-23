@@ -12,7 +12,7 @@ import java.awt.event.KeyEvent;
 public class NewPageAction extends  AbstractRudokAction {
 
     public NewPageAction() {
-        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_P, ActionEvent.CTRL_MASK));
+        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_P, ActionEvent.ALT_MASK));
         putValue(SMALL_ICON, loadIcon("images/newPage.png"));
         putValue(NAME, "New Page");
         putValue(SHORT_DESCRIPTION, "New Page");

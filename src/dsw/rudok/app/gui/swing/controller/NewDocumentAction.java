@@ -12,7 +12,7 @@ import java.awt.event.KeyEvent;
 public class NewDocumentAction extends  AbstractRudokAction   {
 
     public  NewDocumentAction(){
-        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.CTRL_MASK));
+        putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_D, ActionEvent.ALT_MASK));
         putValue(SMALL_ICON, loadIcon("images/newDocument.png"));
         putValue(NAME, "New Document");
         putValue(SHORT_DESCRIPTION, "New Document");

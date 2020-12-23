@@ -3,18 +3,17 @@ package dsw.rudok.app.gui.swing.controller;
 public class ActionManager {
 
     private ExitAction exitAction;
-
     private AboutAction aboutAction;
+    private HelpAction helpAction;
+    private SaveProjectAction saveProjectAction;
+    private SaveAsAction saveAsAction;
+    private SaveSlotAction saveSlotAction;
+    private SaveWorkspaceAction saveWorkspaceAction;
+    private OpenProjectAction openProjectAction;
 
     private NewProjectAction newProjectAction;
     private NewDocumentAction newDocumentAction;
     private NewPageAction newPageAction;
-
-
-    private SaveSlotAction saveSlotAction;
-    private SaveProjectAction saveProjectAction;
-    private SaveWorkspaceAction saveWorkspaceAction;
-
 
     private RenameAction renameAction;
     private CLoseTab cLoseTab;
@@ -45,15 +44,16 @@ public class ActionManager {
     private void initialiseActions() {
         exitAction = new ExitAction();
         aboutAction = new AboutAction();
+        helpAction = new HelpAction();
+        saveProjectAction = new SaveProjectAction();
+        saveAsAction = new SaveAsAction();
+        saveSlotAction = new SaveSlotAction();
+        saveWorkspaceAction = new SaveWorkspaceAction();
+        openProjectAction = new OpenProjectAction();
 
         newProjectAction = new NewProjectAction();
         newDocumentAction = new NewDocumentAction();
         newPageAction = new NewPageAction();
-
-
-        saveSlotAction = new SaveSlotAction();
-        saveProjectAction = new SaveProjectAction();
-        saveWorkspaceAction = new SaveWorkspaceAction();
 
         renameAction = new RenameAction();
         cLoseTab = new CLoseTab();
@@ -70,12 +70,23 @@ public class ActionManager {
         PMoveAction = new PMoveAction();
         PDeleteElementAction = new PDeleteElementAction();
 
-
         cascadeDiagramAction = new CascadeDiagramAction();
         tileHorizontallyDiagramAction = new TileHorizontallyDiagramAction();
         tileVerticallyDiagramAction = new TileVerticallyDiagramAction();
         closeDiagramAction = new CloseDiagramAction();
         closeAllDiagramAction = new CloseAllDiagramAction();
+    }
+
+    public OpenProjectAction getOpenProjectAction() {
+        return openProjectAction;
+    }
+
+    public HelpAction getHelpAction() {
+        return helpAction;
+    }
+
+    public SaveAsAction getSaveAsAction() {
+        return saveAsAction;
     }
 
     public SaveSlotAction getSaveSlotAction() {

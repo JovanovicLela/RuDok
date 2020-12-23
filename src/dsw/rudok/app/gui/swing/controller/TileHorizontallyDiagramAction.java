@@ -16,6 +16,6 @@ public class TileHorizontallyDiagramAction extends AbstractRudokAction{
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        //zatvaranje selektovanog dijagrama i njegovo brisanje iz stabla
+
     }
 }

@@ -8,8 +8,8 @@ public class OpenProjectAction  extends  AbstractRudokAction{
 
     public OpenProjectAction() {
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(
-                KeyEvent.VK_O, ActionEvent.CTRL_MASK));
-        putValue(SMALL_ICON, loadIcon("images/fileopen.png"));
+                KeyEvent.VK_O, ActionEvent.ALT_MASK));
+        putValue(SMALL_ICON, loadIcon("images/open.png"));
         putValue(NAME, "Open project");
         putValue(SHORT_DESCRIPTION, "Open project");
     }

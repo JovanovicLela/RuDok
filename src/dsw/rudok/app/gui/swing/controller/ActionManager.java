@@ -33,8 +33,8 @@ public class ActionManager {
     private CascadePageAction cascadePageAction;
     private TileHorizontallyAction tileHorizontallyAction;
     private TileVerticallyAction tileVerticallyAction;
-    private CloseDiagramAction closeDiagramAction;
-    private CloseAllDiagramAction closeAllDiagramAction;
+    private CloseSlotAction closeSlotAction;
+    private CloseAllSlotsAction closeAllSlotsAction;
 
 
     public  ActionManager(){
@@ -73,8 +73,8 @@ public class ActionManager {
         cascadePageAction = new CascadePageAction();
         tileHorizontallyAction = new TileHorizontallyAction();
         tileVerticallyAction = new TileVerticallyAction();
-        closeDiagramAction = new CloseDiagramAction();
-        closeAllDiagramAction = new CloseAllDiagramAction();
+        closeSlotAction = new CloseSlotAction();
+        closeAllSlotsAction = new CloseAllSlotsAction();
     }
 
     public OpenProjectAction getOpenProjectAction() {
@@ -98,12 +98,12 @@ public class ActionManager {
     }
 
 
-    public CloseDiagramAction getCloseDiagramAction() {
-        return closeDiagramAction;
+    public CloseSlotAction getCloseDiagramAction() {
+        return closeSlotAction;
     }
 
-    public CloseAllDiagramAction getCloseAllDiagramAction() {
-        return closeAllDiagramAction;
+    public CloseAllSlotsAction getCloseAllDiagramAction() {
+        return closeAllSlotsAction;
     }
 
     public CascadePageAction getCascadeDiagramAction() {

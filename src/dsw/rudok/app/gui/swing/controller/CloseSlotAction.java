@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
-public class CloseDiagramAction extends AbstractRudokAction {
+public class CloseSlotAction extends AbstractRudokAction {
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -14,6 +14,6 @@ public class CloseDiagramAction extends AbstractRudokAction {
         putValue(SHORT_DESCRIPTION, "Close diagram");
     }
 
-    public CloseDiagramAction() {
+    public CloseSlotAction() {
     }
 }

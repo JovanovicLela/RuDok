@@ -46,7 +46,7 @@ public class AboutDialog  extends JDialog {
         add(andrijanaOpis);
 
         setLayout(new GridLayout(2, 2, 10, 10));
-        getContentPane().setBackground(Color.getHSBColor(0.7f,0.2f,1f));;
+        getContentPane().setBackground(Color.getHSBColor(0.6f,0.1f,1f));;
         setResizable(false);
         setVisible(false);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);

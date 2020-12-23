@@ -16,6 +16,9 @@ public class SaveAsAction extends AbstractRudokAction {
     @Override
     public void actionPerformed(ActionEvent e) {
 
+        JFileChooser fileChooser = new JFileChooser();
+       // fileChooser.setCurrentDirectory(MainFrame.getInstance().getActionManager());
+
     }
 
 

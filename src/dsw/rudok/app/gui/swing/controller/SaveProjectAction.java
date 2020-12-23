@@ -1,15 +1,19 @@
 package dsw.rudok.app.gui.swing.controller;
 
 import dsw.rudok.app.gui.swing.view.MainFrame;
-import dsw.rudok.app.repository.Workspace;
+import dsw.rudok.app.repository.Project;
 import dsw.rudok.app.repository.node.RuNode;
 
 import javax.swing.*;
+import javax.swing.filechooser.FileFilter;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
-import java.io.File;
+import java.io.*;
 
 public class SaveProjectAction extends AbstractRudokAction{
+
+    public static String PROJECT_EX = ".rdproj";
+
     public SaveProjectAction() {
 
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_S, ActionEvent.CTRL_MASK));
@@ -21,51 +25,52 @@ public class SaveProjectAction extends AbstractRudokAction{
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        Workspace workspace = MainFrame.getInstance().getDocumentRepository().getWorkspace();
-        RuNode o = MainFrame.getInstance().getTree().getSelectedRuNode();
 
-        //JFileChooser jfc = new JFileChooser();
-       // jfc.showOpenDialog(MainFrame.getInstance());
-        JFileChooser fileChooser = new JFileChooser();
-        fileChooser.setDialogTitle("Specify a file to save");
 
-        int userSelection = fileChooser.showSaveDialog(MainFrame.getInstance());
-        if (userSelection == JFileChooser.APPROVE_OPTION) {
-            File fileToSave = fileChooser.getSelectedFile();
-            System.out.println("Save as file: " + fileToSave.getAbsolutePath());
+        RuNode selectedRuNode = MainFrame.getInstance().getTree().getSelectedRuNode();
+        Project project = (Project) selectedRuNode;
+        JFileChooser jfc = new JFileChooser();
+        jfc.setFileFilter(new ProjectF());
+        jfc.setAcceptAllFileFilterUsed(false);
+
+        if(project != null){
+
+            File file;
+
+            if(jfc.showOpenDialog(MainFrame.getInstance()) == JFileChooser.APPROVE_OPTION){
+                file = jfc.getSelectedFile();
+                String s = file.getPath();
+
+                if(!s.endsWith(PROJECT_EX)){
+                    s += PROJECT_EX;
+                    file.delete();
+                    file = new File(s);
+                }
+            }else{ return; }
+
+            ObjectOutputStream os;
+            try {
+                os = new ObjectOutputStream(new FileOutputStream(file));
+                os.writeObject(project);
+                project.setProjectFile(file);
+                os.close();
+            } catch (FileNotFoundException a){
+                a.printStackTrace();
+            } catch (IOException b){
+                b.printStackTrace();
+            }
+        }
+    }
+
+    public class ProjectF extends FileFilter{
+        @Override
+        public boolean accept(File f) {
+            return (f.isDirectory());
         }
 
-    /*    if (o instanceof Project){
-
-            Project  p = (Project) o;
-            if(p.getProjectFile() != null){
-                File projectFile = p.getProjectFile();
-
-                if(!p.isChanged()){
-                    return;
-                }
-
-                ObjectOutputStream os;
-*/
-          /*      try{
-
-                    os = new ObjectOutputStream(new FileOutputStream(projectFile));
-                    os.writeObject(p);
-                    p.setProjectFile(projectFile);
-                    p.setChanged(false);
-                    os.close();
-
-                }catch (FileNotFoundException ex){
-                    ex.printStackTrace();
-                }catch (IOException ex){
-                    ex.printStackTrace();
-                }
-            }*/
-       // }else{
-           // AppCore.getInstance().getError().onError(ErrorType.NOTHING_SELECTED);
-           JOptionPane.showMessageDialog(null, "Please select project!", "Selection required", JOptionPane.WARNING_MESSAGE);
-      //  }
-
-
+        @Override
+        public String getDescription() {
+            return "Rukovalac dokumentima (" + PROJECT_EX + ")";
+        }
     }
 }

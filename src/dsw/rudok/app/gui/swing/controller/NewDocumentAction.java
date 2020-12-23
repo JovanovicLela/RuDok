@@ -16,6 +16,7 @@ public class NewDocumentAction extends  AbstractRudokAction   {
         putValue(SMALL_ICON, loadIcon("images/newDocument.png"));
         putValue(NAME, "New Document");
         putValue(SHORT_DESCRIPTION, "New Document");
+
     }
 
 
@@ -29,7 +30,8 @@ public class NewDocumentAction extends  AbstractRudokAction   {
         if((selectedRuNode == null) || !(selectedRuNode instanceof Project)) {// ako nije selektovan projekat, nema dodavanja novog Doc
             return;
         }
-        else if (selectedRuNode instanceof Project) {
+
+        if (selectedRuNode instanceof Project) {
             setEnabled(true);
         } else {
             setEnabled(false);
@@ -39,7 +41,6 @@ public class NewDocumentAction extends  AbstractRudokAction   {
         Project selectedProject = (Project) selectedRuNode;
         Document document = new Document("Document " + (selectedProject.getChildren().size() + 1),selectedProject);
         MainFrame.getInstance().getTree().addDocument(selectedProject, document);
-
 
 
 

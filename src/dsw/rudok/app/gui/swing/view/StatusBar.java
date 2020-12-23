@@ -13,7 +13,7 @@ public class StatusBar extends JPanel {
     public StatusBar() {
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-        tfDate = new JTextField("Datum i vreme: " + sdf.format(new Date()));
+        tfDate = new JTextField("Date and time: " + sdf.format(new Date()));
         tfDate.setEditable(false);
 
 

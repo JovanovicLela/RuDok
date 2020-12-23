@@ -23,7 +23,7 @@ public class PageView extends JInternalFrame{
     // Ova klasa iscrtava na sebe sve komponente koje se nalaze u DiagramModelu
     // a DiagramModel dobijamo iz Diagrama
 
-    static final int FRAME_WIDTH = 300, FRAME_HEIGHT = 300;
+    static final int FRAME_WIDTH = 340, FRAME_HEIGHT = 320;
     static final int xOffset = 30, yOffset = 30; // koristimo ih za odedjivanje pozicije unutrasnjeg prozora
     private JPanel framework;
     private Page page;
@@ -97,8 +97,8 @@ public class PageView extends JInternalFrame{
             Graphics2D g2 = (Graphics2D) g; // ALt + enter(quick fix)
 
             //providnost
-           // g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.8f));
-           // g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+            g2.setComposite(AlphaComposite.getInstance(AlphaComposite.SRC_OVER, 0.8f));
+            g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
             for (int i = 0; i < page.getChildren().size(); i++) {
                 Slot slot = (Slot) page.getChildren().get(i);

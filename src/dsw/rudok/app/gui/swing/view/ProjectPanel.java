@@ -14,6 +14,7 @@ public class ProjectPanel extends JPanel implements Observer {
 
     private  JLabel projectNameLabel = new JLabel();
     private JTabbedPane tabbedPane = new JTabbedPane();
+
     private Project openedProject = null;
 
 
@@ -56,6 +57,7 @@ public class ProjectPanel extends JPanel implements Observer {
         }
 
     }
+
 
     public void setProjectName(String projectName) {
         projectNameLabel.setText(projectName);

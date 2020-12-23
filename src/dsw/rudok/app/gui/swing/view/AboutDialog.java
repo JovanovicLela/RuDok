@@ -20,6 +20,9 @@ public class AboutDialog  extends JDialog {
         setSize(screenWidth / 3, screenHeight / 2);
         setLocationRelativeTo(null);
 
+        ImageIcon img = new ImageIcon(getClass().getResource("images/layer32-min.png"));
+        this.setIconImage(img.getImage());
+
         img1 = new ImageIcon(getClass().getResource("images/blueIcon.png"));
         Image image1 = img1.getImage();
         Image newImg1 = image1.getScaledInstance(150, 150, Image.SCALE_SMOOTH);

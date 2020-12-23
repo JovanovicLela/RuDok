@@ -25,8 +25,6 @@ public class SaveProjectAction extends AbstractRudokAction{
     @Override
     public void actionPerformed(ActionEvent e) {
 
-
-
         RuNode selectedRuNode = MainFrame.getInstance().getTree().getSelectedRuNode();
         Project project = (Project) selectedRuNode;
         JFileChooser jfc = new JFileChooser();

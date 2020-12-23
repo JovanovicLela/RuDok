@@ -30,9 +30,9 @@ public class ActionManager {
     private PMoveAction PMoveAction;;
     private dsw.rudok.app.gui.swing.controller.PDeleteElementAction PDeleteElementAction;
 
-    private CascadeDiagramAction cascadeDiagramAction;
-    private TileHorizontallyDiagramAction tileHorizontallyDiagramAction;
-    private TileVerticallyDiagramAction tileVerticallyDiagramAction;
+    private CascadePageAction cascadePageAction;
+    private TileHorizontallyAction tileHorizontallyAction;
+    private TileVerticallyAction tileVerticallyAction;
     private CloseDiagramAction closeDiagramAction;
     private CloseAllDiagramAction closeAllDiagramAction;
 
@@ -70,9 +70,9 @@ public class ActionManager {
         PMoveAction = new PMoveAction();
         PDeleteElementAction = new PDeleteElementAction();
 
-        cascadeDiagramAction = new CascadeDiagramAction();
-        tileHorizontallyDiagramAction = new TileHorizontallyDiagramAction();
-        tileVerticallyDiagramAction = new TileVerticallyDiagramAction();
+        cascadePageAction = new CascadePageAction();
+        tileHorizontallyAction = new TileHorizontallyAction();
+        tileVerticallyAction = new TileVerticallyAction();
         closeDiagramAction = new CloseDiagramAction();
         closeAllDiagramAction = new CloseAllDiagramAction();
     }
@@ -106,16 +106,16 @@ public class ActionManager {
         return closeAllDiagramAction;
     }
 
-    public CascadeDiagramAction getCascadeDiagramAction() {
-        return cascadeDiagramAction;
+    public CascadePageAction getCascadeDiagramAction() {
+        return cascadePageAction;
     }
 
-    public TileHorizontallyDiagramAction getTileHorizontallyDiagramAction() {
-        return tileHorizontallyDiagramAction;
+    public TileHorizontallyAction getTileHorizontallyDiagramAction() {
+        return tileHorizontallyAction;
     }
 
-    public TileVerticallyDiagramAction getTileVerticallyDiagramAction() {
-        return tileVerticallyDiagramAction;
+    public TileVerticallyAction getTileVerticallyDiagramAction() {
+        return tileVerticallyAction;
     }
 
 

@@ -23,6 +23,11 @@ public class DocumentPanel extends JDesktopPane {
         addPages();
     }
 
+    public DocumentPanel() {
+
+
+    }
+
     private  void addPages(){
         for(int i = 0; i<document.getPages().size(); i++){
             PageView pageView = new PageView(document.getPages().get(i), (i+1) );
@@ -30,7 +35,6 @@ public class DocumentPanel extends JDesktopPane {
             add(pageView);
         }
     }
-
 
 
     public String getProjectName() {

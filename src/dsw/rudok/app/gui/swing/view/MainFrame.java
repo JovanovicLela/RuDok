@@ -29,9 +29,9 @@ public class MainFrame extends JFrame  {
     private JMenuBar menu;
     private StatusBar statusBar;
     private Palette palette;
-    private JDesktopPane desktopPane;
-    // desktopPane ce u sebi sadrzati kolekciju view-a, gde svaki od njih
-    // predstavlja jedan JInternalFrame i na sebe iscrtava komponente
+    private DocumentPanel desktopPane;
+    /* desktopPane ce u sebi sadrzati kolekciju view-a,
+    gde svaki od njih predstavlja jedan JInternalFrame i na sebe iscrtava komponente*/
 
     private Repository documentRepository;
     private RuTree tree;
@@ -119,7 +119,7 @@ public class MainFrame extends JFrame  {
         add(statusBar, BorderLayout.SOUTH);
 
         desktop = new ProjectPanel();
-        desktopPane = new JDesktopPane();
+        desktopPane = new DocumentPanel();
 
         aboutDialog = new AboutDialog();
         helpDialog = new HelpDialog();
@@ -156,7 +156,7 @@ public class MainFrame extends JFrame  {
         this.helpDialog = helpDialog;
     }
 
-    public JDesktopPane getDesktopPane() {
+    public DocumentPanel getDesktopPane() {
         return desktopPane;
     }
 

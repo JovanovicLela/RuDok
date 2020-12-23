@@ -53,6 +53,9 @@ public class HelpDialog extends JDialog {
         setVisible(false);
         setResizable(true);
 
+        ImageIcon img = new ImageIcon(getClass().getResource("images/layer32-min.png"));
+        this.setIconImage(img.getImage());
+
         panel.setLayout(new BoxLayout(panel, BoxLayout.PAGE_AXIS));
         panel.setBackground(Color.getHSBColor(0.5f,0.2f,1f));;
 

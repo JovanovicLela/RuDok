@@ -4,9 +4,9 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
-public class TileHorizontallyDiagramAction extends AbstractRudokAction{
+public class TileHorizontallyAction extends AbstractRudokAction{
 
-    public TileHorizontallyDiagramAction() {
+    public TileHorizontallyAction() {
         putValue(ACCELERATOR_KEY, KeyStroke.getKeyStroke(KeyEvent.VK_H, ActionEvent.CTRL_MASK));
         putValue(SMALL_ICON, loadIcon("images/horizontal.png"));
         putValue(NAME, "Tile Horizontally");

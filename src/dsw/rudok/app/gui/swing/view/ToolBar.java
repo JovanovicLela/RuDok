@@ -11,6 +11,7 @@ public class ToolBar extends JToolBar {
         add (MainFrame.getInstance().getActionManager().getExitAction());
         add (MainFrame.getInstance().getActionManager().getSaveProjectAction());
         add (MainFrame.getInstance().getActionManager().getSaveAsAction());
+        add (MainFrame.getInstance().getActionManager().getSaveWorkspaceAction());
         add (MainFrame.getInstance().getActionManager().getOpenProjectAction());
 
         addSeparator();

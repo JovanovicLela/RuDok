@@ -28,7 +28,7 @@ public class SaveAsAction extends AbstractRudokAction {
 
 
         JFileChooser jfc = new JFileChooser();
-        jfc.setDialogTitle("Save As");
+        jfc.setDialogTitle("Save project as");
         jfc.setFileFilter(new ProjectAsF());
         jfc.setAcceptAllFileFilterUsed(false);
 

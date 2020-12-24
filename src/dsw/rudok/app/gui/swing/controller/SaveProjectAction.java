@@ -28,7 +28,7 @@ public class SaveProjectAction extends AbstractRudokAction{
         RuNode selectedRuNode = MainFrame.getInstance().getTree().getSelectedRuNode();
         Project project = (Project) selectedRuNode;
         JFileChooser jfc = new JFileChooser();
-        jfc.setDialogTitle("Save");
+        jfc.setDialogTitle("Save project");
         jfc.setFileFilter(new ProjectF());
         jfc.setAcceptAllFileFilterUsed(false);
 

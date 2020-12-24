@@ -1,5 +1,7 @@
 package dsw.rudok.app.gui.swing.controller;
 
+import dsw.rudok.app.gui.swing.view.MainFrame;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
@@ -13,8 +15,22 @@ public class ExitAction extends  AbstractRudokAction {
 
     }
 
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.exit(0);
-    }
-}
+
+                Object[] opcije;
+                opcije = new Object[]{"Cancel", "Exit"};
+
+                int odgovor = JOptionPane.showOptionDialog(MainFrame.getInstance(), "Do you want to exit workspace?", "Confirm exit",
+                        JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, null, opcije, opcije[1]);
+                if (odgovor == JOptionPane.YES_OPTION) {
+                    MainFrame.getInstance().setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+                }
+                if (odgovor == JOptionPane.NO_OPTION) {
+                    System.exit(0);
+                }
+
+
+
+    }}

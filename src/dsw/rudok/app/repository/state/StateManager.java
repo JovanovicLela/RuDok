@@ -8,6 +8,7 @@ public class StateManager {
     private RectangleState rectangleState;
     private TriangleState triangleState;
     private SelectState selectState;
+    private ResizeState resizeState;
 
     public StateManager() {
 
@@ -15,6 +16,7 @@ public class StateManager {
         rectangleState = new RectangleState();
         triangleState = new TriangleState();
         selectState = new SelectState();
+        resizeState = new ResizeState();
         currentState = selectState;
     }
 
@@ -36,6 +38,10 @@ public class StateManager {
 
     public void setSelectState() {
         currentState = selectState;
+    }
+
+    public void setResizeState(ResizeState resizeState) {
+        currentState = resizeState;
     }
 }
 

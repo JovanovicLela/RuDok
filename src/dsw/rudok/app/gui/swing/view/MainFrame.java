@@ -13,6 +13,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.awt.event.WindowListener;
 
 public class MainFrame extends JFrame  {
 
@@ -42,7 +43,7 @@ public class MainFrame extends JFrame  {
 
     public  boolean saved = true;
 
-    private MainFrame(){
+    public MainFrame(){
         setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             @Override
@@ -146,6 +147,11 @@ public class MainFrame extends JFrame  {
             instance.initialise();
         }
         return  instance;
+    }
+
+    @Override
+    public synchronized WindowListener[] getWindowListeners() {
+        return super.getWindowListeners();
     }
 
     public HelpDialog getHelpDialog() {

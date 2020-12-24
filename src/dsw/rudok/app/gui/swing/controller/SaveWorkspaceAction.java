@@ -23,6 +23,7 @@ public class SaveWorkspaceAction extends AbstractRudokAction{
         putValue(SMALL_ICON, loadIcon("images/saveW.png"));
         putValue(NAME, "Save workspace");
         putValue(SHORT_DESCRIPTION, "Save workspace");
+
     }
 
     @Override

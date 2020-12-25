@@ -1,12 +1,16 @@
 package dsw.rudok.app.gui.swing.view;
 
+import dsw.rudok.app.gui.swing.observer.Observer;
 import dsw.rudok.app.repository.Document;
 
 import javax.swing.*;
+import java.awt.*;
+import java.beans.PropertyVetoException;
 import java.util.ArrayList;
 
-public class DocumentPanel extends JDesktopPane {
+public class DocumentPanel extends JDesktopPane implements Observer {
 
+    public static final Dimension SIZE = new Dimension(650, 650);
     private  String projectName = null;
     private Document document = null;
 
@@ -25,7 +29,6 @@ public class DocumentPanel extends JDesktopPane {
 
     public DocumentPanel() {
 
-
     }
 
     private  void addPages(){
@@ -36,6 +39,21 @@ public class DocumentPanel extends JDesktopPane {
         }
     }
 
+    public void cascade(){
+        int size = getAllFrames().length;
+
+        for(int i = 0; i < size; i++){
+            getAllFrames()[i].setLocation(30 + i*40, 30 + i*40);
+            getAllFrames()[i].setSize(SIZE);
+
+            try {
+                getAllFrames()[i].setSelected(true);
+            } catch (PropertyVetoException e){
+                e.printStackTrace();
+            }
+
+        }
+    }
 
     public String getProjectName() {
         return projectName;
@@ -49,6 +67,8 @@ public class DocumentPanel extends JDesktopPane {
         return pageList;
     }
 
-
-
+    @Override
+    public void update() {
+        notifyAll();
+    }
 }

@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class Page extends RuNodeComposite {
 
-    private ArrayList<Diagram> diagrams = new ArrayList<Diagram>();
+    private ArrayList<Slot> slots = new ArrayList<Slot>();
 
     public Page(String name, RuNode parent){
         super(name,parent);
@@ -33,9 +33,9 @@ public class Page extends RuNodeComposite {
         }
 
     }
-    public void addDiagram(Diagram diagram){
-        diagrams.add(diagram);
-        diagram.setName( this.getName()+" - Diagram  - Graphical editor:"+String.valueOf(diagrams.size()));
+    public void addSlot(Slot slot){
+        slots.add(slot);
+        slot.setName( this.getName()+" - Slot  - Graphical editor:"+String.valueOf(slots.size()));
 
     }
 

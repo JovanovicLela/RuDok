@@ -108,7 +108,7 @@ public class RuTreeImplementation implements RuTree {
         RuTreeItem selectedItem = getSelectedRuTreeItem();
         if (selectedItem == null)
             return;
-        selectedItem.remove(new RuTreeItem(slot));
+        selectedItem.add(new RuTreeItem(slot));
         page.removeChild(slot);
         SwingUtilities.updateComponentTreeUI(treeView);
 

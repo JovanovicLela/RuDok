@@ -2,6 +2,7 @@ package dsw.rudok.app.repository;
 
 import dsw.rudok.app.repository.node.RuNode;
 import dsw.rudok.app.repository.node.RuNodeComposite;
+import dsw.rudok.app.repository.slot.Slot;
 
 import java.util.ArrayList;
 
@@ -12,7 +13,7 @@ public class Document extends RuNodeComposite {
       super(name,parent);
   }
   private ArrayList<Page> pages = new ArrayList<>();
-    private ArrayList<Diagram> diagrams = new ArrayList<Diagram>();
+    private ArrayList<Slot> slots = new ArrayList<Slot>();
 
 
    @Override
@@ -40,9 +41,9 @@ public class Document extends RuNodeComposite {
         }
 
     }
-    public void addDiagram(Diagram diagram){
-        diagrams.add(diagram);
-        diagram.setName(this.getName()+" - Diagram  - GrafiÄ�ki editor:"+String.valueOf(diagrams.size()));
+    public void addSlot(Slot slot){
+        slots.add(slot);
+        slot.setName(this.getName()+" - Slot  - GrafiÄ�ki editor:"+ String.valueOf(slots.size()));
 
     }
 
@@ -52,22 +53,20 @@ public class Document extends RuNodeComposite {
         return super.getName();
     }
 
-
-
-    public int getDiagramIndex(Diagram diagram) {
-        return diagrams.indexOf(diagram);
+    public int getSlotIndex(Slot slot) {
+        return slots.indexOf(slot);
     }
 
-    public int getDiagramCount() {
-        return diagrams.size();
+    public int getSlotCount() {
+        return slots.size();
     }
 
     public ArrayList<Page> getPages() {
         return pages;
     }
 
-    public ArrayList<Diagram> getDiagrams() {
-        return diagrams;
+    public ArrayList<Slot> getDiagrams() {
+        return slots;
     }
 
     @Override

@@ -7,6 +7,8 @@ import java.io.Serializable;
 public abstract class Slot  extends RuNode implements Serializable {
 
     private static final long serialVersionUID = 1;
+
+    private SlotModel model = new SlotModel();
     // pozicija
     private double x;
     private double y;
@@ -74,6 +76,19 @@ public abstract class Slot  extends RuNode implements Serializable {
 
     public void setY(double y) {
         this.y = y;
+    }
+
+    public SlotModel getModel() {
+        return model;
+    }
+
+    public void setModel(SlotModel model) {
+        this.model = model;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
     }
 
     @Override

@@ -4,7 +4,7 @@ import dsw.rudok.app.gui.swing.tree.controller.RuTreeCellEditor;
 import dsw.rudok.app.gui.swing.tree.controller.RuTreeMouseListener;
 import dsw.rudok.app.gui.swing.tree.controller.RuTreeSelectionListener;
 import dsw.rudok.app.gui.swing.view.MainFrame;
-import dsw.rudok.app.repository.Diagram;
+import dsw.rudok.app.repository.slot.Slot;
 
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
@@ -31,9 +31,9 @@ public class RuTreeView extends JTree implements TreeSelectionListener {
 
         TreePath path = e.getPath();
         for(int i = 0; i < path.getPathCount(); i++){
-            if(path.getPathComponent(i) instanceof Diagram){
+            if(path.getPathComponent(i) instanceof Slot){
 
-                Diagram d = (Diagram) path.getPathComponent(i);
+                Slot d = (Slot) path.getPathComponent(i);
 
                 JInternalFrame[] jif = MainFrame.getInstance().getDesktopPane().getAllFrames();
 

@@ -5,6 +5,7 @@ import dsw.rudok.app.repository.Document;
 import dsw.rudok.app.repository.Page;
 import dsw.rudok.app.repository.Project;
 import dsw.rudok.app.repository.node.RuNode;
+import dsw.rudok.app.repository.slot.Slot;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -34,6 +35,9 @@ public class DeleteNodeAction extends AbstractRudokAction  {
         }else if(selectedNode instanceof Page) {
             Page selectedPage = (Page) selectedNode;
             MainFrame.getInstance().getTree().deletePage((Document) selectedPage.getParent(), selectedPage);
-
-        }}
+        }else if(selectedNode instanceof Slot) {
+            Slot selectedSlot = (Slot) selectedNode;
+            MainFrame.getInstance().getTree().deleteSlot((Page)selectedSlot.getParent(), selectedSlot);
+        }
+    }
 }

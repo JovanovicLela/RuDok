@@ -15,5 +15,7 @@ public class CloseSlotAction extends AbstractRudokAction {
     }
 
     public CloseSlotAction() {
+
+
     }
 }

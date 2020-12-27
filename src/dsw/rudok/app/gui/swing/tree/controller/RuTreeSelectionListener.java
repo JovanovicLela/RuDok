@@ -1,7 +1,7 @@
 package dsw.rudok.app.gui.swing.tree.controller;
 
 import dsw.rudok.app.gui.swing.view.MainFrame;
-import dsw.rudok.app.repository.Diagram;
+import dsw.rudok.app.repository.slot.Slot;
 
 import javax.swing.*;
 import javax.swing.event.TreeSelectionEvent;
@@ -23,8 +23,8 @@ public class RuTreeSelectionListener implements TreeSelectionListener {
         TreePath path = e.getPath();
 
         for(int i=0; i<path.getPathCount(); i++){
-            if(path.getPathComponent(i) instanceof Diagram){
-                Diagram d=(Diagram)path.getPathComponent(i);
+            if(path.getPathComponent(i) instanceof Slot){
+                Slot d=(Slot)path.getPathComponent(i);
 
                 JInternalFrame[] jif= MainFrame.getInstance().getDesktopPane().getAllFrames();
                 for (int j=0;j<jif.length;j++){

@@ -2,7 +2,9 @@ package dsw.rudok.app.repository.node;
 
 import dsw.rudok.app.gui.swing.observer.Observer;
 
-public abstract class RuNode implements Observer {
+import java.io.Serializable;
+
+public abstract class RuNode implements Observer, Serializable {
 
     private String name;
     private RuNode parent;

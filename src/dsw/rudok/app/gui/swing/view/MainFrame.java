@@ -19,6 +19,8 @@ public class MainFrame extends JFrame  {
 
     private static  MainFrame instance = null;
 
+    private static final long serialVersionUID = 1;
+
     private ActionManager actionManager;
     private StateManager stateManager;
 

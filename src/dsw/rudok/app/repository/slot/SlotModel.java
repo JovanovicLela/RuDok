@@ -7,10 +7,13 @@ import dsw.rudok.app.repository.elements.SlotElement;
 
 import javax.swing.event.EventListenerList;
 import java.awt.*;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class SlotModel {
+public class SlotModel implements Serializable {
+
+    private static final long serialVersionUID = 1;
 
     private static int count = 0;
     private String name;

@@ -2,8 +2,11 @@ package dsw.rudok.app.repository.slot;
 
 import dsw.rudok.app.repository.node.RuNode;
 
-public abstract class Slot  extends RuNode {
+import java.io.Serializable;
 
+public abstract class Slot  extends RuNode implements Serializable {
+
+    private static final long serialVersionUID = 1;
     // pozicija
     private double x;
     private double y;

@@ -3,8 +3,11 @@ package dsw.rudok.app.repository.elements;
 import dsw.rudok.app.gui.swing.view.painters.ElementPainter;
 
 import java.awt.*;
+import java.io.Serializable;
 
-public abstract class SlotElement {
+public abstract class SlotElement implements Serializable {
+
+    private static final long serialVersionUID = 1;
 
     // ova klasa nam daje opis bilo kog elementa,
     // takodje opisuje i linkove dijagrama i elemente dijagrama

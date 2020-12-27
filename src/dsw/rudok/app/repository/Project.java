@@ -1,13 +1,14 @@
 package dsw.rudok.app.repository;
 
-import dsw.rudok.app.gui.swing.event.UpdateEvent;
-import dsw.rudok.app.gui.swing.event.UpdateListener;
 import dsw.rudok.app.repository.node.RuNode;
 import dsw.rudok.app.repository.node.RuNodeComposite;
 
 import java.io.File;
+import java.io.Serializable;
 
-public class Project extends RuNodeComposite implements UpdateListener {
+public class Project extends RuNodeComposite implements Serializable {
+
+    private static final int serialVersionUID = 1;
 
     private File projectFile;
     private transient boolean changed;
@@ -59,12 +60,9 @@ public class Project extends RuNodeComposite implements UpdateListener {
 
     @Override
     public void update() {
-        notifyAll();
+        notify();
     }
 
-    @Override
-    public void updatePerformed(UpdateEvent e) {
-        setChanged(true);
-    }
+
 }
 

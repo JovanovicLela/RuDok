@@ -1,14 +1,14 @@
 package dsw.rudok.app.gui.swing.view;
 
+import dsw.rudok.app.AppCore;
+import dsw.rudok.app.gui.swing.errorHandler.ErrorType;
+import dsw.rudok.app.gui.swing.observer.Observer;
 import dsw.rudok.app.repository.Page;
 import dsw.rudok.app.repository.slot.Slot;
 import dsw.rudok.app.repository.slot.SlotCircle;
 import dsw.rudok.app.repository.slot.SlotFactory;
 import dsw.rudok.app.repository.slot.SlotRectangle;
-import dsw.rudok.app.repository.state.CircleSate;
-import dsw.rudok.app.repository.state.RectangleState;
-import dsw.rudok.app.repository.state.SelectState;
-import dsw.rudok.app.repository.state.TriangleState;
+import dsw.rudok.app.repository.state.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -18,7 +18,7 @@ import java.awt.geom.Rectangle2D;
 
 // PAGE VIEW
 
-public class PageView extends JInternalFrame{
+public class PageView extends JInternalFrame implements Observer {
 
     // Ova klasa iscrtava na sebe sve komponente koje se nalaze u DiagramModelu
     // a DiagramModel dobijamo iz Diagrama
@@ -28,7 +28,7 @@ public class PageView extends JInternalFrame{
     private JPanel framework;
     private Page page;
     private Slot selectedSlot = null;
- //   StateManager stateManager = new StateManager();
+
 
 // novo: prosledjena stranica
     public PageView(Page page, int pageNumber) {
@@ -46,6 +46,7 @@ public class PageView extends JInternalFrame{
         framework.setBackground(Color.WHITE);
         framework.setFocusable(true);
         add(framework);
+
     }
 
     public Slot getSelectedSlot() {
@@ -54,8 +55,8 @@ public class PageView extends JInternalFrame{
 
     public int getNumberOfSlotsPerType(SlotFactory.SlotType slotType){
         if(slotType == null){
-            throw new IllegalArgumentException("bla bla");
-           // AppCore.getInstance().getError().onError(ErrorType.NULL_SLOT);
+            //throw new IllegalArgumentException("bla bla");
+            AppCore.getInstance().getError().onError(ErrorType.NULL_SLOT);
         }
 
         int res = 0;
@@ -81,6 +82,11 @@ public class PageView extends JInternalFrame{
                 break;
         }
         return res;
+    }
+
+    @Override
+    public void update() {
+        repaint();
     }
 
     private class Framework extends  JPanel {

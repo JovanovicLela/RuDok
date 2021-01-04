@@ -39,7 +39,7 @@ public class Workspace extends RuNodeComposite{
     }
     public void addProject(Project project){
         projects.add(project);
-        project.setName("Project - GrafiÄ�ki editor"+projects.size());
+        project.setName("Project - Graficki editor"+projects.size());
     }
 
     public int getProjectsCount() {

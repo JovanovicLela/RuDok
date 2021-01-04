@@ -151,6 +151,7 @@ public class MainFrame extends JFrame  {
         return  instance;
     }
 
+
     @Override
     public synchronized WindowListener[] getWindowListeners() {
         return super.getWindowListeners();

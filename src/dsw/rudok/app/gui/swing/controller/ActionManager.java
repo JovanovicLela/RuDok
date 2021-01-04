@@ -10,6 +10,7 @@ public class ActionManager {
     private SaveSlotAction saveSlotAction;
     private SaveWorkspaceAction saveWorkspaceAction;
     private OpenProjectAction openProjectAction;
+    private ShareDocAction shareDocAction;
 
     private NewProjectAction newProjectAction;
     private NewDocumentAction newDocumentAction;
@@ -50,6 +51,7 @@ public class ActionManager {
         saveSlotAction = new SaveSlotAction();
         saveWorkspaceAction = new SaveWorkspaceAction();
         openProjectAction = new OpenProjectAction();
+        shareDocAction = new ShareDocAction();
 
         newProjectAction = new NewProjectAction();
         newDocumentAction = new NewDocumentAction();
@@ -75,6 +77,14 @@ public class ActionManager {
         tileVerticallyAction = new TileVerticallyAction();
         closeSlotAction = new CloseSlotAction();
         closeAllSlotsAction = new CloseAllSlotsAction();
+    }
+
+    public ShareDocAction getShareDocAction() {
+        return shareDocAction;
+    }
+
+    public void setShareDocAction(ShareDocAction shareDocAction) {
+        this.shareDocAction = shareDocAction;
     }
 
     public OpenProjectAction getOpenProjectAction() {

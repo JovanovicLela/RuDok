@@ -15,7 +15,6 @@ public class CloseSlotAction extends AbstractRudokAction {
     }
 
     public CloseSlotAction() {
-
-
+        // brise se u delete node action
     }
 }

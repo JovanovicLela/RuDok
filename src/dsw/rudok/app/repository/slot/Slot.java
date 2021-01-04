@@ -9,6 +9,7 @@ public abstract class Slot  extends RuNode implements Serializable {
     private static final long serialVersionUID = 1;
 
     private SlotModel model = new SlotModel();
+
     // pozicija
     private double x;
     private double y;
@@ -29,6 +30,7 @@ public abstract class Slot  extends RuNode implements Serializable {
        this.height = height;
 
    }
+
 
     public boolean isSelected() {
         return isSelected;

@@ -8,7 +8,10 @@ import dsw.rudok.app.repository.slot.Slot;
 import dsw.rudok.app.repository.slot.SlotCircle;
 import dsw.rudok.app.repository.slot.SlotFactory;
 import dsw.rudok.app.repository.slot.SlotRectangle;
-import dsw.rudok.app.repository.state.*;
+import dsw.rudok.app.repository.state.CircleSate;
+import dsw.rudok.app.repository.state.RectangleState;
+import dsw.rudok.app.repository.state.SelectState;
+import dsw.rudok.app.repository.state.TriangleState;
 
 import javax.swing.*;
 import java.awt.*;
@@ -147,6 +150,51 @@ public class PageView extends JInternalFrame implements Observer {
                     if(s != null){
                         s.setSelected(true);
                         selectedSlot = s;
+                    }
+                }
+                PageView.this.repaint();
+            }
+
+            @Override
+            public void mouseClicked(MouseEvent e) {
+
+                if (selectedSlot == null) {
+                    return;
+                }
+
+                if(e.getClickCount() == 2 && SwingUtilities.isLeftMouseButton(e)){
+                    if(selectedSlot.getTextEditor() == null || selectedSlot.getImageEditor() == null){
+
+                        String[] options = {"Add Image", "Edit text"};
+                        int answer = JOptionPane.showOptionDialog(null, "Choose content", "Edit content",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, null);
+
+                        if(answer == JOptionPane.NO_OPTION){
+                            if(selectedSlot.getTextEditor() == null){
+                                selectedSlot.setTextEditor(new TextEditor(null, null, false, selectedSlot));
+                                selectedSlot.getTextEditor().setVisible(true);
+                            } else {
+                                selectedSlot.getTextEditor().setVisible(true);
+                            }
+                        }
+                        if(answer == JOptionPane.YES_OPTION){
+                            if(selectedSlot.getImageEditor() == null){
+                                selectedSlot.setImageEditor(new ImageEditor(null, null, false, selectedSlot));
+                                selectedSlot.getImageEditor().setVisible(true);
+                            }else {
+                                selectedSlot.getImageEditor().setVisible(true);
+                        }
+                        }
+
+                    } else {
+                        String[] options = {"Add Image", "Edit text"};
+                        int answer = JOptionPane.showOptionDialog(null, "Choose content", "",
+                                JOptionPane.DEFAULT_OPTION, JOptionPane.PLAIN_MESSAGE, null, options, null);
+                        if (answer == JOptionPane.YES_OPTION)
+                            selectedSlot.getTextEditor().setVisible(true);
+                        if (answer == JOptionPane.NO_OPTION)
+                            selectedSlot.getImageEditor().setVisible(true);
+
                     }
                 }
                 PageView.this.repaint();

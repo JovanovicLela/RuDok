@@ -14,6 +14,10 @@ public abstract class RuNode implements Observer, Serializable {
         this.parent = parent;
     }
 
+    public RuNode(String name){
+        this.setName(name);
+    }
+
 
     @Override
     public boolean equals(Object obj) {

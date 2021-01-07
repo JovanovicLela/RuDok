@@ -32,6 +32,7 @@ public class SerializableStrokeAdapter implements Stroke, Serializable {
 
     @Override
     public Shape createStrokedShape(Shape p) {
-        return null;
+
+        return stroke.createStrokedShape(p);
     }
 }

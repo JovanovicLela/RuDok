@@ -29,7 +29,7 @@ public class ActionManager {
     private PResizeAction PResizeAction;
     private PRotateAction PRotateAction;
     private PMoveAction PMoveAction;;
-    private dsw.rudok.app.gui.swing.controller.PDeleteElementAction PDeleteElementAction;
+    private PEditElementAction PEditElementAction;
 
     private CascadePageAction cascadePageAction;
     private TileHorizontallyAction tileHorizontallyAction;
@@ -70,7 +70,7 @@ public class ActionManager {
         PResizeAction = new PResizeAction();
         PRotateAction = new PRotateAction();
         PMoveAction = new PMoveAction();
-        PDeleteElementAction = new PDeleteElementAction();
+        PEditElementAction = new PEditElementAction();
 
         cascadePageAction = new CascadePageAction();
         tileHorizontallyAction = new TileHorizontallyAction();
@@ -135,8 +135,8 @@ public class ActionManager {
     public PMoveAction getMoveAction(){
         return PMoveAction;
     }
-    public PDeleteElementAction getDeleteElementAction(){
-        return  PDeleteElementAction;
+    public PEditElementAction getDeleteElementAction(){
+        return PEditElementAction;
     }
 
     public SaveSlotAction getSaveDiagramAction() {

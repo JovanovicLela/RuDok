@@ -1,5 +1,8 @@
 package dsw.rudok.app.repository.slot;
 
+import dsw.rudok.app.gui.swing.view.ImageEditor;
+import dsw.rudok.app.gui.swing.view.TextEditor;
+import dsw.rudok.app.repository.elements.ElementType;
 import dsw.rudok.app.repository.node.RuNode;
 
 import java.io.Serializable;
@@ -8,6 +11,10 @@ public abstract class Slot  extends RuNode implements Serializable {
 
     private static final long serialVersionUID = 1;
 
+    private ElementType type;
+    private String content;
+    private TextEditor textEditor;
+    private ImageEditor imageEditor;
     private SlotModel model = new SlotModel();
 
     // pozicija
@@ -21,6 +28,8 @@ public abstract class Slot  extends RuNode implements Serializable {
     private boolean isSelected = false;
     private double rotate = 0;
 
+
+
    public Slot(String name, RuNode parent, double x, double y , double width, double height){
 
        super(name,parent);
@@ -30,7 +39,42 @@ public abstract class Slot  extends RuNode implements Serializable {
        this.height = height;
 
    }
+   public  Slot(String name, ElementType type){
+       super(name);
+       this.type = type;
+   }
 
+    public ImageEditor getImageEditor() {
+        return imageEditor;
+    }
+
+    public void setImageEditor(ImageEditor imageEditor) {
+        this.imageEditor = imageEditor;
+    }
+
+    public ElementType getType() {
+        return type;
+    }
+
+    public void setType(ElementType type) {
+        this.type = type;
+    }
+
+    public String getContent() {
+        return content;
+    }
+
+    public void setContent(String content) {
+        this.content = content;
+    }
+
+    public TextEditor getTextEditor() {
+        return textEditor;
+    }
+
+    public void setTextEditor(TextEditor textEditor) {
+        this.textEditor = textEditor;
+    }
 
     public boolean isSelected() {
         return isSelected;

@@ -171,7 +171,7 @@ public class PageView extends JInternalFrame implements Observer {
 
                         if(answer == JOptionPane.NO_OPTION){
                             if(selectedSlot.getTextEditor() == null){
-                                selectedSlot.setTextEditor(new TextEditor(null, null, false, selectedSlot));
+                                selectedSlot.setTextEditor(new TextEditor(null, "Text editor", false, selectedSlot));
                                 selectedSlot.getTextEditor().setVisible(true);
                             } else {
                                 selectedSlot.getTextEditor().setVisible(true);
@@ -179,7 +179,7 @@ public class PageView extends JInternalFrame implements Observer {
                         }
                         if(answer == JOptionPane.YES_OPTION){
                             if(selectedSlot.getImageEditor() == null){
-                                selectedSlot.setImageEditor(new ImageEditor(null, null, false, selectedSlot));
+                                selectedSlot.setImageEditor(new ImageEditor(null, "Image editor", false, selectedSlot));
                                 selectedSlot.getImageEditor().setVisible(true);
                             }else {
                                 selectedSlot.getImageEditor().setVisible(true);

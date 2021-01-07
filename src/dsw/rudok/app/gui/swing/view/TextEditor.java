@@ -26,8 +26,8 @@ public class TextEditor extends JDialog {
         ImageIcon img = new ImageIcon(getClass().getResource("images/edit.png"));
         this.setIconImage(img.getImage());
 
-        if (slot.getContent() != null)
-            textPane.setText(slot.getContent());
+        if (slot.getName() != null)
+            textPane.setText(slot.getName());
 
         tb = new JToolBar();
         tbInitialise(tb);
@@ -38,7 +38,7 @@ public class TextEditor extends JDialog {
 
     private void tbInitialise(JToolBar tb){
 
-        Icon icon = new ImageIcon(getClass().getResource("images/edit.png"));
+        Icon icon = new ImageIcon(getClass().getResource("images/saveSlot.png"));
            JButton btnS = new JButton(icon); //save
 
         icon = new ImageIcon(getClass().getResource("images/underline.png"));
